@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>login</title>
+    <!-- CSS from Bootstrap -->
+    <link href="css/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- CSS from designer -->
+    <link rel="stylesheet" type="text/css" href="css/login.css" />
+</head>
+
+<body>
+    <div id="wrapper">
+        <form>
+            <h1>Log in</h1> 
+            <p> 
+                <label for="username" class="uname" data-icon="u" > Username</label>
+                <input id="username" name="username" required="required" type="text" placeholder="Enter username"/>
+            </p>
+            <p> 
+                <label for="password" class="youpasswd" data-icon="p"> Password </label>
+                <input id="password" name="password" required="required" type="password" placeholder="Enter password" /> 
+            </p>
+            <p class="keeplogin"> 
+                <input type="checkbox" name="loginkeeping" id="loginkeeping" value="loginkeeping" /> 
+                <label for="loginkeeping">Remember Me</label>
+            </p>
+            <p class="login button"> 
+                <input type="submit" value="Login" onclick="location.href='mainpage.html';"/> 
+            </p>
+        </form> 
+        <div class="text-right">Don't have an account? 
+            <a href="registration.html">Sign up &raquo;</a>
+        </div>                           
+	</div>   
+</body>
+</html>

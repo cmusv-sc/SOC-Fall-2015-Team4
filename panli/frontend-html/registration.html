@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>register</title>
+    <!-- CSS from Bootstrap -->
+    <link href="css/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- CSS from designer -->
+    <link rel="stylesheet" type="text/css" href="css/login.css" />
+</head>
+
+<body>
+    <div id="wrapper">
+        <form> 
+            <h1> Sign up </h1> 
+            <p> 
+                <label for="usernamesignup" class="uname" data-icon="u">Username</label>
+                <input id="usernamesignup" name="usernamesignup" required="required" type="text" placeholder="Enter Username" />
+            </p>
+            <p> 
+                <label for="emailsignup" class="youmail" data-icon="e" >Email Address</label>
+                <input id="emailsignup" name="emailsignup" required="required" type="email" placeholder="Enter email address"/> 
+            </p>
+            <p> 
+                <label for="passwordsignup" class="youpasswd" data-icon="p">Password </label>
+                <input id="passwordsignup" name="passwordsignup" required="required" type="password" placeholder="Enter password"/>
+            </p>
+            <p> 
+                <label for="passwordsignup_confirm" class="youpasswd" data-icon="p">Confirm Password </label>
+                <input id="passwordsignup_confirm" name="passwordsignup_confirm" required="required" type="password" placeholder="Re-enter password"/>
+            </p>
+            <p class="signin button"> 
+                <input type="submit" value="Sign up" onclick="location.href='mainpage.html';"/> 
+            </p>
+        </form>
+        <div class="text-right">Have an account? <a href="login.html">Log in &raquo;</a></div> 
+        </div>
+            
+                     
+
+</body>
+</html>
