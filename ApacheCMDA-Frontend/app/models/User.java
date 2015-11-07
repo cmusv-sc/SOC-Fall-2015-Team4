@@ -21,7 +21,11 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
+import com.fasterxml.jackson.databind.JsonNode;
 import play.data.validation.Constraints;
+import scala.Boolean;
+import util.APICall;
+import util.Constants;
 
 @Entity
 public class User {
@@ -47,6 +51,9 @@ public class User {
 	private String faxNumber;
 	private String researchFields;
 	private String highestDegree;
+	private static final String GET_REGISTER_RESPONSE = Constants.NEW_BACKEND+"/users/add";
+	private static final String GET_LOGIN_RESPONSE = Constants.NEW_BACKEND+"/users/isUserValid";
+
 
 	// @OneToMany(mappedBy = "user", cascade={CascadeType.ALL})
 	// private Set<ClimateService> climateServices = new
@@ -200,5 +207,23 @@ public class User {
 				+ highestDegree + "]";
 	}
 
-}
+	public static boolean registerSuccess(JsonNode jsonData) {
+		JsonNode userNode = APICall.postAPI(GET_REGISTER_RESPONSE,jsonData);
 
+		if (userNode == null || userNode.has("error")
+				|| !userNode.isArray()) {
+			return false;
+		}
+		return true;
+	}
+
+	public static boolean loginSuccess(JsonNode jsonData) {
+		JsonNode userNode = APICall.postAPI(GET_LOGIN_RESPONSE,jsonData);
+
+		if (userNode == null || userNode.has("error")
+				|| !userNode.isArray()) {
+			return false;
+		}
+		return true;
+	}
+}

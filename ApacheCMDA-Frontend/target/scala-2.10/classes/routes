@@ -5,7 +5,12 @@
 # Home page
 GET         /home                                                controllers.ClimateServiceController.home(email ?= null, vfile ?= null, dataset ?= null)
 GET 		/													 controllers.ClimateServiceController.home(email ?= null, vfile ?= null, dataset ?= null)
-
+GET         /login                                               controllers.UserController.login()
+POST        /login                                               controllers.UserController.CheckUser()
+GET         /register                                            controllers.UserController.register()
+POST        /register                                            controllers.UserController.AddUser()
+GET         /mainpage                                            controllers.UserController.mainpage()
+GET         /homepage                                            controllers.UserController.homepage()
 
 # BugReporting
 GET         /bugs                                                controllers.BugReportController.reports()
@@ -38,3 +43,5 @@ GET 		/climate/getSearchResult				 			controllers.DatasetController.getSearchRes
 
 #Map static resources from the /public folder to the /assets URL path
 GET     	/assets/*file               						controllers.Assets.at(path="/public", file)
+
+# Self

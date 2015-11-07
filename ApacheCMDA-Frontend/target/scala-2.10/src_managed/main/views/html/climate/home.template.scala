@@ -53,14 +53,14 @@ object home extends BaseScalaTemplate[play.api.templates.HtmlFormat.Appendable,F
  * See the License for the specific language governing permissions and         *
  * limitations under the License.											   *
  *******************************************************************************/
-    def apply/*18.2*/(email: String, vfile: String, dataset: String):play.api.templates.HtmlFormat.Appendable = {
+    def apply/*19.2*/(email: String, vfile: String, dataset: String):play.api.templates.HtmlFormat.Appendable = {
         _display_ {import helper._ 
 
 
-Seq[Any](format.raw/*18.49*/("""
+Seq[Any](format.raw/*19.49*/("""
 
-"""),format.raw/*21.1*/("""
-"""),_display_(Seq[Any](/*22.2*/main("Home")/*22.14*/ {_display_(Seq[Any](format.raw/*22.16*/("""
+"""),format.raw/*22.1*/("""
+"""),_display_(Seq[Any](/*23.2*/main("Home")/*23.14*/ {_display_(Seq[Any](format.raw/*23.16*/("""
 
 <div class="jumbotron">
 	<div class="row">
@@ -85,18 +85,18 @@ Seq[Any](format.raw/*18.49*/("""
 				group research projects.
 			</p>
 			
-			<!-- """),_display_(Seq[Any](/*47.10*/if(!session.get("username"))/*47.38*/{_display_(Seq[Any](format.raw/*47.39*/(""" -->
+			<!-- """),_display_(Seq[Any](/*48.10*/if(!session.get("username"))/*48.38*/{_display_(Seq[Any](format.raw/*48.39*/(""" -->
 			
 			<p>
-				"""),_display_(Seq[Any](/*50.6*/if(false)/*50.15*/{_display_(Seq[Any](format.raw/*50.16*/(""" <a class="btn btn-primary" href="climate/register"
-					role="button">Register &raquo;</a> """)))})),format.raw/*51.42*/("""
+				"""),_display_(Seq[Any](/*51.6*/if(false)/*51.15*/{_display_(Seq[Any](format.raw/*51.16*/(""" <a class="btn btn-primary" href="climate/register"
+					role="button">Register &raquo;</a> """)))})),format.raw/*52.42*/("""
 			</p>
-			<!-- """)))})),format.raw/*53.10*/(""" -->
+			<!-- """)))})),format.raw/*54.10*/(""" -->
 		</div>
 	</div>
 </div>
 
-""")))})),format.raw/*58.2*/("""
+""")))})),format.raw/*59.2*/("""
 """))}
     }
     
@@ -109,11 +109,11 @@ Seq[Any](format.raw/*18.49*/("""
 }
                 /*
                     -- GENERATED --
-                    DATE: Mon Nov 02 22:46:44 UTC 2015
-                    SOURCE: /home/SOC-Fall-2015/Dev/SOC-Fall-2015/ApacheCMDA-Frontend/app/views/climate/home.scala.html
-                    HASH: fb5c5c9a762e71e7b93424b00a3fe3ff8e71fe74
+                    DATE: Sat Nov 07 07:23:24 UTC 2015
+                    SOURCE: /home/SOC-Fall-2015/ApacheCMDA-Frontend/app/views/climate/home.scala.html
+                    HASH: a680f409287546418f39e2f46ff5bc4f07c42e75
                     MATRIX: 3190->1205|3349->1252|3378->1272|3415->1274|3436->1286|3476->1288|4420->2196|4457->2224|4496->2225|4552->2246|4570->2255|4609->2256|4734->2349|4784->2367|4846->2398
-                    LINES: 56->18|60->18|62->21|63->22|63->22|63->22|88->47|88->47|88->47|91->50|91->50|91->50|92->51|94->53|99->58
+                    LINES: 56->19|60->19|62->22|63->23|63->23|63->23|88->48|88->48|88->48|91->51|91->51|91->51|92->52|94->54|99->59
                     -- GENERATED --
                 */
             

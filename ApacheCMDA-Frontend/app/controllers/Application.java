@@ -20,30 +20,36 @@ package controllers;
 import java.util.Iterator;
 import java.util.Map.Entry;
 import com.fasterxml.jackson.databind.JsonNode;
+import models.metadata.ClimateService;
 import play.mvc.*;
+import util.APICall;
 import views.html.*;
 
+import play.data.Form;
+import models.User;
+
+
 public class Application extends Controller {
-	
     public static Result index() {
         return ok(index.render(""));
     }
 
     public static class Login {
-        
+
         public String email;
         public String password;
-        
+
         public String validate() {
             return null;
-        } 
+        }
     }
-    
+
     public static void flashMsg(JsonNode jsonNode){
-		Iterator<Entry<String, JsonNode>> it = jsonNode.fields();
-		while (it.hasNext()) {
-			Entry<String, JsonNode> field = it.next();
-			flash(field.getKey(),field.getValue().asText());	
-		}
+        Iterator<Entry<String, JsonNode>> it = jsonNode.fields();
+        while (it.hasNext()) {
+            Entry<String, JsonNode> field = it.next();
+            flash(field.getKey(),field.getValue().asText());
+        }
     }
+
 }

@@ -38,6 +38,7 @@ import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
+import models.*;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 public class ClimateServiceController extends Controller {
@@ -190,9 +191,9 @@ public class ClimateServiceController extends Controller {
 		return ok(file);
 	}
 
+
 	public static Result oneService(String url) {
 		return ok(oneService.render("/assets/html/" + url));
 	}
-
 
 }

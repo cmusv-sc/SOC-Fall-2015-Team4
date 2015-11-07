@@ -89,7 +89,7 @@ Seq[Any](format.raw/*18.19*/("""
    <p>Zhiyu Lin</p>  
    <p>Jian Jiao</p>
    <p>Juanchen Li</p>
-   <p>TEST AGAIN</p>
+   <p>TEST AGAINasdasdasdasd</p>
    <br>
    <h3><strong>CMU Former Contributors</strong></h3>
    <p>Pinchao Wang</p>
@@ -133,9 +133,9 @@ Seq[Any](format.raw/*18.19*/("""
 }
                 /*
                     -- GENERATED --
-                    DATE: Mon Nov 02 22:46:44 UTC 2015
-                    SOURCE: /home/SOC-Fall-2015/Dev/SOC-Fall-2015/ApacheCMDA-Frontend/app/views/climate/aboutus.scala.html
-                    HASH: 2c0f971bb8a7fe8e5b8582ebb60a4703dab8f663
+                    DATE: Sat Nov 07 07:23:22 UTC 2015
+                    SOURCE: /home/SOC-Fall-2015/ApacheCMDA-Frontend/app/views/climate/aboutus.scala.html
+                    HASH: 0b4cfd11d4f0887fff0304d468475fe1a1e2be3f
                     MATRIX: 3179->1205|3291->1222|3329->1225|3354->1241|3394->1243
                     LINES: 56->18|59->18|61->20|61->20|61->20
                     -- GENERATED --
