@@ -11,4 +11,5 @@ import org.springframework.data.repository.CrudRepository;
 @Singleton
 public interface FollowerRepository extends CrudRepository<Follower, Long> {
 	List<Follower> findByUserId(long userId);
+	List<Follower> findByFollowerId(long followerId);
 }

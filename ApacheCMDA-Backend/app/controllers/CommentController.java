@@ -1,5 +1,7 @@
 package controllers;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.List;
 
 import javax.inject.Inject;
@@ -14,6 +16,8 @@ import models.Comment;
 import models.CommentRepository;
 import play.mvc.Controller;
 import play.mvc.Result;
+
+import static util.Common.DATE_PATTERN;
 
 @Named
 @Singleton
@@ -36,9 +40,11 @@ public class CommentController extends Controller{
 		String text = json.path("text").asText();
 		String postId = json.path("postId").asText();
 		String commentUserId = json.path("commentUserId").asText();
-
+		SimpleDateFormat df = new SimpleDateFormat(DATE_PATTERN);
+		String time = df.format(new Date());
+		
 		try {
-			Comment comment = new Comment(text, Long.valueOf(postId), Long.valueOf(commentUserId));
+			Comment comment = new Comment(text, Long.valueOf(postId), Long.valueOf(commentUserId), time);
 			commentRepository.save(comment);
 			System.out.println("Comment saved: " + comment.getId());
 			return created(new Gson().toJson(comment.getId()));
@@ -51,8 +57,8 @@ public class CommentController extends Controller{
 	
 	public Result getAllCommentsByPostId(Long postId, String format) {
 		if (postId == null) {
-			System.out.println("Comment id is null or empty!");
-			return badRequest("Comment id is null or empty!");
+			System.out.println("Post id is null or empty!");
+			return badRequest("Post id is null or empty!");
 		}
 
 		List<Comment> allComments = commentRepository.findByPostId(postId);
@@ -67,5 +73,23 @@ public class CommentController extends Controller{
 		}
 
 		return ok(result);
+	}
+	
+	public Result deleteAllCommentsByPostId(Long postId) {
+		if (postId == null) {
+			System.out.println("Post id is null or empty!");
+			return badRequest("Post id is null or empty!");
+		}
+
+		List<Comment> allComments = commentRepository.findByPostId(postId);
+		
+		if (allComments.size() == 0) {
+			System.out.println("Comment not found with id: " + postId);
+			return notFound("Comment not found with id: " + postId);
+		}
+		
+		commentRepository.delete(allComments);
+		System.out.println("All comments of post " + postId + "are deleted!");
+		return ok("All comments of post " + postId + "are deleted!");
 	}
 }

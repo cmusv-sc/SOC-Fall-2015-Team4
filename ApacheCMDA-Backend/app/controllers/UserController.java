@@ -96,6 +96,25 @@ public class UserController extends Controller {
 		System.out.println("User is deleted: " + id);
 		return ok("User is deleted: " + id);
 	}
+	
+	public Result search() {
+		System.out.println("search called");
+		JsonNode json = request().body().asJson();
+		String keyword = json.path("userKeyword").asText();
+		System.out.println(keyword);
+		
+		
+		Iterable<User> userIterable = userRepository.findAll();
+		List<User> userList = new ArrayList<User>();
+		for (User user : userIterable) {
+			if(user.getFirstName().contains(keyword) || user.getLastName().contains(keyword))
+				userList.add(user);
+		}
+		
+		System.out.println("-------"+userList.size());
+		String result = new Gson().toJson(userList);
+		return ok(result);
+	}
 
 	public Result updateUser(long id) {
 		JsonNode json = request().body().asJson();
@@ -185,10 +204,15 @@ public class UserController extends Controller {
 		}
 		String email = json.path("email").asText();
 		String password = json.path("password").asText();
+		
+		System.out.println("**************" + email + "************" + password);
+		
 		User user = userRepository.findByEmail(email);
+		String result = new String();
 		if (user.getPassword().equals(password)) {
 			System.out.println("User is valid");
-			return ok("User is valid");
+			result = new Gson().toJson(user);
+			return ok(result);
 		} else {
 			System.out.println("User is not valid");
 			return badRequest("User is not valid");
@@ -219,6 +243,19 @@ public class UserController extends Controller {
 			return badRequest("User is not deleted");
 		}
 		
+	}
+	
+	public Result isEmailExisted(){
+		JsonNode json = request().body().asJson();
+		if (json == null) {
+			System.out.println("Cannot check email, expecting Json data");
+			return badRequest("Cannot check email, expecting Json data");
+		}
+		String email = json.path("email").asText();
+		if (userRepository.findByEmail(email) != null) {
+			return badRequest("Email already existed");
+		}
+		return ok("Email is valid");
 	}
 
 }

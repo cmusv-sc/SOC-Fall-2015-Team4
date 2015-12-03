@@ -40,6 +40,7 @@ public class User {
 	private String faxNumber;
 	private String researchFields;
 	private String highestDegree;
+	private String photoURL;
 
 	// @OneToMany(mappedBy = "user", cascade={CascadeType.ALL})
 	// private Set<ClimateService> climateServices = new

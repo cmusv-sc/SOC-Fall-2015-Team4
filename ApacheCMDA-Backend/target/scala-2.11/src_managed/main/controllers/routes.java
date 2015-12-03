@@ -1,6 +1,6 @@
-// @SOURCE:/home/SOC-Fall-2015/ApacheCMDA-Backend/conf/routes
-// @HASH:1c9520eede9bc45447040ad81ddbd97fff79d266
-// @DATE:Sat Nov 07 06:55:18 UTC 2015
+// @SOURCE:/Users/apple/test/SOC-Fall-2015-Team4-Lead-Shuting-Xi/ApacheCMDA-Backend/conf/routes
+// @HASH:2e5cfa85025ef8bdfa991ec48d7bd26692f6dd3d
+// @DATE:Mon Nov 30 17:11:21 EST 2015
 
 package controllers;
 
@@ -13,7 +13,6 @@ public static final controllers.ReverseParameterController ParameterController =
 public static final controllers.ReversePostController PostController = new controllers.ReversePostController();
 public static final controllers.ReverseCommentController CommentController = new controllers.ReverseCommentController();
 public static final controllers.ReverseDatasetController DatasetController = new controllers.ReverseDatasetController();
-public static final controllers.ReverseSharePostController SharePostController = new controllers.ReverseSharePostController();
 public static final controllers.ReverseClimateServiceController ClimateServiceController = new controllers.ReverseClimateServiceController();
 
 public static class javascript {
@@ -25,7 +24,6 @@ public static final controllers.javascript.ReverseParameterController ParameterC
 public static final controllers.javascript.ReversePostController PostController = new controllers.javascript.ReversePostController();
 public static final controllers.javascript.ReverseCommentController CommentController = new controllers.javascript.ReverseCommentController();
 public static final controllers.javascript.ReverseDatasetController DatasetController = new controllers.javascript.ReverseDatasetController();
-public static final controllers.javascript.ReverseSharePostController SharePostController = new controllers.javascript.ReverseSharePostController();
 public static final controllers.javascript.ReverseClimateServiceController ClimateServiceController = new controllers.javascript.ReverseClimateServiceController();
 }
           
@@ -39,7 +37,6 @@ public static final controllers.ref.ReverseParameterController ParameterControll
 public static final controllers.ref.ReversePostController PostController = new controllers.ref.ReversePostController();
 public static final controllers.ref.ReverseCommentController CommentController = new controllers.ref.ReverseCommentController();
 public static final controllers.ref.ReverseDatasetController DatasetController = new controllers.ref.ReverseDatasetController();
-public static final controllers.ref.ReverseSharePostController SharePostController = new controllers.ref.ReverseSharePostController();
 public static final controllers.ref.ReverseClimateServiceController ClimateServiceController = new controllers.ref.ReverseClimateServiceController();
 }
           

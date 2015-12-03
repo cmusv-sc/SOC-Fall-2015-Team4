@@ -4,7 +4,7 @@
 		module="apachecmda_backend_2.11"
 		revision="1.0-SNAPSHOT"
 		status="integration"
-		publication="20151107064854"
+		publication="20151130170939"
 	>
 		<description>
 		ApacheCMDA_Backend

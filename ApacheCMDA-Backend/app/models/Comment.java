@@ -13,15 +13,25 @@ public class Comment {
 	private String text;
 	private long postId;
 	private long commentUserId;
+	private String time;
 	
 	public Comment() {
 	}
 
-	public Comment(String text, long postId, long commentUserId) {
+	public Comment(String text, long postId, long commentUserId, String time) {
 		super();
 		this.text = text;
 		this.postId = postId;
 		this.commentUserId = commentUserId;
+		this.time = time;
+	}
+
+	public String getTime() {
+		return time;
+	}
+
+	public void setTime(String time) {
+		this.time = time;
 	}
 
 	public long getId() {
@@ -59,6 +69,6 @@ public class Comment {
 	@Override
 	public String toString() {
 		return "Comment [id=" + id + ", text=" + text + ", postId=" + postId
-				+ ", commentUserId=" + commentUserId + "]";
+				+ ", commentUserId=" + commentUserId + ", time=" + time + "]";
 	}
 }

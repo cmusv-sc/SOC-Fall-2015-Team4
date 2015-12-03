@@ -15,18 +15,59 @@ public class Post {
 	private int likes;
 	private String location;
 	private long postUserId;
-	
+	private String share;
+	private String time;
+	private String postUserFirstName;
+	private String postUserLastName;
+
 	public Post() {
 	}
 
 	public Post(String visibility, String text, int likes,
-			String location, long postUserId) {
+			String location, long postUserId, String share, String time, 
+			String postUserFirstName, String postUserLastName) {
 		super();
 		this.visibility = visibility;
 		this.text = text;
 		this.likes = likes;
 		this.location = location;
 		this.postUserId = postUserId;
+		this.share = share;
+		this.time = time;
+		this.postUserFirstName = postUserFirstName;
+		this.postUserLastName = postUserLastName;
+	}
+
+	public String getPostUserFirstName() {
+		return postUserFirstName;
+	}
+
+	public void setPostUserFirstName(String postUserFirstName) {
+		this.postUserFirstName = postUserFirstName;
+	}
+
+	public String getPostUserLastName() {
+		return postUserLastName;
+	}
+
+	public void setPostUserLastName(String postUserLastName) {
+		this.postUserLastName = postUserLastName;
+	}
+
+	public String getTime() {
+		return time;
+	}
+
+	public void setTime(String time) {
+		this.time = time;
+	}
+	
+	public String getShare() {
+		return share;
+	}
+
+	public void setShare(String share) {
+		this.share = share;
 	}
 
 	public long getId() {
@@ -37,7 +78,7 @@ public class Post {
 		this.id = id;
 	}
 
-	public String isVisibility() {
+	public String getVisibility() {
 		return visibility;
 	}
 
@@ -81,6 +122,10 @@ public class Post {
 	public String toString() {
 		return "Post [id=" + id + ", visibility=" + visibility + ", text="
 				+ text + ", likes=" + likes + ", location=" + location
-				+ ", postUserId=" + postUserId + "]";
+				+ ", postUserId=" + postUserId + ", share=" + share + ", time="
+				+ time + ", postUserFirstName=" + postUserFirstName
+				+ ", postUserLastName=" + postUserLastName + "]";
 	}
+
+	
 }
