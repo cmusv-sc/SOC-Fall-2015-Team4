@@ -1,16 +1,12 @@
 @charset "UTF-8";
-/* CSS Document for profile.html*/
+/* CSS Document for global_stream.html */
 body {
 	padding-top:50px;
 	background-image: url("../image/bg.jpg");
-	
 }
 /* Navigation bar */
 #bar {
 	background-image: url("../image/background.jpg");
-}
-#search-form1 {
-	padding-left:100px;
 }
 /* User Information */
 #wrapper1 {
@@ -21,6 +17,8 @@ body {
 	color: #004986;
 	margin-top: 10px;
 	background-image: url("../image/imgback.jpg");
+	background-repeat: no-repeat;
+	background-size: 100%;
 	text-align: left;
 	padding: 20px 20px 20px;
 	height:200px;

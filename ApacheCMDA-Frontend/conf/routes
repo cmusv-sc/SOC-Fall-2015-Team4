@@ -5,12 +5,13 @@
 # Home page
 GET         /home                                                controllers.ClimateServiceController.home(email ?= null, vfile ?= null, dataset ?= null)
 GET 		/													 controllers.ClimateServiceController.home(email ?= null, vfile ?= null, dataset ?= null)
-GET         /login                                               controllers.UserController.login()
-POST        /login                                               controllers.UserController.CheckUser()
-GET         /register                                            controllers.UserController.register()
-POST        /register                                            controllers.UserController.AddUser()
-GET         /mainpage                                            controllers.UserController.mainpage()
-GET         /homepage                                            controllers.UserController.homepage()
+GET		/login						controllers.Application.login()
+GET		/logout						controllers.Application.logout()
+GET		/authenticate				controllers.Application.authenticate()
+GET		/signup						controllers.Application.signup()
+GET		/createNewUser				controllers.Application.createNewUser()
+GET		/createSuccess				controllers.Application.createSuccess()
+POST	/isEmailExisted				controllers.Application.isEmailExisted()
 
 # BugReporting
 GET         /bugs                                                controllers.BugReportController.reports()
@@ -44,4 +45,16 @@ GET 		/climate/getSearchResult				 			controllers.DatasetController.getSearchRes
 #Map static resources from the /public folder to the /assets URL path
 GET     	/assets/*file               						controllers.Assets.at(path="/public", file)
 
-# Self
+
+## Self
+GET         /mainpage                                            controllers.UserController.mainpage()
+GET         /homepage                                            controllers.UserController.homepage()
+POST        /addPost                                             controllers.UserController.addPost()
+POST    	/deletePost          				                 controllers.UserController.deletePost()
+POST		/sharePost											 controllers.UserController.sharePost()
+POST    	/likePost          				                     controllers.UserController.likePost()
+POST        /searchUser          				                 controllers.UserController.searchUser()
+POST        /addComment                                          controllers.UserController.addComment()
+GET         /allComment/:id                                      controllers.UserController.allComment(id: Long)
+GET         /editProfile                                         controllers.UserController.editProfile()
+GET		    /editUser				                             controllers.UserController.editUser()

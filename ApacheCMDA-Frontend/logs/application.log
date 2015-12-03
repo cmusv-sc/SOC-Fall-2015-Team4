@@ -1,12 +1,1562 @@
-2015-11-07 07:43:23,696 - [INFO] - from play in pool-4-thread-3 
+2015-12-03 00:40:17,761 - [INFO] - from play in pool-4-thread-1 
 Listening for HTTP on /0:0:0:0:0:0:0:0:9000
 
-2015-11-07 07:44:00,066 - [INFO] - from play in play-internal-execution-context-1 
+2015-12-03 00:40:28,915 - [INFO] - from play in play-internal-execution-context-1 
 datasource [jdbc:h2:file:data/db;DB_CLOSE_DELAY=-1] bound to JNDI as DefaultDS
 
-2015-11-07 07:44:00,314 - [INFO] - from play in play-internal-execution-context-1 
+2015-12-03 00:40:29,147 - [INFO] - from play in play-internal-execution-context-1 
 database [default] connected at jdbc:h2:file:data/db
 
-2015-11-07 07:44:02,297 - [INFO] - from play in play-internal-execution-context-1 
+2015-12-03 00:40:29,923 - [INFO] - from play in play-internal-execution-context-1 
 Application started (Dev)
+
+2015-12-03 00:41:02,071 - [INFO] - from application in play-akka.actor.default-dispatcher-4 
+http://localhost:9034/posts/getAllPostsByUserId/userId/92/json
+
+2015-12-03 00:41:02,117 - [INFO] - from application in play-akka.actor.default-dispatcher-5 
+404
+
+2015-12-03 00:41:12,639 - [INFO] - from application in play-akka.actor.default-dispatcher-3 
+http://localhost:9034/posts/getAllPostsByUserId/userId/92/json
+
+2015-12-03 00:48:56,150 - [INFO] - from play in play-internal-execution-context-4 
+datasource [jdbc:h2:file:data/db;DB_CLOSE_DELAY=-1] bound to JNDI as DefaultDS
+
+2015-12-03 00:48:56,153 - [INFO] - from play in play-internal-execution-context-4 
+database [default] connected at jdbc:h2:file:data/db
+
+2015-12-03 00:48:56,341 - [INFO] - from play in play-internal-execution-context-4 
+Application started (Dev)
+
+2015-12-03 00:48:56,350 - [INFO] - from application in play-akka.actor.default-dispatcher-15 
+http://localhost:9034/posts/getAllPostsByUserId/userId/92/json
+
+2015-12-03 00:57:22,336 - [ERROR] - from application in New I/O worker #5 
+
+
+! @6oapm9a2i - Internal server error, for (POST) [/addPost] ->
+
+play.PlayExceptions$CompilationException: Compilation error[not found: value commentServices]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14$$anonfun$apply$16.apply(PlayReloader.scala:304) ~[na:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14$$anonfun$apply$16.apply(PlayReloader.scala:304) ~[na:na]
+	at scala.Option.map(Option.scala:145) ~[scala-library-2.10.3.jar:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14.apply(PlayReloader.scala:304) ~[na:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14.apply(PlayReloader.scala:298) ~[na:na]
+	at scala.Option.map(Option.scala:145) ~[scala-library-2.10.3.jar:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2.apply(PlayReloader.scala:298) ~[na:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2.apply(PlayReloader.scala:296) ~[na:na]
+	at scala.util.Either$LeftProjection.map(Either.scala:377) ~[scala-library-2.10.3.jar:na]
+	at play.PlayReloader$$anon$1.reload(PlayReloader.scala:296) ~[na:na]
+	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:104) ~[play_2.10-2.2.3.jar:2.2.3]
+	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:102) ~[play_2.10-2.2.3.jar:2.2.3]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) ~[scala-library-2.10.3.jar:na]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) ~[scala-library-2.10.3.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask$AdaptedRunnableAction.exec(ForkJoinTask.java:1361) ~[scala-library-2.10.3.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) ~[scala-library-2.10.3.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) ~[scala-library-2.10.3.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) ~[scala-library-2.10.3.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) ~[scala-library-2.10.3.jar:na]
+
+2015-12-03 00:57:48,283 - [INFO] - from play in play-internal-execution-context-4 
+datasource [jdbc:h2:file:data/db;DB_CLOSE_DELAY=-1] bound to JNDI as DefaultDS
+
+2015-12-03 00:57:48,287 - [INFO] - from play in play-internal-execution-context-4 
+database [default] connected at jdbc:h2:file:data/db
+
+2015-12-03 00:57:48,598 - [INFO] - from play in play-internal-execution-context-4 
+Application started (Dev)
+
+2015-12-03 00:57:55,591 - [INFO] - from application in play-akka.actor.default-dispatcher-17 
+http://localhost:9034/posts/getAllPostsByUserId/userId/92/json
+
+2015-12-03 00:57:59,113 - [INFO] - from application in play-akka.actor.default-dispatcher-30 
+http://localhost:9034/posts/getAllPostsByUserId/userId/92/json
+
+2015-12-03 10:24:20,783 - [ERROR] - from application in New I/O worker #3 
+
+
+! @6ob2ikn6m - Internal server error, for (GET) [/login] ->
+
+play.PlayExceptions$CompilationException: Compilation error[object postForm is not a member of package views.html.helper]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14$$anonfun$apply$16.apply(PlayReloader.scala:304) ~[na:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14$$anonfun$apply$16.apply(PlayReloader.scala:304) ~[na:na]
+	at scala.Option.map(Option.scala:145) ~[scala-library-2.10.3.jar:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14.apply(PlayReloader.scala:304) ~[na:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14.apply(PlayReloader.scala:298) ~[na:na]
+	at scala.Option.map(Option.scala:145) ~[scala-library-2.10.3.jar:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2.apply(PlayReloader.scala:298) ~[na:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2.apply(PlayReloader.scala:296) ~[na:na]
+	at scala.util.Either$LeftProjection.map(Either.scala:377) ~[scala-library-2.10.3.jar:na]
+	at play.PlayReloader$$anon$1.reload(PlayReloader.scala:296) ~[na:na]
+	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:104) ~[play_2.10-2.2.3.jar:2.2.3]
+	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:102) ~[play_2.10-2.2.3.jar:2.2.3]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) ~[scala-library-2.10.3.jar:na]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) ~[scala-library-2.10.3.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask$AdaptedRunnableAction.exec(ForkJoinTask.java:1361) ~[scala-library-2.10.3.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) ~[scala-library-2.10.3.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) ~[scala-library-2.10.3.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) ~[scala-library-2.10.3.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) ~[scala-library-2.10.3.jar:na]
+
+2015-12-03 10:25:06,183 - [ERROR] - from application in New I/O worker #3 
+
+
+! @6ob2incb0 - Internal server error, for (GET) [/login] ->
+
+play.PlayExceptions$CompilationException: Compilation error[error: method render in class homepage cannot be applied to given types;]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14$$anonfun$apply$16.apply(PlayReloader.scala:304) ~[na:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14$$anonfun$apply$16.apply(PlayReloader.scala:304) ~[na:na]
+	at scala.Option.map(Option.scala:145) ~[scala-library-2.10.3.jar:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14.apply(PlayReloader.scala:304) ~[na:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14.apply(PlayReloader.scala:298) ~[na:na]
+	at scala.Option.map(Option.scala:145) ~[scala-library-2.10.3.jar:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2.apply(PlayReloader.scala:298) ~[na:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2.apply(PlayReloader.scala:296) ~[na:na]
+	at scala.util.Either$LeftProjection.map(Either.scala:377) ~[scala-library-2.10.3.jar:na]
+	at play.PlayReloader$$anon$1.reload(PlayReloader.scala:296) ~[na:na]
+	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:104) ~[play_2.10-2.2.3.jar:2.2.3]
+	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:102) ~[play_2.10-2.2.3.jar:2.2.3]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) ~[scala-library-2.10.3.jar:na]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) ~[scala-library-2.10.3.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask$AdaptedRunnableAction.exec(ForkJoinTask.java:1361) ~[scala-library-2.10.3.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) ~[scala-library-2.10.3.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) ~[scala-library-2.10.3.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) ~[scala-library-2.10.3.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) ~[scala-library-2.10.3.jar:na]
+
+2015-12-03 10:25:34,704 - [ERROR] - from application in New I/O worker #3 
+
+
+! @6ob2ip2fp - Internal server error, for (GET) [/login] ->
+
+play.PlayExceptions$CompilationException: Compilation error[error: incompatible types: List<Comment> cannot be converted to Result]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14$$anonfun$apply$16.apply(PlayReloader.scala:304) ~[na:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14$$anonfun$apply$16.apply(PlayReloader.scala:304) ~[na:na]
+	at scala.Option.map(Option.scala:145) ~[scala-library-2.10.3.jar:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14.apply(PlayReloader.scala:304) ~[na:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14.apply(PlayReloader.scala:298) ~[na:na]
+	at scala.Option.map(Option.scala:145) ~[scala-library-2.10.3.jar:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2.apply(PlayReloader.scala:298) ~[na:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2.apply(PlayReloader.scala:296) ~[na:na]
+	at scala.util.Either$LeftProjection.map(Either.scala:377) ~[scala-library-2.10.3.jar:na]
+	at play.PlayReloader$$anon$1.reload(PlayReloader.scala:296) ~[na:na]
+	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:104) ~[play_2.10-2.2.3.jar:2.2.3]
+	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:102) ~[play_2.10-2.2.3.jar:2.2.3]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) ~[scala-library-2.10.3.jar:na]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) ~[scala-library-2.10.3.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask$AdaptedRunnableAction.exec(ForkJoinTask.java:1361) ~[scala-library-2.10.3.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) ~[scala-library-2.10.3.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) ~[scala-library-2.10.3.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) ~[scala-library-2.10.3.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) ~[scala-library-2.10.3.jar:na]
+
+2015-12-03 10:26:04,264 - [INFO] - from play in play-internal-execution-context-4 
+datasource [jdbc:h2:file:data/db;DB_CLOSE_DELAY=-1] bound to JNDI as DefaultDS
+
+2015-12-03 10:26:04,266 - [INFO] - from play in play-internal-execution-context-4 
+database [default] connected at jdbc:h2:file:data/db
+
+2015-12-03 10:26:04,379 - [INFO] - from play in play-internal-execution-context-4 
+Application started (Dev)
+
+2015-12-03 10:26:10,105 - [INFO] - from application in play-akka.actor.default-dispatcher-37 
+http://localhost:9034/posts/getAllPostsByUserId/userId/92/json
+
+2015-12-03 10:26:12,518 - [INFO] - from application in play-akka.actor.default-dispatcher-38 
+http://localhost:9034/comments/getAllCommentsByPostId/post/3/json
+
+2015-12-03 10:26:12,546 - [INFO] - from application in play-akka.actor.default-dispatcher-32 
+404
+
+2015-12-03 10:26:17,238 - [INFO] - from application in play-akka.actor.default-dispatcher-33 
+http://localhost:9034/posts/getAllPostsByUserId/userId/92/json
+
+2015-12-03 10:26:17,349 - [INFO] - from application in play-akka.actor.default-dispatcher-35 
+http://localhost:9034/posts/getAllPostsByUserId/userId/92/json
+
+2015-12-03 10:26:17,349 - [INFO] - from application in play-akka.actor.default-dispatcher-33 
+http://localhost:9034/posts/getAllPostsByUserId/userId/92/json
+
+2015-12-03 10:26:19,504 - [INFO] - from application in play-akka.actor.default-dispatcher-31 
+http://localhost:9034/comments/getAllCommentsByPostId/post/3/json
+
+2015-12-03 10:27:18,546 - [INFO] - from play in play-internal-execution-context-4 
+datasource [jdbc:h2:file:data/db;DB_CLOSE_DELAY=-1] bound to JNDI as DefaultDS
+
+2015-12-03 10:27:18,549 - [INFO] - from play in play-internal-execution-context-4 
+database [default] connected at jdbc:h2:file:data/db
+
+2015-12-03 10:27:18,732 - [INFO] - from play in play-internal-execution-context-4 
+Application started (Dev)
+
+2015-12-03 10:27:18,741 - [INFO] - from application in play-akka.actor.default-dispatcher-39 
+http://localhost:9034/posts/getAllPostsByUserId/userId/92/json
+
+2015-12-03 10:27:21,376 - [INFO] - from application in play-akka.actor.default-dispatcher-46 
+http://localhost:9034/comments/getAllCommentsByPostId/post/3/json
+
+2015-12-03 10:27:26,351 - [INFO] - from application in play-akka.actor.default-dispatcher-47 
+http://localhost:9034/posts/getAllPostsByUserId/userId/92/json
+
+2015-12-03 10:27:26,383 - [INFO] - from application in play-akka.actor.default-dispatcher-47 
+http://localhost:9034/posts/getAllPostsByUserId/userId/92/json
+
+2015-12-03 10:27:26,445 - [INFO] - from application in play-akka.actor.default-dispatcher-45 
+http://localhost:9034/posts/getAllPostsByUserId/userId/92/json
+
+2015-12-03 10:28:31,101 - [INFO] - from play in play-internal-execution-context-8 
+datasource [jdbc:h2:file:data/db;DB_CLOSE_DELAY=-1] bound to JNDI as DefaultDS
+
+2015-12-03 10:28:31,105 - [INFO] - from play in play-internal-execution-context-8 
+database [default] connected at jdbc:h2:file:data/db
+
+2015-12-03 10:28:31,319 - [INFO] - from play in play-internal-execution-context-8 
+Application started (Dev)
+
+2015-12-03 10:28:31,332 - [INFO] - from application in play-akka.actor.default-dispatcher-39 
+http://localhost:9034/posts/getAllPostsByUserId/userId/92/json
+
+2015-12-03 10:28:33,967 - [INFO] - from application in play-akka.actor.default-dispatcher-51 
+http://localhost:9034/comments/getAllCommentsByPostId/post/3/json
+
+2015-12-03 10:28:39,193 - [INFO] - from application in play-akka.actor.default-dispatcher-55 
+http://localhost:9034/posts/getAllPostsByUserId/userId/92/json
+
+2015-12-03 10:28:39,242 - [INFO] - from application in play-akka.actor.default-dispatcher-55 
+http://localhost:9034/posts/getAllPostsByUserId/userId/92/json
+
+2015-12-03 10:28:39,264 - [INFO] - from application in play-akka.actor.default-dispatcher-50 
+http://localhost:9034/posts/getAllPostsByUserId/userId/92/json
+
+2015-12-03 10:40:09,003 - [ERROR] - from application in New I/O worker #7 
+
+
+! @6ob2kmlon - Internal server error, for (GET) [/mainpage] ->
+
+play.PlayExceptions$CompilationException: Compilation error[error: cannot find symbol]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14$$anonfun$apply$16.apply(PlayReloader.scala:304) ~[na:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14$$anonfun$apply$16.apply(PlayReloader.scala:304) ~[na:na]
+	at scala.Option.map(Option.scala:145) ~[scala-library-2.10.3.jar:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14.apply(PlayReloader.scala:304) ~[na:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14.apply(PlayReloader.scala:298) ~[na:na]
+	at scala.Option.map(Option.scala:145) ~[scala-library-2.10.3.jar:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2.apply(PlayReloader.scala:298) ~[na:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2.apply(PlayReloader.scala:296) ~[na:na]
+	at scala.util.Either$LeftProjection.map(Either.scala:377) ~[scala-library-2.10.3.jar:na]
+	at play.PlayReloader$$anon$1.reload(PlayReloader.scala:296) ~[na:na]
+	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:104) ~[play_2.10-2.2.3.jar:2.2.3]
+	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:102) ~[play_2.10-2.2.3.jar:2.2.3]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) ~[scala-library-2.10.3.jar:na]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) ~[scala-library-2.10.3.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask$AdaptedRunnableAction.exec(ForkJoinTask.java:1361) ~[scala-library-2.10.3.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) ~[scala-library-2.10.3.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) ~[scala-library-2.10.3.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) ~[scala-library-2.10.3.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) ~[scala-library-2.10.3.jar:na]
+
+2015-12-03 10:40:59,716 - [ERROR] - from application in New I/O worker #7 
+
+
+! @6ob2kpip8 - Internal server error, for (GET) [/mainpage] ->
+
+play.PlayExceptions$CompilationException: Compilation error[error: cannot find symbol]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14$$anonfun$apply$16.apply(PlayReloader.scala:304) ~[na:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14$$anonfun$apply$16.apply(PlayReloader.scala:304) ~[na:na]
+	at scala.Option.map(Option.scala:145) ~[scala-library-2.10.3.jar:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14.apply(PlayReloader.scala:304) ~[na:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14.apply(PlayReloader.scala:298) ~[na:na]
+	at scala.Option.map(Option.scala:145) ~[scala-library-2.10.3.jar:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2.apply(PlayReloader.scala:298) ~[na:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2.apply(PlayReloader.scala:296) ~[na:na]
+	at scala.util.Either$LeftProjection.map(Either.scala:377) ~[scala-library-2.10.3.jar:na]
+	at play.PlayReloader$$anon$1.reload(PlayReloader.scala:296) ~[na:na]
+	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:104) ~[play_2.10-2.2.3.jar:2.2.3]
+	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:102) ~[play_2.10-2.2.3.jar:2.2.3]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) ~[scala-library-2.10.3.jar:na]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) ~[scala-library-2.10.3.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask$AdaptedRunnableAction.exec(ForkJoinTask.java:1361) ~[scala-library-2.10.3.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) ~[scala-library-2.10.3.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) ~[scala-library-2.10.3.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) ~[scala-library-2.10.3.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) ~[scala-library-2.10.3.jar:na]
+
+2015-12-03 10:41:56,589 - [INFO] - from play in play-internal-execution-context-8 
+datasource [jdbc:h2:file:data/db;DB_CLOSE_DELAY=-1] bound to JNDI as DefaultDS
+
+2015-12-03 10:41:56,592 - [INFO] - from play in play-internal-execution-context-8 
+database [default] connected at jdbc:h2:file:data/db
+
+2015-12-03 10:41:56,802 - [INFO] - from play in play-internal-execution-context-8 
+Application started (Dev)
+
+2015-12-03 10:41:56,811 - [INFO] - from application in play-akka.actor.default-dispatcher-54 
+http://localhost:9034/posts/getAllPostsByUserId/userId/92/json
+
+2015-12-03 10:42:05,492 - [INFO] - from application in play-akka.actor.default-dispatcher-61 
+http://localhost:9034/comments/getAllCommentsByPostId/post/3/json
+
+2015-12-03 10:42:09,867 - [INFO] - from application in play-akka.actor.default-dispatcher-63 
+http://localhost:9034/posts/getAllPostsByUserId/userId/92/json
+
+2015-12-03 10:42:09,904 - [INFO] - from application in play-akka.actor.default-dispatcher-63 
+http://localhost:9034/posts/getAllPostsByUserId/userId/92/json
+
+2015-12-03 10:42:09,943 - [INFO] - from application in play-akka.actor.default-dispatcher-63 
+http://localhost:9034/posts/getAllPostsByUserId/userId/92/json
+
+2015-12-03 10:42:17,313 - [INFO] - from application in play-akka.actor.default-dispatcher-63 
+http://localhost:9034/comments/getAllCommentsByPostId/post/3/json
+
+2015-12-03 10:42:23,995 - [INFO] - from application in play-akka.actor.default-dispatcher-64 
+http://localhost:9034/posts/getAllPostsByUserId/userId/92/json
+
+2015-12-03 10:42:24,037 - [INFO] - from application in play-akka.actor.default-dispatcher-64 
+http://localhost:9034/posts/getAllPostsByUserId/userId/92/json
+
+2015-12-03 10:42:24,076 - [INFO] - from application in play-akka.actor.default-dispatcher-54 
+http://localhost:9034/posts/getAllPostsByUserId/userId/92/json
+
+2015-12-03 10:44:21,611 - [INFO] - from application in play-akka.actor.default-dispatcher-61 
+http://localhost:9034/comments/getAllCommentsByPostId/post/3/json
+
+2015-12-03 10:50:18,453 - [INFO] - from play in play-internal-execution-context-10 
+datasource [jdbc:h2:file:data/db;DB_CLOSE_DELAY=-1] bound to JNDI as DefaultDS
+
+2015-12-03 10:50:18,457 - [INFO] - from play in play-internal-execution-context-10 
+database [default] connected at jdbc:h2:file:data/db
+
+2015-12-03 10:50:18,639 - [INFO] - from play in play-internal-execution-context-10 
+Application started (Dev)
+
+2015-12-03 10:50:18,649 - [INFO] - from application in play-akka.actor.default-dispatcher-61 
+http://localhost:9034/posts/getAllPostsByUserId/userId/92/json
+
+2015-12-03 10:50:36,821 - [INFO] - from application in play-akka.actor.default-dispatcher-73 
+http://localhost:9034/comments/getAllCommentsByPostId/post/3/json
+
+2015-12-03 10:52:12,051 - [INFO] - from play in play-internal-execution-context-10 
+datasource [jdbc:h2:file:data/db;DB_CLOSE_DELAY=-1] bound to JNDI as DefaultDS
+
+2015-12-03 10:52:12,053 - [INFO] - from play in play-internal-execution-context-10 
+database [default] connected at jdbc:h2:file:data/db
+
+2015-12-03 10:52:12,232 - [INFO] - from play in play-internal-execution-context-10 
+Application started (Dev)
+
+2015-12-03 10:52:12,242 - [INFO] - from application in play-akka.actor.default-dispatcher-76 
+http://localhost:9034/posts/getAllPostsByUserId/userId/92/json
+
+2015-12-03 10:52:15,478 - [INFO] - from application in play-akka.actor.default-dispatcher-78 
+http://localhost:9034/posts/getAllPostsByUserId/userId/92/json
+
+2015-12-03 10:52:20,777 - [INFO] - from application in play-akka.actor.default-dispatcher-76 
+http://localhost:9034/comments/getAllCommentsByPostId/post/3/json
+
+2015-12-03 10:53:07,688 - [INFO] - from play in play-internal-execution-context-13 
+datasource [jdbc:h2:file:data/db;DB_CLOSE_DELAY=-1] bound to JNDI as DefaultDS
+
+2015-12-03 10:53:07,690 - [INFO] - from play in play-internal-execution-context-13 
+database [default] connected at jdbc:h2:file:data/db
+
+2015-12-03 10:53:07,825 - [INFO] - from play in play-internal-execution-context-13 
+Application started (Dev)
+
+2015-12-03 10:53:07,835 - [INFO] - from application in play-akka.actor.default-dispatcher-79 
+http://localhost:9034/posts/getAllPostsByUserId/userId/92/json
+
+2015-12-03 10:53:15,324 - [INFO] - from application in play-akka.actor.default-dispatcher-85 
+http://localhost:9034/posts/getAllPostsByUserId/userId/92/json
+
+2015-12-03 10:53:19,794 - [INFO] - from application in play-akka.actor.default-dispatcher-85 
+http://localhost:9034/comments/getAllCommentsByPostId/post/3/json
+
+2015-12-03 10:56:55,404 - [INFO] - from play in play-internal-execution-context-13 
+datasource [jdbc:h2:file:data/db;DB_CLOSE_DELAY=-1] bound to JNDI as DefaultDS
+
+2015-12-03 10:56:55,406 - [INFO] - from play in play-internal-execution-context-13 
+database [default] connected at jdbc:h2:file:data/db
+
+2015-12-03 10:56:55,567 - [INFO] - from play in play-internal-execution-context-13 
+Application started (Dev)
+
+2015-12-03 10:56:55,573 - [INFO] - from application in play-akka.actor.default-dispatcher-88 
+http://localhost:9034/posts/getAllPostsByUserId/userId/92/json
+
+2015-12-03 10:56:59,135 - [INFO] - from application in play-akka.actor.default-dispatcher-95 
+http://localhost:9034/posts/getAllPostsByUserId/userId/92/json
+
+2015-12-03 10:57:03,084 - [INFO] - from application in play-akka.actor.default-dispatcher-94 
+http://localhost:9034/comments/getAllCommentsByPostId/post/3/json
+
+2015-12-03 10:57:36,216 - [INFO] - from play in play-internal-execution-context-15 
+datasource [jdbc:h2:file:data/db;DB_CLOSE_DELAY=-1] bound to JNDI as DefaultDS
+
+2015-12-03 10:57:36,220 - [INFO] - from play in play-internal-execution-context-15 
+database [default] connected at jdbc:h2:file:data/db
+
+2015-12-03 10:57:36,406 - [INFO] - from play in play-internal-execution-context-15 
+Application started (Dev)
+
+2015-12-03 10:57:36,419 - [INFO] - from application in play-akka.actor.default-dispatcher-96 
+http://localhost:9034/posts/getAllPostsByUserId/userId/92/json
+
+2015-12-03 10:57:40,811 - [INFO] - from application in play-akka.actor.default-dispatcher-92 
+http://localhost:9034/comments/getAllCommentsByPostId/post/3/json
+
+2015-12-03 10:58:26,916 - [INFO] - from play in play-internal-execution-context-15 
+datasource [jdbc:h2:file:data/db;DB_CLOSE_DELAY=-1] bound to JNDI as DefaultDS
+
+2015-12-03 10:58:26,921 - [INFO] - from play in play-internal-execution-context-15 
+database [default] connected at jdbc:h2:file:data/db
+
+2015-12-03 10:58:27,055 - [INFO] - from play in play-internal-execution-context-15 
+Application started (Dev)
+
+2015-12-03 10:58:27,064 - [INFO] - from application in play-akka.actor.default-dispatcher-98 
+http://localhost:9034/posts/getAllPostsByUserId/userId/92/json
+
+2015-12-03 10:58:29,837 - [INFO] - from application in play-akka.actor.default-dispatcher-104 
+http://localhost:9034/comments/getAllCommentsByPostId/post/3/json
+
+2015-12-03 11:00:09,093 - [INFO] - from play in play-internal-execution-context-16 
+datasource [jdbc:h2:file:data/db;DB_CLOSE_DELAY=-1] bound to JNDI as DefaultDS
+
+2015-12-03 11:00:09,096 - [INFO] - from play in play-internal-execution-context-16 
+database [default] connected at jdbc:h2:file:data/db
+
+2015-12-03 11:00:09,250 - [INFO] - from play in play-internal-execution-context-16 
+Application started (Dev)
+
+2015-12-03 11:00:09,374 - [INFO] - from application in play-akka.actor.default-dispatcher-101 
+http://localhost:9034/posts/getAllPostsByUserId/userId/92/json
+
+2015-12-03 11:00:09,427 - [INFO] - from application in play-akka.actor.default-dispatcher-107 
+http://localhost:9034/posts/getAllPostsByUserId/userId/92/json
+
+2015-12-03 11:00:09,449 - [INFO] - from application in play-akka.actor.default-dispatcher-107 
+http://localhost:9034/posts/getAllPostsByUserId/userId/92/json
+
+2015-12-03 11:00:12,951 - [INFO] - from application in play-akka.actor.default-dispatcher-110 
+http://localhost:9034/comments/getAllCommentsByPostId/post/3/json
+
+2015-12-03 11:03:56,402 - [INFO] - from play in play-internal-execution-context-17 
+datasource [jdbc:h2:file:data/db;DB_CLOSE_DELAY=-1] bound to JNDI as DefaultDS
+
+2015-12-03 11:03:56,404 - [INFO] - from play in play-internal-execution-context-17 
+database [default] connected at jdbc:h2:file:data/db
+
+2015-12-03 11:03:56,541 - [INFO] - from play in play-internal-execution-context-17 
+Application started (Dev)
+
+2015-12-03 11:03:56,551 - [INFO] - from application in play-akka.actor.default-dispatcher-106 
+http://localhost:9034/posts/getAllPostsByUserId/userId/92/json
+
+2015-12-03 11:04:04,697 - [INFO] - from application in play-akka.actor.default-dispatcher-116 
+http://localhost:9034/posts/getAllPostsByPostUserId/postUserId/92/json
+
+2015-12-03 11:04:11,469 - [INFO] - from application in play-akka.actor.default-dispatcher-119 
+http://localhost:9034/posts/getAllPostsByUserId/userId/92/json
+
+2015-12-03 11:04:14,711 - [INFO] - from application in play-akka.actor.default-dispatcher-117 
+http://localhost:9034/posts/getAllPostsByPostUserId/postUserId/92/json
+
+2015-12-03 11:04:20,581 - [INFO] - from application in play-akka.actor.default-dispatcher-117 
+http://localhost:9034/comments/getAllCommentsByPostId/post/3/json
+
+2015-12-03 11:04:27,438 - [INFO] - from application in play-akka.actor.default-dispatcher-118 
+http://localhost:9034/posts/getAllPostsByUserId/userId/92/json
+
+2015-12-03 11:04:27,458 - [INFO] - from application in play-akka.actor.default-dispatcher-118 
+http://localhost:9034/posts/getAllPostsByUserId/userId/92/json
+
+2015-12-03 11:04:27,479 - [INFO] - from application in play-akka.actor.default-dispatcher-118 
+http://localhost:9034/posts/getAllPostsByPostUserId/postUserId/92/json
+
+2015-12-03 11:04:29,429 - [INFO] - from application in play-akka.actor.default-dispatcher-117 
+http://localhost:9034/comments/getAllCommentsByPostId/post/3/json
+
+2015-12-03 11:05:04,657 - [INFO] - from play in play-internal-execution-context-18 
+datasource [jdbc:h2:file:data/db;DB_CLOSE_DELAY=-1] bound to JNDI as DefaultDS
+
+2015-12-03 11:05:04,659 - [INFO] - from play in play-internal-execution-context-18 
+database [default] connected at jdbc:h2:file:data/db
+
+2015-12-03 11:05:04,727 - [INFO] - from play in play-internal-execution-context-18 
+Application started (Dev)
+
+2015-12-03 11:05:04,737 - [INFO] - from application in play-akka.actor.default-dispatcher-114 
+http://localhost:9034/posts/getAllPostsByPostUserId/postUserId/92/json
+
+2015-12-03 11:05:19,977 - [INFO] - from play in play-internal-execution-context-18 
+datasource [jdbc:h2:file:data/db;DB_CLOSE_DELAY=-1] bound to JNDI as DefaultDS
+
+2015-12-03 11:05:19,979 - [INFO] - from play in play-internal-execution-context-18 
+database [default] connected at jdbc:h2:file:data/db
+
+2015-12-03 11:05:20,051 - [INFO] - from play in play-internal-execution-context-18 
+Application started (Dev)
+
+2015-12-03 11:05:20,061 - [INFO] - from application in play-akka.actor.default-dispatcher-122 
+http://localhost:9034/posts/getAllPostsByPostUserId/postUserId/92/json
+
+2015-12-03 11:05:35,479 - [INFO] - from play in play-internal-execution-context-18 
+datasource [jdbc:h2:file:data/db;DB_CLOSE_DELAY=-1] bound to JNDI as DefaultDS
+
+2015-12-03 11:05:35,483 - [INFO] - from play in play-internal-execution-context-18 
+database [default] connected at jdbc:h2:file:data/db
+
+2015-12-03 11:05:35,538 - [INFO] - from play in play-internal-execution-context-18 
+Application started (Dev)
+
+2015-12-03 11:05:35,552 - [INFO] - from application in play-akka.actor.default-dispatcher-126 
+http://localhost:9034/posts/getAllPostsByPostUserId/postUserId/92/json
+
+2015-12-03 11:05:44,753 - [INFO] - from play in play-internal-execution-context-18 
+datasource [jdbc:h2:file:data/db;DB_CLOSE_DELAY=-1] bound to JNDI as DefaultDS
+
+2015-12-03 11:05:44,754 - [INFO] - from play in play-internal-execution-context-18 
+database [default] connected at jdbc:h2:file:data/db
+
+2015-12-03 11:05:44,820 - [INFO] - from play in play-internal-execution-context-18 
+Application started (Dev)
+
+2015-12-03 11:05:44,832 - [INFO] - from application in play-akka.actor.default-dispatcher-122 
+http://localhost:9034/posts/getAllPostsByPostUserId/postUserId/92/json
+
+2015-12-03 11:05:55,656 - [INFO] - from play in play-internal-execution-context-18 
+datasource [jdbc:h2:file:data/db;DB_CLOSE_DELAY=-1] bound to JNDI as DefaultDS
+
+2015-12-03 11:05:55,658 - [INFO] - from play in play-internal-execution-context-18 
+database [default] connected at jdbc:h2:file:data/db
+
+2015-12-03 11:05:55,717 - [INFO] - from play in play-internal-execution-context-18 
+Application started (Dev)
+
+2015-12-03 11:05:55,726 - [INFO] - from application in play-akka.actor.default-dispatcher-130 
+http://localhost:9034/posts/getAllPostsByPostUserId/postUserId/92/json
+
+2015-12-03 11:06:17,398 - [INFO] - from play in play-internal-execution-context-18 
+datasource [jdbc:h2:file:data/db;DB_CLOSE_DELAY=-1] bound to JNDI as DefaultDS
+
+2015-12-03 11:06:17,400 - [INFO] - from play in play-internal-execution-context-18 
+database [default] connected at jdbc:h2:file:data/db
+
+2015-12-03 11:06:17,450 - [INFO] - from play in play-internal-execution-context-18 
+Application started (Dev)
+
+2015-12-03 11:06:17,461 - [INFO] - from application in play-akka.actor.default-dispatcher-130 
+http://localhost:9034/posts/getAllPostsByPostUserId/postUserId/92/json
+
+2015-12-03 11:06:36,248 - [INFO] - from play in play-internal-execution-context-18 
+datasource [jdbc:h2:file:data/db;DB_CLOSE_DELAY=-1] bound to JNDI as DefaultDS
+
+2015-12-03 11:06:36,252 - [INFO] - from play in play-internal-execution-context-18 
+database [default] connected at jdbc:h2:file:data/db
+
+2015-12-03 11:06:36,299 - [INFO] - from play in play-internal-execution-context-18 
+Application started (Dev)
+
+2015-12-03 11:06:36,310 - [INFO] - from application in play-akka.actor.default-dispatcher-118 
+http://localhost:9034/posts/getAllPostsByPostUserId/postUserId/92/json
+
+2015-12-03 11:06:46,193 - [INFO] - from play in play-internal-execution-context-25 
+datasource [jdbc:h2:file:data/db;DB_CLOSE_DELAY=-1] bound to JNDI as DefaultDS
+
+2015-12-03 11:06:46,195 - [INFO] - from play in play-internal-execution-context-25 
+database [default] connected at jdbc:h2:file:data/db
+
+2015-12-03 11:06:46,265 - [INFO] - from play in play-internal-execution-context-25 
+Application started (Dev)
+
+2015-12-03 11:06:46,275 - [INFO] - from application in play-akka.actor.default-dispatcher-136 
+http://localhost:9034/posts/getAllPostsByPostUserId/postUserId/92/json
+
+2015-12-03 11:07:09,410 - [INFO] - from play in play-internal-execution-context-26 
+datasource [jdbc:h2:file:data/db;DB_CLOSE_DELAY=-1] bound to JNDI as DefaultDS
+
+2015-12-03 11:07:09,412 - [INFO] - from play in play-internal-execution-context-26 
+database [default] connected at jdbc:h2:file:data/db
+
+2015-12-03 11:07:09,468 - [INFO] - from play in play-internal-execution-context-26 
+Application started (Dev)
+
+2015-12-03 11:07:09,477 - [INFO] - from application in play-akka.actor.default-dispatcher-141 
+http://localhost:9034/comments/getAllCommentsByPostId/post/3/json
+
+2015-12-03 11:07:37,026 - [INFO] - from application in play-akka.actor.default-dispatcher-140 
+http://localhost:9034/comments/getAllCommentsByPostId/post/2/json
+
+2015-12-03 11:07:37,038 - [INFO] - from application in play-akka.actor.default-dispatcher-145 
+404
+
+2015-12-03 11:07:41,486 - [INFO] - from application in play-akka.actor.default-dispatcher-145 
+http://localhost:9034/posts/getAllPostsByUserId/userId/92/json
+
+2015-12-03 11:07:41,518 - [INFO] - from application in play-akka.actor.default-dispatcher-118 
+http://localhost:9034/posts/getAllPostsByUserId/userId/92/json
+
+2015-12-03 11:07:41,548 - [INFO] - from application in play-akka.actor.default-dispatcher-118 
+http://localhost:9034/posts/getAllPostsByPostUserId/postUserId/92/json
+
+2015-12-03 11:07:43,138 - [INFO] - from application in play-akka.actor.default-dispatcher-118 
+http://localhost:9034/comments/getAllCommentsByPostId/post/2/json
+
+2015-12-03 11:08:09,038 - [INFO] - from play in play-internal-execution-context-26 
+datasource [jdbc:h2:file:data/db;DB_CLOSE_DELAY=-1] bound to JNDI as DefaultDS
+
+2015-12-03 11:08:09,039 - [INFO] - from play in play-internal-execution-context-26 
+database [default] connected at jdbc:h2:file:data/db
+
+2015-12-03 11:08:09,107 - [INFO] - from play in play-internal-execution-context-26 
+Application started (Dev)
+
+2015-12-03 11:08:09,114 - [INFO] - from application in play-akka.actor.default-dispatcher-146 
+http://localhost:9034/posts/getAllPostsByPostUserId/postUserId/92/json
+
+2015-12-03 11:08:14,269 - [INFO] - from application in play-akka.actor.default-dispatcher-140 
+http://localhost:9034/comments/getAllCommentsByPostId/post/3/json
+
+2015-12-03 11:13:17,414 - [INFO] - from play in play-internal-execution-context-27 
+datasource [jdbc:h2:file:data/db;DB_CLOSE_DELAY=-1] bound to JNDI as DefaultDS
+
+2015-12-03 11:13:17,416 - [INFO] - from play in play-internal-execution-context-27 
+database [default] connected at jdbc:h2:file:data/db
+
+2015-12-03 11:13:17,541 - [INFO] - from play in play-internal-execution-context-27 
+Application started (Dev)
+
+2015-12-03 11:13:17,554 - [INFO] - from application in play-akka.actor.default-dispatcher-153 
+http://localhost:9034/posts/getAllPostsByUserId/userId/92/json
+
+2015-12-03 11:13:17,663 - [INFO] - from application in play-akka.actor.default-dispatcher-155 
+http://localhost:9034/posts/getAllPostsByUserId/userId/92/json
+
+2015-12-03 11:13:17,663 - [INFO] - from application in play-akka.actor.default-dispatcher-153 
+http://localhost:9034/posts/getAllPostsByUserId/userId/92/json
+
+2015-12-03 11:13:21,030 - [INFO] - from application in play-akka.actor.default-dispatcher-161 
+http://localhost:9034/posts/getAllPostsByPostUserId/postUserId/92/json
+
+2015-12-03 11:33:50,398 - [ERROR] - from application in New I/O worker #2 
+
+
+! @6ob31o38h - Internal server error, for (GET) [/homepage] ->
+
+play.PlayExceptions$CompilationException: Compilation error[error: cannot find symbol]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14$$anonfun$apply$16.apply(PlayReloader.scala:304) ~[na:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14$$anonfun$apply$16.apply(PlayReloader.scala:304) ~[na:na]
+	at scala.Option.map(Option.scala:145) ~[scala-library-2.10.3.jar:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14.apply(PlayReloader.scala:304) ~[na:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14.apply(PlayReloader.scala:298) ~[na:na]
+	at scala.Option.map(Option.scala:145) ~[scala-library-2.10.3.jar:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2.apply(PlayReloader.scala:298) ~[na:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2.apply(PlayReloader.scala:296) ~[na:na]
+	at scala.util.Either$LeftProjection.map(Either.scala:377) ~[scala-library-2.10.3.jar:na]
+	at play.PlayReloader$$anon$1.reload(PlayReloader.scala:296) ~[na:na]
+	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:104) ~[play_2.10-2.2.3.jar:2.2.3]
+	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:102) ~[play_2.10-2.2.3.jar:2.2.3]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) ~[scala-library-2.10.3.jar:na]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) ~[scala-library-2.10.3.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask$AdaptedRunnableAction.exec(ForkJoinTask.java:1361) ~[scala-library-2.10.3.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) ~[scala-library-2.10.3.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) ~[scala-library-2.10.3.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) ~[scala-library-2.10.3.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) ~[scala-library-2.10.3.jar:na]
+
+2015-12-03 11:34:48,943 - [INFO] - from play in play-internal-execution-context-28 
+datasource [jdbc:h2:file:data/db;DB_CLOSE_DELAY=-1] bound to JNDI as DefaultDS
+
+2015-12-03 11:34:48,946 - [INFO] - from play in play-internal-execution-context-28 
+database [default] connected at jdbc:h2:file:data/db
+
+2015-12-03 11:34:49,026 - [INFO] - from play in play-internal-execution-context-28 
+Application started (Dev)
+
+2015-12-03 11:34:49,037 - [INFO] - from application in play-akka.actor.default-dispatcher-156 
+http://localhost:9034/posts/getAllPostsByPostUserId/postUserId/92/json
+
+2015-12-03 11:35:51,985 - [INFO] - from play in play-internal-execution-context-29 
+datasource [jdbc:h2:file:data/db;DB_CLOSE_DELAY=-1] bound to JNDI as DefaultDS
+
+2015-12-03 11:35:51,987 - [INFO] - from play in play-internal-execution-context-29 
+database [default] connected at jdbc:h2:file:data/db
+
+2015-12-03 11:35:52,046 - [INFO] - from play in play-internal-execution-context-29 
+Application started (Dev)
+
+2015-12-03 11:38:09,166 - [INFO] - from play in play-internal-execution-context-30 
+datasource [jdbc:h2:file:data/db;DB_CLOSE_DELAY=-1] bound to JNDI as DefaultDS
+
+2015-12-03 11:38:09,169 - [INFO] - from play in play-internal-execution-context-30 
+database [default] connected at jdbc:h2:file:data/db
+
+2015-12-03 11:38:09,239 - [INFO] - from play in play-internal-execution-context-30 
+Application started (Dev)
+
+2015-12-03 11:38:09,564 - [INFO] - from play in play-internal-execution-context-30 
+datasource [jdbc:h2:file:data/db;DB_CLOSE_DELAY=-1] bound to JNDI as DefaultDS
+
+2015-12-03 11:38:09,565 - [INFO] - from play in play-internal-execution-context-30 
+database [default] connected at jdbc:h2:file:data/db
+
+2015-12-03 11:38:09,638 - [INFO] - from play in play-internal-execution-context-30 
+Application started (Dev)
+
+2015-12-03 11:40:08,194 - [INFO] - from application in play-akka.actor.default-dispatcher-188 
+http://localhost:9034/posts/getAllPostsByPostUserId/postUserId/92/json
+
+2015-12-03 11:42:14,163 - [INFO] - from play in play-internal-execution-context-31 
+datasource [jdbc:h2:file:data/db;DB_CLOSE_DELAY=-1] bound to JNDI as DefaultDS
+
+2015-12-03 11:42:14,164 - [INFO] - from play in play-internal-execution-context-31 
+database [default] connected at jdbc:h2:file:data/db
+
+2015-12-03 11:42:14,292 - [INFO] - from play in play-internal-execution-context-31 
+Application started (Dev)
+
+2015-12-03 11:42:14,319 - [INFO] - from application in play-akka.actor.default-dispatcher-199 
+http://localhost:9034/posts/getAllPostsByPostUserId/postUserId/92/json
+
+2015-12-03 11:42:18,117 - [INFO] - from application in play-akka.actor.default-dispatcher-204 
+http://localhost:9034/posts/getAllPostsByPostUserId/postUserId/92/json
+
+2015-12-03 11:48:34,707 - [ERROR] - from application in New I/O worker #5 
+
+
+! @6ob33mbcf - Internal server error, for (GET) [/editProfile] ->
+
+play.PlayExceptions$CompilationException: Compilation error[error: cannot find symbol]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14$$anonfun$apply$16.apply(PlayReloader.scala:304) ~[na:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14$$anonfun$apply$16.apply(PlayReloader.scala:304) ~[na:na]
+	at scala.Option.map(Option.scala:145) ~[scala-library-2.10.3.jar:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14.apply(PlayReloader.scala:304) ~[na:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14.apply(PlayReloader.scala:298) ~[na:na]
+	at scala.Option.map(Option.scala:145) ~[scala-library-2.10.3.jar:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2.apply(PlayReloader.scala:298) ~[na:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2.apply(PlayReloader.scala:296) ~[na:na]
+	at scala.util.Either$LeftProjection.map(Either.scala:377) ~[scala-library-2.10.3.jar:na]
+	at play.PlayReloader$$anon$1.reload(PlayReloader.scala:296) ~[na:na]
+	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:104) ~[play_2.10-2.2.3.jar:2.2.3]
+	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:102) ~[play_2.10-2.2.3.jar:2.2.3]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) ~[scala-library-2.10.3.jar:na]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) ~[scala-library-2.10.3.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask$AdaptedRunnableAction.exec(ForkJoinTask.java:1361) ~[scala-library-2.10.3.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) ~[scala-library-2.10.3.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) ~[scala-library-2.10.3.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) ~[scala-library-2.10.3.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) ~[scala-library-2.10.3.jar:na]
+
+2015-12-03 11:59:58,034 - [ERROR] - from application in New I/O worker #6 
+
+
+! @6ob359889 - Internal server error, for (GET) [/editProfile] ->
+
+play.PlayExceptions$CompilationException: Compilation error[Cannot use a method returning models.User as an Handler]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14$$anonfun$apply$16.apply(PlayReloader.scala:304) ~[na:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14$$anonfun$apply$16.apply(PlayReloader.scala:304) ~[na:na]
+	at scala.Option.map(Option.scala:145) ~[scala-library-2.10.3.jar:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14.apply(PlayReloader.scala:304) ~[na:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14.apply(PlayReloader.scala:298) ~[na:na]
+	at scala.Option.map(Option.scala:145) ~[scala-library-2.10.3.jar:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2.apply(PlayReloader.scala:298) ~[na:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2.apply(PlayReloader.scala:296) ~[na:na]
+	at scala.util.Either$LeftProjection.map(Either.scala:377) ~[scala-library-2.10.3.jar:na]
+	at play.PlayReloader$$anon$1.reload(PlayReloader.scala:296) ~[na:na]
+	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:104) ~[play_2.10-2.2.3.jar:2.2.3]
+	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:102) ~[play_2.10-2.2.3.jar:2.2.3]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) ~[scala-library-2.10.3.jar:na]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) ~[scala-library-2.10.3.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask$AdaptedRunnableAction.exec(ForkJoinTask.java:1361) ~[scala-library-2.10.3.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) ~[scala-library-2.10.3.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) ~[scala-library-2.10.3.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) ~[scala-library-2.10.3.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) ~[scala-library-2.10.3.jar:na]
+
+2015-12-03 12:00:41,634 - [ERROR] - from application in New I/O worker #6 
+
+
+! @6ob35bkl8 - Internal server error, for (GET) [/editProfile] ->
+
+play.PlayExceptions$CompilationException: Compilation error[error: incompatible types: Form<Comment> cannot be converted to User]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14$$anonfun$apply$16.apply(PlayReloader.scala:304) ~[na:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14$$anonfun$apply$16.apply(PlayReloader.scala:304) ~[na:na]
+	at scala.Option.map(Option.scala:145) ~[scala-library-2.10.3.jar:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14.apply(PlayReloader.scala:304) ~[na:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14.apply(PlayReloader.scala:298) ~[na:na]
+	at scala.Option.map(Option.scala:145) ~[scala-library-2.10.3.jar:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2.apply(PlayReloader.scala:298) ~[na:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2.apply(PlayReloader.scala:296) ~[na:na]
+	at scala.util.Either$LeftProjection.map(Either.scala:377) ~[scala-library-2.10.3.jar:na]
+	at play.PlayReloader$$anon$1.reload(PlayReloader.scala:296) ~[na:na]
+	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:104) ~[play_2.10-2.2.3.jar:2.2.3]
+	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:102) ~[play_2.10-2.2.3.jar:2.2.3]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) ~[scala-library-2.10.3.jar:na]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) ~[scala-library-2.10.3.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask$AdaptedRunnableAction.exec(ForkJoinTask.java:1361) ~[scala-library-2.10.3.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) ~[scala-library-2.10.3.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) ~[scala-library-2.10.3.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) ~[scala-library-2.10.3.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) ~[scala-library-2.10.3.jar:na]
+
+2015-12-03 12:01:13,870 - [INFO] - from play in play-internal-execution-context-31 
+datasource [jdbc:h2:file:data/db;DB_CLOSE_DELAY=-1] bound to JNDI as DefaultDS
+
+2015-12-03 12:01:13,872 - [INFO] - from play in play-internal-execution-context-31 
+database [default] connected at jdbc:h2:file:data/db
+
+2015-12-03 12:01:13,947 - [INFO] - from play in play-internal-execution-context-31 
+Application started (Dev)
+
+2015-12-03 12:01:13,958 - [INFO] - from application in play-akka.actor.default-dispatcher-189 
+/users/getUserInformation/userId/92/json
+
+2015-12-03 12:01:13,962 - [ERROR] - from play in play-internal-execution-context-31 
+Cannot invoke the action, eventually got an error: java.lang.IllegalArgumentException: The URI scheme, of the URI /users/getUserInformation/userId/92/json, must be equal (ignoring case) to 'http', 'https', 'ws', or 'wss'
+
+2015-12-03 12:01:13,974 - [ERROR] - from application in play-internal-execution-context-31 
+
+
+! @6ob35dgh3 - Internal server error, for (GET) [/editProfile] ->
+
+play.api.Application$$anon$1: Execution exception[[IllegalArgumentException: The URI scheme, of the URI /users/getUserInformation/userId/92/json, must be equal (ignoring case) to 'http', 'https', 'ws', or 'wss']]
+	at play.api.Application$class.handleError(Application.scala:293) ~[play_2.10-2.2.3.jar:2.2.3]
+	at play.api.DefaultApplication.handleError(Application.scala:399) [play_2.10-2.2.3.jar:2.2.3]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3$$anonfun$applyOrElse$3.apply(PlayDefaultUpstreamHandler.scala:264) [play_2.10-2.2.3.jar:2.2.3]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3$$anonfun$applyOrElse$3.apply(PlayDefaultUpstreamHandler.scala:264) [play_2.10-2.2.3.jar:2.2.3]
+	at scala.Option.map(Option.scala:145) [scala-library-2.10.3.jar:na]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3.applyOrElse(PlayDefaultUpstreamHandler.scala:264) [play_2.10-2.2.3.jar:2.2.3]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3.applyOrElse(PlayDefaultUpstreamHandler.scala:260) [play_2.10-2.2.3.jar:2.2.3]
+	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:344) [scala-library-2.10.3.jar:na]
+	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:343) [scala-library-2.10.3.jar:na]
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [scala-library-2.10.3.jar:na]
+	at play.api.libs.iteratee.Execution$$anon$1.execute(Execution.scala:43) [play-iteratees_2.10-2.2.3.jar:2.2.3]
+	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:40) [scala-library-2.10.3.jar:na]
+	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:248) [scala-library-2.10.3.jar:na]
+	at scala.concurrent.Promise$class.complete(Promise.scala:55) [scala-library-2.10.3.jar:na]
+	at scala.concurrent.impl.Promise$DefaultPromise.complete(Promise.scala:153) [scala-library-2.10.3.jar:na]
+	at scala.concurrent.Future$$anonfun$map$1.apply(Future.scala:235) [scala-library-2.10.3.jar:na]
+	at scala.concurrent.Future$$anonfun$map$1.apply(Future.scala:235) [scala-library-2.10.3.jar:na]
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [scala-library-2.10.3.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask$AdaptedRunnableAction.exec(ForkJoinTask.java:1361) [scala-library-2.10.3.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) [scala-library-2.10.3.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) [scala-library-2.10.3.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) [scala-library-2.10.3.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) [scala-library-2.10.3.jar:na]
+Caused by: java.lang.IllegalArgumentException: The URI scheme, of the URI /users/getUserInformation/userId/92/json, must be equal (ignoring case) to 'http', 'https', 'ws', or 'wss'
+	at com.ning.http.util.AsyncHttpProviderUtils.validateSupportedScheme(AsyncHttpProviderUtils.java:148) ~[async-http-client-1.7.18.jar:na]
+	at com.ning.http.client.RequestBuilderBase$RequestImpl.toURI(RequestBuilderBase.java:173) ~[async-http-client-1.7.18.jar:na]
+	at com.ning.http.client.RequestBuilderBase$RequestImpl.getURI(RequestBuilderBase.java:156) ~[async-http-client-1.7.18.jar:na]
+	at com.ning.http.client.RequestBuilderBase$RequestImpl.getUrl(RequestBuilderBase.java:142) ~[async-http-client-1.7.18.jar:na]
+	at com.ning.http.client.providers.netty.NettyAsyncHttpProvider.doConnect(NettyAsyncHttpProvider.java:903) ~[async-http-client-1.7.18.jar:na]
+	at com.ning.http.client.providers.netty.NettyAsyncHttpProvider.execute(NettyAsyncHttpProvider.java:890) ~[async-http-client-1.7.18.jar:na]
+	at com.ning.http.client.AsyncHttpClient.executeRequest(AsyncHttpClient.java:520) ~[async-http-client-1.7.18.jar:na]
+	at play.libs.WS$WSRequest.execute(WS.java:147) ~[play-java_2.10-2.2.3.jar:2.2.3]
+	at play.libs.WS$WSRequestHolder.execute(WS.java:522) ~[play-java_2.10-2.2.3.jar:2.2.3]
+	at play.libs.WS$WSRequestHolder.execute(WS.java:457) ~[play-java_2.10-2.2.3.jar:2.2.3]
+	at play.libs.WS$WSRequestHolder.get(WS.java:352) ~[play-java_2.10-2.2.3.jar:2.2.3]
+	at util.APICall.callAPI(APICall.java:37) ~[na:na]
+	at controllers.UserController.userInfo(UserController.java:312) ~[na:na]
+	at controllers.UserController.editProfile(UserController.java:271) ~[na:na]
+	at Routes$$anonfun$routes$1$$anonfun$applyOrElse$42$$anonfun$apply$42.apply(routes_routing.scala:541) ~[na:na]
+	at Routes$$anonfun$routes$1$$anonfun$applyOrElse$42$$anonfun$apply$42.apply(routes_routing.scala:541) ~[na:na]
+	at play.core.Router$HandlerInvoker$$anon$7$$anon$2.invocation(Router.scala:183) ~[play_2.10-2.2.3.jar:2.2.3]
+	at play.core.Router$Routes$$anon$1.invocation(Router.scala:377) ~[play_2.10-2.2.3.jar:2.2.3]
+	at play.core.j.JavaAction$$anon$1.call(JavaAction.scala:56) ~[play_2.10-2.2.3.jar:2.2.3]
+	at play.core.j.JavaAction$$anon$3.apply(JavaAction.scala:91) ~[play_2.10-2.2.3.jar:2.2.3]
+	at play.core.j.JavaAction$$anon$3.apply(JavaAction.scala:90) ~[play_2.10-2.2.3.jar:2.2.3]
+	at play.core.j.FPromiseHelper$$anonfun$flatMap$1.apply(FPromiseHelper.scala:82) ~[play_2.10-2.2.3.jar:2.2.3]
+	at play.core.j.FPromiseHelper$$anonfun$flatMap$1.apply(FPromiseHelper.scala:82) ~[play_2.10-2.2.3.jar:2.2.3]
+	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:251) ~[scala-library-2.10.3.jar:na]
+	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:249) ~[scala-library-2.10.3.jar:na]
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [scala-library-2.10.3.jar:na]
+	at play.core.j.HttpExecutionContext$$anon$2.run(HttpExecutionContext.scala:37) ~[play_2.10-2.2.3.jar:2.2.3]
+	at akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:42) ~[akka-actor_2.10-2.2.0.jar:2.2.0]
+	at akka.dispatch.ForkJoinExecutorConfigurator$AkkaForkJoinTask.exec(AbstractDispatcher.scala:386) ~[akka-actor_2.10-2.2.0.jar:2.2.0]
+	... 4 common frames omitted
+
+2015-12-03 12:03:39,452 - [INFO] - from play in play-internal-execution-context-31 
+datasource [jdbc:h2:file:data/db;DB_CLOSE_DELAY=-1] bound to JNDI as DefaultDS
+
+2015-12-03 12:03:39,455 - [INFO] - from play in play-internal-execution-context-31 
+database [default] connected at jdbc:h2:file:data/db
+
+2015-12-03 12:03:39,586 - [INFO] - from play in play-internal-execution-context-31 
+Application started (Dev)
+
+2015-12-03 12:03:39,593 - [INFO] - from application in play-akka.actor.default-dispatcher-207 
+/users/getUserInformation/userId/92/json
+
+2015-12-03 12:03:39,594 - [ERROR] - from play in play-internal-execution-context-31 
+Cannot invoke the action, eventually got an error: java.lang.IllegalArgumentException: The URI scheme, of the URI /users/getUserInformation/userId/92/json, must be equal (ignoring case) to 'http', 'https', 'ws', or 'wss'
+
+2015-12-03 12:03:39,597 - [ERROR] - from application in play-internal-execution-context-31 
+
+
+! @6ob35lo21 - Internal server error, for (GET) [/editProfile] ->
+
+play.api.Application$$anon$1: Execution exception[[IllegalArgumentException: The URI scheme, of the URI /users/getUserInformation/userId/92/json, must be equal (ignoring case) to 'http', 'https', 'ws', or 'wss']]
+	at play.api.Application$class.handleError(Application.scala:293) ~[play_2.10-2.2.3.jar:2.2.3]
+	at play.api.DefaultApplication.handleError(Application.scala:399) [play_2.10-2.2.3.jar:2.2.3]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3$$anonfun$applyOrElse$3.apply(PlayDefaultUpstreamHandler.scala:264) [play_2.10-2.2.3.jar:2.2.3]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3$$anonfun$applyOrElse$3.apply(PlayDefaultUpstreamHandler.scala:264) [play_2.10-2.2.3.jar:2.2.3]
+	at scala.Option.map(Option.scala:145) [scala-library-2.10.3.jar:na]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3.applyOrElse(PlayDefaultUpstreamHandler.scala:264) [play_2.10-2.2.3.jar:2.2.3]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3.applyOrElse(PlayDefaultUpstreamHandler.scala:260) [play_2.10-2.2.3.jar:2.2.3]
+	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:344) [scala-library-2.10.3.jar:na]
+	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:343) [scala-library-2.10.3.jar:na]
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [scala-library-2.10.3.jar:na]
+	at play.api.libs.iteratee.Execution$$anon$1.execute(Execution.scala:43) [play-iteratees_2.10-2.2.3.jar:2.2.3]
+	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:40) [scala-library-2.10.3.jar:na]
+	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:248) [scala-library-2.10.3.jar:na]
+	at scala.concurrent.Promise$class.complete(Promise.scala:55) [scala-library-2.10.3.jar:na]
+	at scala.concurrent.impl.Promise$DefaultPromise.complete(Promise.scala:153) [scala-library-2.10.3.jar:na]
+	at scala.concurrent.Future$$anonfun$map$1.apply(Future.scala:235) [scala-library-2.10.3.jar:na]
+	at scala.concurrent.Future$$anonfun$map$1.apply(Future.scala:235) [scala-library-2.10.3.jar:na]
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [scala-library-2.10.3.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask$AdaptedRunnableAction.exec(ForkJoinTask.java:1361) [scala-library-2.10.3.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) [scala-library-2.10.3.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) [scala-library-2.10.3.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) [scala-library-2.10.3.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) [scala-library-2.10.3.jar:na]
+Caused by: java.lang.IllegalArgumentException: The URI scheme, of the URI /users/getUserInformation/userId/92/json, must be equal (ignoring case) to 'http', 'https', 'ws', or 'wss'
+	at com.ning.http.util.AsyncHttpProviderUtils.validateSupportedScheme(AsyncHttpProviderUtils.java:148) ~[async-http-client-1.7.18.jar:na]
+	at com.ning.http.client.RequestBuilderBase$RequestImpl.toURI(RequestBuilderBase.java:173) ~[async-http-client-1.7.18.jar:na]
+	at com.ning.http.client.RequestBuilderBase$RequestImpl.getURI(RequestBuilderBase.java:156) ~[async-http-client-1.7.18.jar:na]
+	at com.ning.http.client.RequestBuilderBase$RequestImpl.getUrl(RequestBuilderBase.java:142) ~[async-http-client-1.7.18.jar:na]
+	at com.ning.http.client.providers.netty.NettyAsyncHttpProvider.doConnect(NettyAsyncHttpProvider.java:903) ~[async-http-client-1.7.18.jar:na]
+	at com.ning.http.client.providers.netty.NettyAsyncHttpProvider.execute(NettyAsyncHttpProvider.java:890) ~[async-http-client-1.7.18.jar:na]
+	at com.ning.http.client.AsyncHttpClient.executeRequest(AsyncHttpClient.java:520) ~[async-http-client-1.7.18.jar:na]
+	at play.libs.WS$WSRequest.execute(WS.java:147) ~[play-java_2.10-2.2.3.jar:2.2.3]
+	at play.libs.WS$WSRequestHolder.execute(WS.java:522) ~[play-java_2.10-2.2.3.jar:2.2.3]
+	at play.libs.WS$WSRequestHolder.execute(WS.java:457) ~[play-java_2.10-2.2.3.jar:2.2.3]
+	at play.libs.WS$WSRequestHolder.get(WS.java:352) ~[play-java_2.10-2.2.3.jar:2.2.3]
+	at util.APICall.callAPI(APICall.java:37) ~[na:na]
+	at controllers.UserController.userInfo(UserController.java:312) ~[na:na]
+	at controllers.UserController.editProfile(UserController.java:271) ~[na:na]
+	at Routes$$anonfun$routes$1$$anonfun$applyOrElse$42$$anonfun$apply$42.apply(routes_routing.scala:541) ~[na:na]
+	at Routes$$anonfun$routes$1$$anonfun$applyOrElse$42$$anonfun$apply$42.apply(routes_routing.scala:541) ~[na:na]
+	at play.core.Router$HandlerInvoker$$anon$7$$anon$2.invocation(Router.scala:183) ~[play_2.10-2.2.3.jar:2.2.3]
+	at play.core.Router$Routes$$anon$1.invocation(Router.scala:377) ~[play_2.10-2.2.3.jar:2.2.3]
+	at play.core.j.JavaAction$$anon$1.call(JavaAction.scala:56) ~[play_2.10-2.2.3.jar:2.2.3]
+	at play.core.j.JavaAction$$anon$3.apply(JavaAction.scala:91) ~[play_2.10-2.2.3.jar:2.2.3]
+	at play.core.j.JavaAction$$anon$3.apply(JavaAction.scala:90) ~[play_2.10-2.2.3.jar:2.2.3]
+	at play.core.j.FPromiseHelper$$anonfun$flatMap$1.apply(FPromiseHelper.scala:82) ~[play_2.10-2.2.3.jar:2.2.3]
+	at play.core.j.FPromiseHelper$$anonfun$flatMap$1.apply(FPromiseHelper.scala:82) ~[play_2.10-2.2.3.jar:2.2.3]
+	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:251) ~[scala-library-2.10.3.jar:na]
+	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:249) ~[scala-library-2.10.3.jar:na]
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [scala-library-2.10.3.jar:na]
+	at play.core.j.HttpExecutionContext$$anon$2.run(HttpExecutionContext.scala:37) ~[play_2.10-2.2.3.jar:2.2.3]
+	at akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:42) ~[akka-actor_2.10-2.2.0.jar:2.2.0]
+	at akka.dispatch.ForkJoinExecutorConfigurator$AkkaForkJoinTask.exec(AbstractDispatcher.scala:386) ~[akka-actor_2.10-2.2.0.jar:2.2.0]
+	... 4 common frames omitted
+
+2015-12-03 12:05:01,156 - [INFO] - from play in play-internal-execution-context-31 
+datasource [jdbc:h2:file:data/db;DB_CLOSE_DELAY=-1] bound to JNDI as DefaultDS
+
+2015-12-03 12:05:01,159 - [INFO] - from play in play-internal-execution-context-31 
+database [default] connected at jdbc:h2:file:data/db
+
+2015-12-03 12:05:01,274 - [INFO] - from play in play-internal-execution-context-31 
+Application started (Dev)
+
+2015-12-03 12:05:01,280 - [INFO] - from application in play-akka.actor.default-dispatcher-206 
+/users/getUserInformation/userId/92/json
+
+2015-12-03 12:05:01,281 - [ERROR] - from play in play-internal-execution-context-31 
+Cannot invoke the action, eventually got an error: java.lang.IllegalArgumentException: The URI scheme, of the URI /users/getUserInformation/userId/92/json, must be equal (ignoring case) to 'http', 'https', 'ws', or 'wss'
+
+2015-12-03 12:05:01,283 - [ERROR] - from application in play-internal-execution-context-31 
+
+
+! @6ob360enl - Internal server error, for (GET) [/editProfile] ->
+
+play.api.Application$$anon$1: Execution exception[[IllegalArgumentException: The URI scheme, of the URI /users/getUserInformation/userId/92/json, must be equal (ignoring case) to 'http', 'https', 'ws', or 'wss']]
+	at play.api.Application$class.handleError(Application.scala:293) ~[play_2.10-2.2.3.jar:2.2.3]
+	at play.api.DefaultApplication.handleError(Application.scala:399) [play_2.10-2.2.3.jar:2.2.3]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3$$anonfun$applyOrElse$3.apply(PlayDefaultUpstreamHandler.scala:264) [play_2.10-2.2.3.jar:2.2.3]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3$$anonfun$applyOrElse$3.apply(PlayDefaultUpstreamHandler.scala:264) [play_2.10-2.2.3.jar:2.2.3]
+	at scala.Option.map(Option.scala:145) [scala-library-2.10.3.jar:na]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3.applyOrElse(PlayDefaultUpstreamHandler.scala:264) [play_2.10-2.2.3.jar:2.2.3]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3.applyOrElse(PlayDefaultUpstreamHandler.scala:260) [play_2.10-2.2.3.jar:2.2.3]
+	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:344) [scala-library-2.10.3.jar:na]
+	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:343) [scala-library-2.10.3.jar:na]
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [scala-library-2.10.3.jar:na]
+	at play.api.libs.iteratee.Execution$$anon$1.execute(Execution.scala:43) [play-iteratees_2.10-2.2.3.jar:2.2.3]
+	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:40) [scala-library-2.10.3.jar:na]
+	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:248) [scala-library-2.10.3.jar:na]
+	at scala.concurrent.Promise$class.complete(Promise.scala:55) [scala-library-2.10.3.jar:na]
+	at scala.concurrent.impl.Promise$DefaultPromise.complete(Promise.scala:153) [scala-library-2.10.3.jar:na]
+	at scala.concurrent.Future$$anonfun$map$1.apply(Future.scala:235) [scala-library-2.10.3.jar:na]
+	at scala.concurrent.Future$$anonfun$map$1.apply(Future.scala:235) [scala-library-2.10.3.jar:na]
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [scala-library-2.10.3.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask$AdaptedRunnableAction.exec(ForkJoinTask.java:1361) [scala-library-2.10.3.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) [scala-library-2.10.3.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) [scala-library-2.10.3.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) [scala-library-2.10.3.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) [scala-library-2.10.3.jar:na]
+Caused by: java.lang.IllegalArgumentException: The URI scheme, of the URI /users/getUserInformation/userId/92/json, must be equal (ignoring case) to 'http', 'https', 'ws', or 'wss'
+	at com.ning.http.util.AsyncHttpProviderUtils.validateSupportedScheme(AsyncHttpProviderUtils.java:148) ~[async-http-client-1.7.18.jar:na]
+	at com.ning.http.client.RequestBuilderBase$RequestImpl.toURI(RequestBuilderBase.java:173) ~[async-http-client-1.7.18.jar:na]
+	at com.ning.http.client.RequestBuilderBase$RequestImpl.getURI(RequestBuilderBase.java:156) ~[async-http-client-1.7.18.jar:na]
+	at com.ning.http.client.RequestBuilderBase$RequestImpl.getUrl(RequestBuilderBase.java:142) ~[async-http-client-1.7.18.jar:na]
+	at com.ning.http.client.providers.netty.NettyAsyncHttpProvider.doConnect(NettyAsyncHttpProvider.java:903) ~[async-http-client-1.7.18.jar:na]
+	at com.ning.http.client.providers.netty.NettyAsyncHttpProvider.execute(NettyAsyncHttpProvider.java:890) ~[async-http-client-1.7.18.jar:na]
+	at com.ning.http.client.AsyncHttpClient.executeRequest(AsyncHttpClient.java:520) ~[async-http-client-1.7.18.jar:na]
+	at play.libs.WS$WSRequest.execute(WS.java:147) ~[play-java_2.10-2.2.3.jar:2.2.3]
+	at play.libs.WS$WSRequestHolder.execute(WS.java:522) ~[play-java_2.10-2.2.3.jar:2.2.3]
+	at play.libs.WS$WSRequestHolder.execute(WS.java:457) ~[play-java_2.10-2.2.3.jar:2.2.3]
+	at play.libs.WS$WSRequestHolder.get(WS.java:352) ~[play-java_2.10-2.2.3.jar:2.2.3]
+	at util.APICall.callAPI(APICall.java:37) ~[na:na]
+	at controllers.UserController.userInfo(UserController.java:310) ~[na:na]
+	at controllers.UserController.editProfile(UserController.java:271) ~[na:na]
+	at Routes$$anonfun$routes$1$$anonfun$applyOrElse$42$$anonfun$apply$42.apply(routes_routing.scala:541) ~[na:na]
+	at Routes$$anonfun$routes$1$$anonfun$applyOrElse$42$$anonfun$apply$42.apply(routes_routing.scala:541) ~[na:na]
+	at play.core.Router$HandlerInvoker$$anon$7$$anon$2.invocation(Router.scala:183) ~[play_2.10-2.2.3.jar:2.2.3]
+	at play.core.Router$Routes$$anon$1.invocation(Router.scala:377) ~[play_2.10-2.2.3.jar:2.2.3]
+	at play.core.j.JavaAction$$anon$1.call(JavaAction.scala:56) ~[play_2.10-2.2.3.jar:2.2.3]
+	at play.core.j.JavaAction$$anon$3.apply(JavaAction.scala:91) ~[play_2.10-2.2.3.jar:2.2.3]
+	at play.core.j.JavaAction$$anon$3.apply(JavaAction.scala:90) ~[play_2.10-2.2.3.jar:2.2.3]
+	at play.core.j.FPromiseHelper$$anonfun$flatMap$1.apply(FPromiseHelper.scala:82) ~[play_2.10-2.2.3.jar:2.2.3]
+	at play.core.j.FPromiseHelper$$anonfun$flatMap$1.apply(FPromiseHelper.scala:82) ~[play_2.10-2.2.3.jar:2.2.3]
+	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:251) ~[scala-library-2.10.3.jar:na]
+	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:249) ~[scala-library-2.10.3.jar:na]
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [scala-library-2.10.3.jar:na]
+	at play.core.j.HttpExecutionContext$$anon$2.run(HttpExecutionContext.scala:37) ~[play_2.10-2.2.3.jar:2.2.3]
+	at akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:42) ~[akka-actor_2.10-2.2.0.jar:2.2.0]
+	at akka.dispatch.ForkJoinExecutorConfigurator$AkkaForkJoinTask.exec(AbstractDispatcher.scala:386) ~[akka-actor_2.10-2.2.0.jar:2.2.0]
+	... 4 common frames omitted
+
+2015-12-03 13:42:32,459 - [INFO] - from application in play-akka.actor.default-dispatcher-208 
+/users/getUserInformation/userId/92/json
+
+2015-12-03 13:42:32,462 - [ERROR] - from play in play-internal-execution-context-31 
+Cannot invoke the action, eventually got an error: java.lang.IllegalArgumentException: The URI scheme, of the URI /users/getUserInformation/userId/92/json, must be equal (ignoring case) to 'http', 'https', 'ws', or 'wss'
+
+2015-12-03 13:42:32,475 - [ERROR] - from application in play-internal-execution-context-31 
+
+
+! @6ob3ilcdb - Internal server error, for (GET) [/editProfile] ->
+
+play.api.Application$$anon$1: Execution exception[[IllegalArgumentException: The URI scheme, of the URI /users/getUserInformation/userId/92/json, must be equal (ignoring case) to 'http', 'https', 'ws', or 'wss']]
+	at play.api.Application$class.handleError(Application.scala:293) ~[play_2.10-2.2.3.jar:2.2.3]
+	at play.api.DefaultApplication.handleError(Application.scala:399) [play_2.10-2.2.3.jar:2.2.3]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3$$anonfun$applyOrElse$3.apply(PlayDefaultUpstreamHandler.scala:264) [play_2.10-2.2.3.jar:2.2.3]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3$$anonfun$applyOrElse$3.apply(PlayDefaultUpstreamHandler.scala:264) [play_2.10-2.2.3.jar:2.2.3]
+	at scala.Option.map(Option.scala:145) [scala-library-2.10.3.jar:na]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3.applyOrElse(PlayDefaultUpstreamHandler.scala:264) [play_2.10-2.2.3.jar:2.2.3]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3.applyOrElse(PlayDefaultUpstreamHandler.scala:260) [play_2.10-2.2.3.jar:2.2.3]
+	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:344) [scala-library-2.10.3.jar:na]
+	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:343) [scala-library-2.10.3.jar:na]
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [scala-library-2.10.3.jar:na]
+	at play.api.libs.iteratee.Execution$$anon$1.execute(Execution.scala:43) [play-iteratees_2.10-2.2.3.jar:2.2.3]
+	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:40) [scala-library-2.10.3.jar:na]
+	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:248) [scala-library-2.10.3.jar:na]
+	at scala.concurrent.Promise$class.complete(Promise.scala:55) [scala-library-2.10.3.jar:na]
+	at scala.concurrent.impl.Promise$DefaultPromise.complete(Promise.scala:153) [scala-library-2.10.3.jar:na]
+	at scala.concurrent.Future$$anonfun$map$1.apply(Future.scala:235) [scala-library-2.10.3.jar:na]
+	at scala.concurrent.Future$$anonfun$map$1.apply(Future.scala:235) [scala-library-2.10.3.jar:na]
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [scala-library-2.10.3.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask$AdaptedRunnableAction.exec(ForkJoinTask.java:1361) [scala-library-2.10.3.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) [scala-library-2.10.3.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) [scala-library-2.10.3.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) [scala-library-2.10.3.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) [scala-library-2.10.3.jar:na]
+Caused by: java.lang.IllegalArgumentException: The URI scheme, of the URI /users/getUserInformation/userId/92/json, must be equal (ignoring case) to 'http', 'https', 'ws', or 'wss'
+	at com.ning.http.util.AsyncHttpProviderUtils.validateSupportedScheme(AsyncHttpProviderUtils.java:148) ~[async-http-client-1.7.18.jar:na]
+	at com.ning.http.client.RequestBuilderBase$RequestImpl.toURI(RequestBuilderBase.java:173) ~[async-http-client-1.7.18.jar:na]
+	at com.ning.http.client.RequestBuilderBase$RequestImpl.getURI(RequestBuilderBase.java:156) ~[async-http-client-1.7.18.jar:na]
+	at com.ning.http.client.RequestBuilderBase$RequestImpl.getUrl(RequestBuilderBase.java:142) ~[async-http-client-1.7.18.jar:na]
+	at com.ning.http.client.providers.netty.NettyAsyncHttpProvider.doConnect(NettyAsyncHttpProvider.java:903) ~[async-http-client-1.7.18.jar:na]
+	at com.ning.http.client.providers.netty.NettyAsyncHttpProvider.execute(NettyAsyncHttpProvider.java:890) ~[async-http-client-1.7.18.jar:na]
+	at com.ning.http.client.AsyncHttpClient.executeRequest(AsyncHttpClient.java:520) ~[async-http-client-1.7.18.jar:na]
+	at play.libs.WS$WSRequest.execute(WS.java:147) ~[play-java_2.10-2.2.3.jar:2.2.3]
+	at play.libs.WS$WSRequestHolder.execute(WS.java:522) ~[play-java_2.10-2.2.3.jar:2.2.3]
+	at play.libs.WS$WSRequestHolder.execute(WS.java:457) ~[play-java_2.10-2.2.3.jar:2.2.3]
+	at play.libs.WS$WSRequestHolder.get(WS.java:352) ~[play-java_2.10-2.2.3.jar:2.2.3]
+	at util.APICall.callAPI(APICall.java:37) ~[na:na]
+	at controllers.UserController.userInfo(UserController.java:310) ~[na:na]
+	at controllers.UserController.editProfile(UserController.java:271) ~[na:na]
+	at Routes$$anonfun$routes$1$$anonfun$applyOrElse$42$$anonfun$apply$42.apply(routes_routing.scala:541) ~[na:na]
+	at Routes$$anonfun$routes$1$$anonfun$applyOrElse$42$$anonfun$apply$42.apply(routes_routing.scala:541) ~[na:na]
+	at play.core.Router$HandlerInvoker$$anon$7$$anon$2.invocation(Router.scala:183) ~[play_2.10-2.2.3.jar:2.2.3]
+	at play.core.Router$Routes$$anon$1.invocation(Router.scala:377) ~[play_2.10-2.2.3.jar:2.2.3]
+	at play.core.j.JavaAction$$anon$1.call(JavaAction.scala:56) ~[play_2.10-2.2.3.jar:2.2.3]
+	at play.core.j.JavaAction$$anon$3.apply(JavaAction.scala:91) ~[play_2.10-2.2.3.jar:2.2.3]
+	at play.core.j.JavaAction$$anon$3.apply(JavaAction.scala:90) ~[play_2.10-2.2.3.jar:2.2.3]
+	at play.core.j.FPromiseHelper$$anonfun$flatMap$1.apply(FPromiseHelper.scala:82) ~[play_2.10-2.2.3.jar:2.2.3]
+	at play.core.j.FPromiseHelper$$anonfun$flatMap$1.apply(FPromiseHelper.scala:82) ~[play_2.10-2.2.3.jar:2.2.3]
+	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:251) ~[scala-library-2.10.3.jar:na]
+	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:249) ~[scala-library-2.10.3.jar:na]
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [scala-library-2.10.3.jar:na]
+	at play.core.j.HttpExecutionContext$$anon$2.run(HttpExecutionContext.scala:37) ~[play_2.10-2.2.3.jar:2.2.3]
+	at akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:42) ~[akka-actor_2.10-2.2.0.jar:2.2.0]
+	at akka.dispatch.ForkJoinExecutorConfigurator$AkkaForkJoinTask.exec(AbstractDispatcher.scala:386) ~[akka-actor_2.10-2.2.0.jar:2.2.0]
+	... 4 common frames omitted
+
+2015-12-03 13:54:57,053 - [INFO] - from play in play-internal-execution-context-31 
+datasource [jdbc:h2:file:data/db;DB_CLOSE_DELAY=-1] bound to JNDI as DefaultDS
+
+2015-12-03 13:54:57,055 - [INFO] - from play in play-internal-execution-context-31 
+database [default] connected at jdbc:h2:file:data/db
+
+2015-12-03 13:54:57,238 - [INFO] - from play in play-internal-execution-context-31 
+Application started (Dev)
+
+2015-12-03 13:54:57,252 - [INFO] - from application in play-akka.actor.default-dispatcher-209 
+/users/92
+
+2015-12-03 13:54:57,253 - [ERROR] - from play in play-internal-execution-context-31 
+Cannot invoke the action, eventually got an error: java.lang.IllegalArgumentException: The URI scheme, of the URI /users/92, must be equal (ignoring case) to 'http', 'https', 'ws', or 'wss'
+
+2015-12-03 13:54:57,257 - [ERROR] - from application in play-internal-execution-context-31 
+
+
+! @6ob3kbm72 - Internal server error, for (GET) [/editProfile] ->
+
+play.api.Application$$anon$1: Execution exception[[IllegalArgumentException: The URI scheme, of the URI /users/92, must be equal (ignoring case) to 'http', 'https', 'ws', or 'wss']]
+	at play.api.Application$class.handleError(Application.scala:293) ~[play_2.10-2.2.3.jar:2.2.3]
+	at play.api.DefaultApplication.handleError(Application.scala:399) [play_2.10-2.2.3.jar:2.2.3]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3$$anonfun$applyOrElse$3.apply(PlayDefaultUpstreamHandler.scala:264) [play_2.10-2.2.3.jar:2.2.3]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3$$anonfun$applyOrElse$3.apply(PlayDefaultUpstreamHandler.scala:264) [play_2.10-2.2.3.jar:2.2.3]
+	at scala.Option.map(Option.scala:145) [scala-library-2.10.3.jar:na]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3.applyOrElse(PlayDefaultUpstreamHandler.scala:264) [play_2.10-2.2.3.jar:2.2.3]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3.applyOrElse(PlayDefaultUpstreamHandler.scala:260) [play_2.10-2.2.3.jar:2.2.3]
+	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:344) [scala-library-2.10.3.jar:na]
+	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:343) [scala-library-2.10.3.jar:na]
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [scala-library-2.10.3.jar:na]
+	at play.api.libs.iteratee.Execution$$anon$1.execute(Execution.scala:43) [play-iteratees_2.10-2.2.3.jar:2.2.3]
+	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:40) [scala-library-2.10.3.jar:na]
+	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:248) [scala-library-2.10.3.jar:na]
+	at scala.concurrent.Promise$class.complete(Promise.scala:55) [scala-library-2.10.3.jar:na]
+	at scala.concurrent.impl.Promise$DefaultPromise.complete(Promise.scala:153) [scala-library-2.10.3.jar:na]
+	at scala.concurrent.Future$$anonfun$map$1.apply(Future.scala:235) [scala-library-2.10.3.jar:na]
+	at scala.concurrent.Future$$anonfun$map$1.apply(Future.scala:235) [scala-library-2.10.3.jar:na]
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [scala-library-2.10.3.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask$AdaptedRunnableAction.exec(ForkJoinTask.java:1361) [scala-library-2.10.3.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) [scala-library-2.10.3.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) [scala-library-2.10.3.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) [scala-library-2.10.3.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) [scala-library-2.10.3.jar:na]
+Caused by: java.lang.IllegalArgumentException: The URI scheme, of the URI /users/92, must be equal (ignoring case) to 'http', 'https', 'ws', or 'wss'
+	at com.ning.http.util.AsyncHttpProviderUtils.validateSupportedScheme(AsyncHttpProviderUtils.java:148) ~[async-http-client-1.7.18.jar:na]
+	at com.ning.http.client.RequestBuilderBase$RequestImpl.toURI(RequestBuilderBase.java:173) ~[async-http-client-1.7.18.jar:na]
+	at com.ning.http.client.RequestBuilderBase$RequestImpl.getURI(RequestBuilderBase.java:156) ~[async-http-client-1.7.18.jar:na]
+	at com.ning.http.client.RequestBuilderBase$RequestImpl.getUrl(RequestBuilderBase.java:142) ~[async-http-client-1.7.18.jar:na]
+	at com.ning.http.client.providers.netty.NettyAsyncHttpProvider.doConnect(NettyAsyncHttpProvider.java:903) ~[async-http-client-1.7.18.jar:na]
+	at com.ning.http.client.providers.netty.NettyAsyncHttpProvider.execute(NettyAsyncHttpProvider.java:890) ~[async-http-client-1.7.18.jar:na]
+	at com.ning.http.client.AsyncHttpClient.executeRequest(AsyncHttpClient.java:520) ~[async-http-client-1.7.18.jar:na]
+	at play.libs.WS$WSRequest.execute(WS.java:147) ~[play-java_2.10-2.2.3.jar:2.2.3]
+	at play.libs.WS$WSRequestHolder.execute(WS.java:522) ~[play-java_2.10-2.2.3.jar:2.2.3]
+	at play.libs.WS$WSRequestHolder.execute(WS.java:457) ~[play-java_2.10-2.2.3.jar:2.2.3]
+	at play.libs.WS$WSRequestHolder.get(WS.java:352) ~[play-java_2.10-2.2.3.jar:2.2.3]
+	at util.APICall.callAPI(APICall.java:37) ~[na:na]
+	at controllers.UserController.userInfo(UserController.java:310) ~[na:na]
+	at controllers.UserController.editProfile(UserController.java:271) ~[na:na]
+	at Routes$$anonfun$routes$1$$anonfun$applyOrElse$42$$anonfun$apply$42.apply(routes_routing.scala:541) ~[na:na]
+	at Routes$$anonfun$routes$1$$anonfun$applyOrElse$42$$anonfun$apply$42.apply(routes_routing.scala:541) ~[na:na]
+	at play.core.Router$HandlerInvoker$$anon$7$$anon$2.invocation(Router.scala:183) ~[play_2.10-2.2.3.jar:2.2.3]
+	at play.core.Router$Routes$$anon$1.invocation(Router.scala:377) ~[play_2.10-2.2.3.jar:2.2.3]
+	at play.core.j.JavaAction$$anon$1.call(JavaAction.scala:56) ~[play_2.10-2.2.3.jar:2.2.3]
+	at play.core.j.JavaAction$$anon$3.apply(JavaAction.scala:91) ~[play_2.10-2.2.3.jar:2.2.3]
+	at play.core.j.JavaAction$$anon$3.apply(JavaAction.scala:90) ~[play_2.10-2.2.3.jar:2.2.3]
+	at play.core.j.FPromiseHelper$$anonfun$flatMap$1.apply(FPromiseHelper.scala:82) ~[play_2.10-2.2.3.jar:2.2.3]
+	at play.core.j.FPromiseHelper$$anonfun$flatMap$1.apply(FPromiseHelper.scala:82) ~[play_2.10-2.2.3.jar:2.2.3]
+	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:251) ~[scala-library-2.10.3.jar:na]
+	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:249) ~[scala-library-2.10.3.jar:na]
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [scala-library-2.10.3.jar:na]
+	at play.core.j.HttpExecutionContext$$anon$2.run(HttpExecutionContext.scala:37) ~[play_2.10-2.2.3.jar:2.2.3]
+	at akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:42) ~[akka-actor_2.10-2.2.0.jar:2.2.0]
+	at akka.dispatch.ForkJoinExecutorConfigurator$AkkaForkJoinTask.exec(AbstractDispatcher.scala:386) ~[akka-actor_2.10-2.2.0.jar:2.2.0]
+	... 4 common frames omitted
+
+2015-12-03 13:55:55,751 - [INFO] - from play in play-internal-execution-context-31 
+datasource [jdbc:h2:file:data/db;DB_CLOSE_DELAY=-1] bound to JNDI as DefaultDS
+
+2015-12-03 13:55:55,753 - [INFO] - from play in play-internal-execution-context-31 
+database [default] connected at jdbc:h2:file:data/db
+
+2015-12-03 13:55:55,905 - [INFO] - from play in play-internal-execution-context-31 
+Application started (Dev)
+
+2015-12-03 13:55:55,913 - [INFO] - from application in play-akka.actor.default-dispatcher-210 
+/users/92
+
+2015-12-03 13:55:55,914 - [ERROR] - from play in play-internal-execution-context-31 
+Cannot invoke the action, eventually got an error: java.lang.IllegalArgumentException: The URI scheme, of the URI /users/92, must be equal (ignoring case) to 'http', 'https', 'ws', or 'wss'
+
+2015-12-03 13:55:55,917 - [ERROR] - from application in play-internal-execution-context-31 
+
+
+! @6ob3kf516 - Internal server error, for (GET) [/editProfile] ->
+
+play.api.Application$$anon$1: Execution exception[[IllegalArgumentException: The URI scheme, of the URI /users/92, must be equal (ignoring case) to 'http', 'https', 'ws', or 'wss']]
+	at play.api.Application$class.handleError(Application.scala:293) ~[play_2.10-2.2.3.jar:2.2.3]
+	at play.api.DefaultApplication.handleError(Application.scala:399) [play_2.10-2.2.3.jar:2.2.3]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3$$anonfun$applyOrElse$3.apply(PlayDefaultUpstreamHandler.scala:264) [play_2.10-2.2.3.jar:2.2.3]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3$$anonfun$applyOrElse$3.apply(PlayDefaultUpstreamHandler.scala:264) [play_2.10-2.2.3.jar:2.2.3]
+	at scala.Option.map(Option.scala:145) [scala-library-2.10.3.jar:na]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3.applyOrElse(PlayDefaultUpstreamHandler.scala:264) [play_2.10-2.2.3.jar:2.2.3]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3.applyOrElse(PlayDefaultUpstreamHandler.scala:260) [play_2.10-2.2.3.jar:2.2.3]
+	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:344) [scala-library-2.10.3.jar:na]
+	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:343) [scala-library-2.10.3.jar:na]
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [scala-library-2.10.3.jar:na]
+	at play.api.libs.iteratee.Execution$$anon$1.execute(Execution.scala:43) [play-iteratees_2.10-2.2.3.jar:2.2.3]
+	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:40) [scala-library-2.10.3.jar:na]
+	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:248) [scala-library-2.10.3.jar:na]
+	at scala.concurrent.Promise$class.complete(Promise.scala:55) [scala-library-2.10.3.jar:na]
+	at scala.concurrent.impl.Promise$DefaultPromise.complete(Promise.scala:153) [scala-library-2.10.3.jar:na]
+	at scala.concurrent.Future$$anonfun$map$1.apply(Future.scala:235) [scala-library-2.10.3.jar:na]
+	at scala.concurrent.Future$$anonfun$map$1.apply(Future.scala:235) [scala-library-2.10.3.jar:na]
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [scala-library-2.10.3.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask$AdaptedRunnableAction.exec(ForkJoinTask.java:1361) [scala-library-2.10.3.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) [scala-library-2.10.3.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) [scala-library-2.10.3.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) [scala-library-2.10.3.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) [scala-library-2.10.3.jar:na]
+Caused by: java.lang.IllegalArgumentException: The URI scheme, of the URI /users/92, must be equal (ignoring case) to 'http', 'https', 'ws', or 'wss'
+	at com.ning.http.util.AsyncHttpProviderUtils.validateSupportedScheme(AsyncHttpProviderUtils.java:148) ~[async-http-client-1.7.18.jar:na]
+	at com.ning.http.client.RequestBuilderBase$RequestImpl.toURI(RequestBuilderBase.java:173) ~[async-http-client-1.7.18.jar:na]
+	at com.ning.http.client.RequestBuilderBase$RequestImpl.getURI(RequestBuilderBase.java:156) ~[async-http-client-1.7.18.jar:na]
+	at com.ning.http.client.RequestBuilderBase$RequestImpl.getUrl(RequestBuilderBase.java:142) ~[async-http-client-1.7.18.jar:na]
+	at com.ning.http.client.providers.netty.NettyAsyncHttpProvider.doConnect(NettyAsyncHttpProvider.java:903) ~[async-http-client-1.7.18.jar:na]
+	at com.ning.http.client.providers.netty.NettyAsyncHttpProvider.execute(NettyAsyncHttpProvider.java:890) ~[async-http-client-1.7.18.jar:na]
+	at com.ning.http.client.AsyncHttpClient.executeRequest(AsyncHttpClient.java:520) ~[async-http-client-1.7.18.jar:na]
+	at play.libs.WS$WSRequest.execute(WS.java:147) ~[play-java_2.10-2.2.3.jar:2.2.3]
+	at play.libs.WS$WSRequestHolder.execute(WS.java:522) ~[play-java_2.10-2.2.3.jar:2.2.3]
+	at play.libs.WS$WSRequestHolder.execute(WS.java:457) ~[play-java_2.10-2.2.3.jar:2.2.3]
+	at play.libs.WS$WSRequestHolder.get(WS.java:352) ~[play-java_2.10-2.2.3.jar:2.2.3]
+	at util.APICall.callAPI(APICall.java:37) ~[na:na]
+	at controllers.UserController.userInfo(UserController.java:310) ~[na:na]
+	at controllers.UserController.editProfile(UserController.java:271) ~[na:na]
+	at Routes$$anonfun$routes$1$$anonfun$applyOrElse$42$$anonfun$apply$42.apply(routes_routing.scala:541) ~[na:na]
+	at Routes$$anonfun$routes$1$$anonfun$applyOrElse$42$$anonfun$apply$42.apply(routes_routing.scala:541) ~[na:na]
+	at play.core.Router$HandlerInvoker$$anon$7$$anon$2.invocation(Router.scala:183) ~[play_2.10-2.2.3.jar:2.2.3]
+	at play.core.Router$Routes$$anon$1.invocation(Router.scala:377) ~[play_2.10-2.2.3.jar:2.2.3]
+	at play.core.j.JavaAction$$anon$1.call(JavaAction.scala:56) ~[play_2.10-2.2.3.jar:2.2.3]
+	at play.core.j.JavaAction$$anon$3.apply(JavaAction.scala:91) ~[play_2.10-2.2.3.jar:2.2.3]
+	at play.core.j.JavaAction$$anon$3.apply(JavaAction.scala:90) ~[play_2.10-2.2.3.jar:2.2.3]
+	at play.core.j.FPromiseHelper$$anonfun$flatMap$1.apply(FPromiseHelper.scala:82) ~[play_2.10-2.2.3.jar:2.2.3]
+	at play.core.j.FPromiseHelper$$anonfun$flatMap$1.apply(FPromiseHelper.scala:82) ~[play_2.10-2.2.3.jar:2.2.3]
+	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:251) ~[scala-library-2.10.3.jar:na]
+	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:249) ~[scala-library-2.10.3.jar:na]
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [scala-library-2.10.3.jar:na]
+	at play.core.j.HttpExecutionContext$$anon$2.run(HttpExecutionContext.scala:37) ~[play_2.10-2.2.3.jar:2.2.3]
+	at akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:42) ~[akka-actor_2.10-2.2.0.jar:2.2.0]
+	at akka.dispatch.ForkJoinExecutorConfigurator$AkkaForkJoinTask.exec(AbstractDispatcher.scala:386) ~[akka-actor_2.10-2.2.0.jar:2.2.0]
+	... 4 common frames omitted
+
+2015-12-03 13:56:17,163 - [INFO] - from application in play-akka.actor.default-dispatcher-211 
+/users/92
+
+2015-12-03 13:56:17,163 - [ERROR] - from play in play-internal-execution-context-31 
+Cannot invoke the action, eventually got an error: java.lang.IllegalArgumentException: The URI scheme, of the URI /users/92, must be equal (ignoring case) to 'http', 'https', 'ws', or 'wss'
+
+2015-12-03 13:56:17,166 - [ERROR] - from application in play-internal-execution-context-31 
+
+
+! @6ob3kgacd - Internal server error, for (GET) [/editProfile] ->
+
+play.api.Application$$anon$1: Execution exception[[IllegalArgumentException: The URI scheme, of the URI /users/92, must be equal (ignoring case) to 'http', 'https', 'ws', or 'wss']]
+	at play.api.Application$class.handleError(Application.scala:293) ~[play_2.10-2.2.3.jar:2.2.3]
+	at play.api.DefaultApplication.handleError(Application.scala:399) [play_2.10-2.2.3.jar:2.2.3]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3$$anonfun$applyOrElse$3.apply(PlayDefaultUpstreamHandler.scala:264) [play_2.10-2.2.3.jar:2.2.3]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3$$anonfun$applyOrElse$3.apply(PlayDefaultUpstreamHandler.scala:264) [play_2.10-2.2.3.jar:2.2.3]
+	at scala.Option.map(Option.scala:145) [scala-library-2.10.3.jar:na]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3.applyOrElse(PlayDefaultUpstreamHandler.scala:264) [play_2.10-2.2.3.jar:2.2.3]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3.applyOrElse(PlayDefaultUpstreamHandler.scala:260) [play_2.10-2.2.3.jar:2.2.3]
+	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:344) [scala-library-2.10.3.jar:na]
+	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:343) [scala-library-2.10.3.jar:na]
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [scala-library-2.10.3.jar:na]
+	at play.api.libs.iteratee.Execution$$anon$1.execute(Execution.scala:43) [play-iteratees_2.10-2.2.3.jar:2.2.3]
+	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:40) [scala-library-2.10.3.jar:na]
+	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:248) [scala-library-2.10.3.jar:na]
+	at scala.concurrent.Promise$class.complete(Promise.scala:55) [scala-library-2.10.3.jar:na]
+	at scala.concurrent.impl.Promise$DefaultPromise.complete(Promise.scala:153) [scala-library-2.10.3.jar:na]
+	at scala.concurrent.Future$$anonfun$map$1.apply(Future.scala:235) [scala-library-2.10.3.jar:na]
+	at scala.concurrent.Future$$anonfun$map$1.apply(Future.scala:235) [scala-library-2.10.3.jar:na]
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [scala-library-2.10.3.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask$AdaptedRunnableAction.exec(ForkJoinTask.java:1361) [scala-library-2.10.3.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) [scala-library-2.10.3.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) [scala-library-2.10.3.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) [scala-library-2.10.3.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) [scala-library-2.10.3.jar:na]
+Caused by: java.lang.IllegalArgumentException: The URI scheme, of the URI /users/92, must be equal (ignoring case) to 'http', 'https', 'ws', or 'wss'
+	at com.ning.http.util.AsyncHttpProviderUtils.validateSupportedScheme(AsyncHttpProviderUtils.java:148) ~[async-http-client-1.7.18.jar:na]
+	at com.ning.http.client.RequestBuilderBase$RequestImpl.toURI(RequestBuilderBase.java:173) ~[async-http-client-1.7.18.jar:na]
+	at com.ning.http.client.RequestBuilderBase$RequestImpl.getURI(RequestBuilderBase.java:156) ~[async-http-client-1.7.18.jar:na]
+	at com.ning.http.client.RequestBuilderBase$RequestImpl.getUrl(RequestBuilderBase.java:142) ~[async-http-client-1.7.18.jar:na]
+	at com.ning.http.client.providers.netty.NettyAsyncHttpProvider.doConnect(NettyAsyncHttpProvider.java:903) ~[async-http-client-1.7.18.jar:na]
+	at com.ning.http.client.providers.netty.NettyAsyncHttpProvider.execute(NettyAsyncHttpProvider.java:890) ~[async-http-client-1.7.18.jar:na]
+	at com.ning.http.client.AsyncHttpClient.executeRequest(AsyncHttpClient.java:520) ~[async-http-client-1.7.18.jar:na]
+	at play.libs.WS$WSRequest.execute(WS.java:147) ~[play-java_2.10-2.2.3.jar:2.2.3]
+	at play.libs.WS$WSRequestHolder.execute(WS.java:522) ~[play-java_2.10-2.2.3.jar:2.2.3]
+	at play.libs.WS$WSRequestHolder.execute(WS.java:457) ~[play-java_2.10-2.2.3.jar:2.2.3]
+	at play.libs.WS$WSRequestHolder.get(WS.java:352) ~[play-java_2.10-2.2.3.jar:2.2.3]
+	at util.APICall.callAPI(APICall.java:37) ~[na:na]
+	at controllers.UserController.userInfo(UserController.java:310) ~[na:na]
+	at controllers.UserController.editProfile(UserController.java:271) ~[na:na]
+	at Routes$$anonfun$routes$1$$anonfun$applyOrElse$42$$anonfun$apply$42.apply(routes_routing.scala:541) ~[na:na]
+	at Routes$$anonfun$routes$1$$anonfun$applyOrElse$42$$anonfun$apply$42.apply(routes_routing.scala:541) ~[na:na]
+	at play.core.Router$HandlerInvoker$$anon$7$$anon$2.invocation(Router.scala:183) ~[play_2.10-2.2.3.jar:2.2.3]
+	at play.core.Router$Routes$$anon$1.invocation(Router.scala:377) ~[play_2.10-2.2.3.jar:2.2.3]
+	at play.core.j.JavaAction$$anon$1.call(JavaAction.scala:56) ~[play_2.10-2.2.3.jar:2.2.3]
+	at play.core.j.JavaAction$$anon$3.apply(JavaAction.scala:91) ~[play_2.10-2.2.3.jar:2.2.3]
+	at play.core.j.JavaAction$$anon$3.apply(JavaAction.scala:90) ~[play_2.10-2.2.3.jar:2.2.3]
+	at play.core.j.FPromiseHelper$$anonfun$flatMap$1.apply(FPromiseHelper.scala:82) ~[play_2.10-2.2.3.jar:2.2.3]
+	at play.core.j.FPromiseHelper$$anonfun$flatMap$1.apply(FPromiseHelper.scala:82) ~[play_2.10-2.2.3.jar:2.2.3]
+	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:251) ~[scala-library-2.10.3.jar:na]
+	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:249) ~[scala-library-2.10.3.jar:na]
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [scala-library-2.10.3.jar:na]
+	at play.core.j.HttpExecutionContext$$anon$2.run(HttpExecutionContext.scala:37) ~[play_2.10-2.2.3.jar:2.2.3]
+	at akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:42) ~[akka-actor_2.10-2.2.0.jar:2.2.0]
+	at akka.dispatch.ForkJoinExecutorConfigurator$AkkaForkJoinTask.exec(AbstractDispatcher.scala:386) ~[akka-actor_2.10-2.2.0.jar:2.2.0]
+	... 4 common frames omitted
+
+2015-12-03 14:00:28,776 - [INFO] - from play in play-internal-execution-context-31 
+datasource [jdbc:h2:file:data/db;DB_CLOSE_DELAY=-1] bound to JNDI as DefaultDS
+
+2015-12-03 14:00:28,780 - [INFO] - from play in play-internal-execution-context-31 
+database [default] connected at jdbc:h2:file:data/db
+
+2015-12-03 14:00:28,936 - [INFO] - from play in play-internal-execution-context-31 
+Application started (Dev)
+
+2015-12-03 14:00:28,947 - [INFO] - from application in play-akka.actor.default-dispatcher-212 
+http://localhost:9034/users/92
+
+2015-12-03 14:00:31,943 - [INFO] - from application in play-akka.actor.default-dispatcher-213 
+http://localhost:9034/posts/getAllPostsByPostUserId/postUserId/92/json
+
+2015-12-03 14:00:31,958 - [INFO] - from application in play-akka.actor.default-dispatcher-213 
+http://localhost:9034/users/92
+
+2015-12-03 14:00:34,576 - [INFO] - from application in play-akka.actor.default-dispatcher-216 
+http://localhost:9034/users/92
+
+2015-12-03 14:00:39,553 - [INFO] - from application in play-akka.actor.default-dispatcher-217 
+http://localhost:9034/posts/getAllPostsByPostUserId/postUserId/92/json
+
+2015-12-03 14:00:39,561 - [INFO] - from application in play-akka.actor.default-dispatcher-217 
+http://localhost:9034/users/92
+
+2015-12-03 14:00:43,340 - [INFO] - from application in play-akka.actor.default-dispatcher-214 
+http://localhost:9034/users/92
+
+2015-12-03 14:01:19,148 - [INFO] - from play in play-internal-execution-context-31 
+datasource [jdbc:h2:file:data/db;DB_CLOSE_DELAY=-1] bound to JNDI as DefaultDS
+
+2015-12-03 14:01:19,150 - [INFO] - from play in play-internal-execution-context-31 
+database [default] connected at jdbc:h2:file:data/db
+
+2015-12-03 14:01:19,289 - [INFO] - from play in play-internal-execution-context-31 
+Application started (Dev)
+
+2015-12-03 14:01:19,295 - [INFO] - from application in play-akka.actor.default-dispatcher-218 
+http://localhost:9034/users/92
+
+2015-12-03 14:01:20,891 - [INFO] - from application in play-akka.actor.default-dispatcher-216 
+http://localhost:9034/posts/getAllPostsByUserId/userId/92/json
+
+2015-12-03 14:01:24,263 - [INFO] - from application in play-akka.actor.default-dispatcher-216 
+http://localhost:9034/posts/getAllPostsByPostUserId/postUserId/92/json
+
+2015-12-03 14:01:24,271 - [INFO] - from application in play-akka.actor.default-dispatcher-216 
+http://localhost:9034/users/92
+
+2015-12-03 14:01:30,598 - [INFO] - from application in play-akka.actor.default-dispatcher-218 
+http://localhost:9034/users/92
+
+2015-12-03 14:02:05,409 - [INFO] - from application in play-akka.actor.default-dispatcher-223 
+http://localhost:9034/posts/getAllPostsByPostUserId/postUserId/92/json
+
+2015-12-03 14:02:05,417 - [INFO] - from application in play-akka.actor.default-dispatcher-223 
+http://localhost:9034/users/92
+
+2015-12-03 14:02:08,407 - [INFO] - from application in play-akka.actor.default-dispatcher-223 
+http://localhost:9034/posts/getAllPostsByPostUserId/postUserId/92/json
+
+2015-12-03 14:02:08,414 - [INFO] - from application in play-akka.actor.default-dispatcher-223 
+http://localhost:9034/users/92
+
+2015-12-03 14:03:20,229 - [INFO] - from play in play-internal-execution-context-32 
+datasource [jdbc:h2:file:data/db;DB_CLOSE_DELAY=-1] bound to JNDI as DefaultDS
+
+2015-12-03 14:03:20,231 - [INFO] - from play in play-internal-execution-context-32 
+database [default] connected at jdbc:h2:file:data/db
+
+2015-12-03 14:03:20,349 - [INFO] - from play in play-internal-execution-context-32 
+Application started (Dev)
+
+2015-12-03 14:03:20,360 - [INFO] - from application in play-akka.actor.default-dispatcher-223 
+http://localhost:9034/posts/getAllPostsByPostUserId/postUserId/92/json
+
+2015-12-03 14:03:20,372 - [INFO] - from application in play-akka.actor.default-dispatcher-223 
+http://localhost:9034/users/92
+
+2015-12-03 14:03:34,503 - [INFO] - from application in play-akka.actor.default-dispatcher-236 
+http://localhost:9034/users/92
+
+2015-12-03 14:03:47,109 - [INFO] - from application in play-akka.actor.default-dispatcher-235 
+http://localhost:9034/posts/getAllPostsByPostUserId/postUserId/92/json
+
+2015-12-03 14:03:47,125 - [INFO] - from application in play-akka.actor.default-dispatcher-235 
+http://localhost:9034/users/92
+
+2015-12-03 14:05:53,405 - [ERROR] - from application in New I/O worker #3 
+
+
+! @6ob3ln4ne - Internal server error, for (GET) [/editProfile] ->
+
+play.PlayExceptions$CompilationException: Compilation error[error: cannot find symbol]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14$$anonfun$apply$16.apply(PlayReloader.scala:304) ~[na:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14$$anonfun$apply$16.apply(PlayReloader.scala:304) ~[na:na]
+	at scala.Option.map(Option.scala:145) ~[scala-library-2.10.3.jar:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14.apply(PlayReloader.scala:304) ~[na:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14.apply(PlayReloader.scala:298) ~[na:na]
+	at scala.Option.map(Option.scala:145) ~[scala-library-2.10.3.jar:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2.apply(PlayReloader.scala:298) ~[na:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2.apply(PlayReloader.scala:296) ~[na:na]
+	at scala.util.Either$LeftProjection.map(Either.scala:377) ~[scala-library-2.10.3.jar:na]
+	at play.PlayReloader$$anon$1.reload(PlayReloader.scala:296) ~[na:na]
+	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:104) ~[play_2.10-2.2.3.jar:2.2.3]
+	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:102) ~[play_2.10-2.2.3.jar:2.2.3]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) ~[scala-library-2.10.3.jar:na]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) ~[scala-library-2.10.3.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask$AdaptedRunnableAction.exec(ForkJoinTask.java:1361) ~[scala-library-2.10.3.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) ~[scala-library-2.10.3.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) ~[scala-library-2.10.3.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) ~[scala-library-2.10.3.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) ~[scala-library-2.10.3.jar:na]
+
+2015-12-03 14:06:19,668 - [INFO] - from play in play-internal-execution-context-32 
+datasource [jdbc:h2:file:data/db;DB_CLOSE_DELAY=-1] bound to JNDI as DefaultDS
+
+2015-12-03 14:06:19,670 - [INFO] - from play in play-internal-execution-context-32 
+database [default] connected at jdbc:h2:file:data/db
+
+2015-12-03 14:06:19,783 - [INFO] - from play in play-internal-execution-context-32 
+Application started (Dev)
+
+2015-12-03 14:06:19,796 - [INFO] - from application in play-akka.actor.default-dispatcher-241 
+http://localhost:9034/users/92
+
+2015-12-03 14:07:16,521 - [INFO] - from play in play-internal-execution-context-32 
+datasource [jdbc:h2:file:data/db;DB_CLOSE_DELAY=-1] bound to JNDI as DefaultDS
+
+2015-12-03 14:07:16,523 - [INFO] - from play in play-internal-execution-context-32 
+database [default] connected at jdbc:h2:file:data/db
+
+2015-12-03 14:07:16,647 - [INFO] - from play in play-internal-execution-context-32 
+Application started (Dev)
+
+2015-12-03 14:07:27,308 - [INFO] - from application in play-akka.actor.default-dispatcher-255 
+http://localhost:9034/posts/getAllPostsByPostUserId/postUserId/92/json
+
+2015-12-03 14:07:27,316 - [INFO] - from application in play-akka.actor.default-dispatcher-255 
+http://localhost:9034/users/92
+
+2015-12-03 14:09:00,160 - [INFO] - from play in play-internal-execution-context-32 
+datasource [jdbc:h2:file:data/db;DB_CLOSE_DELAY=-1] bound to JNDI as DefaultDS
+
+2015-12-03 14:09:00,161 - [INFO] - from play in play-internal-execution-context-32 
+database [default] connected at jdbc:h2:file:data/db
+
+2015-12-03 14:09:00,277 - [INFO] - from play in play-internal-execution-context-32 
+Application started (Dev)
+
+2015-12-03 14:09:00,288 - [INFO] - from application in play-akka.actor.default-dispatcher-254 
+http://localhost:9034/posts/getAllPostsByPostUserId/postUserId/92/json
+
+2015-12-03 14:09:00,311 - [INFO] - from application in play-akka.actor.default-dispatcher-254 
+http://localhost:9034/users/92
+
+2015-12-03 14:09:00,352 - [INFO] - from application in play-akka.actor.default-dispatcher-254 
+http://localhost:9034/users/92
+
+2015-12-03 14:09:36,215 - [INFO] - from application in play-akka.actor.default-dispatcher-257 
+http://localhost:9034/posts/getAllPostsByPostUserId/postUserId/92/json
+
+2015-12-03 14:09:36,223 - [INFO] - from application in play-akka.actor.default-dispatcher-257 
+http://localhost:9034/users/92
+
+2015-12-03 14:09:49,210 - [INFO] - from application in play-akka.actor.default-dispatcher-257 
+http://localhost:9034/users/92
+
+2015-12-03 14:10:41,126 - [INFO] - from play in play-internal-execution-context-32 
+datasource [jdbc:h2:file:data/db;DB_CLOSE_DELAY=-1] bound to JNDI as DefaultDS
+
+2015-12-03 14:10:41,128 - [INFO] - from play in play-internal-execution-context-32 
+database [default] connected at jdbc:h2:file:data/db
+
+2015-12-03 14:10:41,257 - [INFO] - from play in play-internal-execution-context-32 
+Application started (Dev)
+
+2015-12-03 14:10:41,267 - [INFO] - from application in play-akka.actor.default-dispatcher-254 
+http://localhost:9034/users/92
+
+2015-12-03 14:10:43,103 - [INFO] - from application in play-akka.actor.default-dispatcher-254 
+http://localhost:9034/users/92
+
+2015-12-03 14:10:57,312 - [INFO] - from application in play-akka.actor.default-dispatcher-276 
+http://localhost:9034/users/92
+
+2015-12-03 14:12:15,879 - [INFO] - from play in play-internal-execution-context-32 
+datasource [jdbc:h2:file:data/db;DB_CLOSE_DELAY=-1] bound to JNDI as DefaultDS
+
+2015-12-03 14:12:15,881 - [INFO] - from play in play-internal-execution-context-32 
+database [default] connected at jdbc:h2:file:data/db
+
+2015-12-03 14:12:16,016 - [INFO] - from play in play-internal-execution-context-32 
+Application started (Dev)
+
+2015-12-03 14:12:16,022 - [INFO] - from application in play-akka.actor.default-dispatcher-271 
+http://localhost:9034/users/92
+
+2015-12-03 14:14:06,352 - [INFO] - from play in play-internal-execution-context-36 
+datasource [jdbc:h2:file:data/db;DB_CLOSE_DELAY=-1] bound to JNDI as DefaultDS
+
+2015-12-03 14:14:06,354 - [INFO] - from play in play-internal-execution-context-36 
+database [default] connected at jdbc:h2:file:data/db
+
+2015-12-03 14:14:06,480 - [INFO] - from play in play-internal-execution-context-36 
+Application started (Dev)
+
+2015-12-03 14:14:06,491 - [INFO] - from application in play-akka.actor.default-dispatcher-284 
+http://localhost:9034/users/92
+
+2015-12-03 14:14:13,391 - [INFO] - from application in play-akka.actor.default-dispatcher-293 
+http://localhost:9034/posts/getAllPostsByPostUserId/postUserId/92/json
+
+2015-12-03 14:14:13,403 - [INFO] - from application in play-akka.actor.default-dispatcher-293 
+http://localhost:9034/users/92
+
+2015-12-03 14:14:16,271 - [INFO] - from application in play-akka.actor.default-dispatcher-289 
+http://localhost:9034/users/92
+
+2015-12-03 14:15:25,325 - [INFO] - from play in play-internal-execution-context-37 
+datasource [jdbc:h2:file:data/db;DB_CLOSE_DELAY=-1] bound to JNDI as DefaultDS
+
+2015-12-03 14:15:25,327 - [INFO] - from play in play-internal-execution-context-37 
+database [default] connected at jdbc:h2:file:data/db
+
+2015-12-03 14:15:25,447 - [INFO] - from play in play-internal-execution-context-37 
+Application started (Dev)
+
+2015-12-03 14:15:25,453 - [INFO] - from application in play-akka.actor.default-dispatcher-292 
+http://localhost:9034/posts/getAllPostsByPostUserId/postUserId/92/json
+
+2015-12-03 14:15:25,461 - [INFO] - from application in play-akka.actor.default-dispatcher-292 
+http://localhost:9034/users/92
+
+2015-12-03 14:15:28,491 - [INFO] - from application in play-akka.actor.default-dispatcher-301 
+http://localhost:9034/users/92
+
+2015-12-03 14:15:37,643 - [INFO] - from application in play-akka.actor.default-dispatcher-292 
+http://localhost:9034/posts/getAllPostsByPostUserId/postUserId/92/json
+
+2015-12-03 14:15:37,656 - [INFO] - from application in play-akka.actor.default-dispatcher-292 
+http://localhost:9034/users/92
+
+2015-12-03 14:15:40,811 - [INFO] - from application in play-akka.actor.default-dispatcher-301 
+http://localhost:9034/users/92
 

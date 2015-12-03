@@ -49,5 +49,25 @@ public class Constants {
 	public static final String GET_CONFIG_ITEMS_BY_CONFIG= "serviceConfigurationItemByServiceConfig/";
 
 
+	// login & signup
+	public static final String URL_HOST = "http://localhost";
+	public static final String CMU_BACKEND_PORT = ":9034";
+	public static final String IS_USER_VALID = "/users/isUserValid";
+	public static final String ADD_USER = "/users/add";
+	public static final String IS_EMAIL_EXISTED = "/users/isEmailExisted";
 
+	// Self
+	public static final String ADD_POST = "/posts/add";
+	public static final String GET_HOMEPAGE_POST_CALL = Constants.NEW_BACKEND+"posts/getAllPostsByPostUserId/postUserId/";
+	public static final String GET_MAINPAGE_POST_CALL = Constants.NEW_BACKEND+"posts/getAllPostsByUserId/userId/";
+
+	public static final String ADD_COMMENT = "/comments/add";
+	public static final String GET_COMMENT_CALL = Constants.NEW_BACKEND+"comments/getAllCommentsByPostId/post/";
+
+	public static final String DELETE_POST_CALL = "http://localhost:9034/posts/delete/";
+	public static final String UPDATE_POST_LIKE_CALL = Constants.NEW_BACKEND+"posts/updatePostLikesById/id/";
+
+
+	public static final String Edit_USER = "/users/update/";
+	public static final String GET_USER_INFO = Constants.NEW_BACKEND+"users/";
 }

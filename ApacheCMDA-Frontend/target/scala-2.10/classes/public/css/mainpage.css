@@ -11,6 +11,9 @@ body {
 #search-form {
 	padding-left:100px;
 }
+#search-form .form-group {
+	width: 200px;
+}
 /* Post board & personal information */
 #medium {
 	padding-top:10px;
@@ -40,6 +43,8 @@ body {
 	color: #004986;
 	margin-top: 10px;
 	background-image: url("../image/imgback.jpg");
+	background-repeat: no-repeat;
+	background-size: 100%;
 	text-align: left;
 	padding: 20px 20px 20px;
 	height:150px;
