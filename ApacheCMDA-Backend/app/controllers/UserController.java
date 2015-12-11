@@ -74,7 +74,7 @@ public class UserController extends Controller {
 				System.out.println("UserName has been used: " + userName);
 				return badRequest("UserName has been used");
 			}
-			User user = new User(userName, password, firstName, lastName, middleInitial, affiliation, title, email, mailingAddress, phoneNumber, faxNumber, researchFields, highestDegree);	
+			User user = new User(userName, password, firstName, lastName, middleInitial, affiliation, title, email, mailingAddress, phoneNumber, faxNumber, researchFields, highestDegree);
 			userRepository.save(user);
 			System.out.println("User saved: " + user.getId());
 			return created(new Gson().toJson(user.getId()));
@@ -96,22 +96,20 @@ public class UserController extends Controller {
 		System.out.println("User is deleted: " + id);
 		return ok("User is deleted: " + id);
 	}
-	
+
 	public Result search() {
-		System.out.println("search called");
+
 		JsonNode json = request().body().asJson();
 		String keyword = json.path("userKeyword").asText();
-		System.out.println(keyword);
-		
-		
+
 		Iterable<User> userIterable = userRepository.findAll();
 		List<User> userList = new ArrayList<User>();
 		for (User user : userIterable) {
 			if(user.getFirstName().contains(keyword) || user.getLastName().contains(keyword))
 				userList.add(user);
 		}
+
 		
-		System.out.println("-------"+userList.size());
 		String result = new Gson().toJson(userList);
 		return ok(result);
 	}
@@ -138,18 +136,24 @@ public class UserController extends Controller {
 		try {
 			User updateUser = userRepository.findOne(id);
 
-			updateUser.setFirstName(firstName);
-			updateUser.setLastName(lastName);
-			updateUser.setAffiliation(affiliation);
-			updateUser.setEmail(email);
-			updateUser.setFaxNumber(faxNumber);
-			updateUser.setHighestDegree(highestDegree);
-			updateUser.setMailingAddress(mailingAddress);
+			if(affiliation.length()!=0)
+					updateUser.setAffiliation(affiliation);
+			if(email.length()!=0)
+					updateUser.setEmail(email);
+			if(faxNumber.length()!=0)
+					updateUser.setFaxNumber(faxNumber);
+			if(highestDegree.length()!=0)
+					updateUser.setHighestDegree(highestDegree);
+			if(mailingAddress.length()!=0)
+					updateUser.setMailingAddress(mailingAddress);
 			updateUser.setMiddleInitial(middleInitial);
-			updateUser.setPhoneNumber(phoneNumber);
-			updateUser.setResearchFields(researchFields);
-			updateUser.setTitle(title);
-			
+			if(phoneNumber.length()!=0)
+					updateUser.setPhoneNumber(phoneNumber);
+			if(researchFields.length()!=0)
+					updateUser.setResearchFields(researchFields);
+			if(title.length()!=0)
+					updateUser.setTitle(title);
+
 			User savedUser = userRepository.save(updateUser);
 			System.out.println("User updated: " + savedUser.getFirstName()
 					+ " " + savedUser.getLastName());
@@ -182,7 +186,7 @@ public class UserController extends Controller {
 
 		return ok(result);
 	}
-	
+
 	public Result getAllUsers(String format) {
 		Iterable<User> userIterable = userRepository.findAll();
 		List<User> userList = new ArrayList<User>();
@@ -195,7 +199,7 @@ public class UserController extends Controller {
 		}
 		return ok(result);
 	}
-	
+
 	public Result isUserValid() {
 		JsonNode json = request().body().asJson();
 		if (json == null) {
@@ -204,9 +208,9 @@ public class UserController extends Controller {
 		}
 		String email = json.path("email").asText();
 		String password = json.path("password").asText();
-		
+
 		System.out.println("**************" + email + "************" + password);
-		
+
 		User user = userRepository.findByEmail(email);
 		String result = new String();
 		if (user.getPassword().equals(password)) {
@@ -218,7 +222,7 @@ public class UserController extends Controller {
 			return badRequest("User is not valid");
 		}
 	}
-	
+
 	public Result deleteUserByUserNameandPassword(String userName, String password) {
 		try {
 			List<User> users = userRepository.findByUserName(userName);
@@ -242,9 +246,9 @@ public class UserController extends Controller {
 			System.out.println("User is not deleted");
 			return badRequest("User is not deleted");
 		}
-		
+
 	}
-	
+
 	public Result isEmailExisted(){
 		JsonNode json = request().body().asJson();
 		if (json == null) {

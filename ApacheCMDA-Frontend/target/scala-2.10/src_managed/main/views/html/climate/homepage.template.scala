@@ -53,18 +53,18 @@ object homepage extends BaseScalaTemplate[play.api.templates.HtmlFormat.Appendab
 * See the License for the specific language governing permissions and         *
 * limitations under the License.											   *
 *******************************************************************************/
-    def apply/*17.2*/(postServices: List[models.Post], commentForm: play.data.Form[models.Comment], editUser: models.User):play.api.templates.HtmlFormat.Appendable = {
+    def apply/*17.2*/(postServices: List[models.Post],
+ commentForm: play.data.Form[models.Comment],
+ editUser: models.User):play.api.templates.HtmlFormat.Appendable = {
         _display_ {import helper._
 
 
-Seq[Any](format.raw/*17.103*/("""
-"""),format.raw/*19.1*/("""<script type="text/javascript">
-    function deletePostById(postId)"""),format.raw/*20.36*/("""{"""),format.raw/*20.37*/("""
-
-            var obj = """),format.raw/*22.23*/("""{"""),format.raw/*22.24*/("""
+Seq[Any](format.raw/*19.24*/("""
+"""),format.raw/*21.1*/("""<script type="text/javascript">
+    function deletePostById(postId)"""),format.raw/*22.36*/("""{"""),format.raw/*22.37*/("""
+            var obj = """),format.raw/*23.23*/("""{"""),format.raw/*23.24*/("""
                 postId : postId
-            """),format.raw/*24.13*/("""}"""),format.raw/*24.14*/("""
-            //alert(postId);
+            """),format.raw/*25.13*/("""}"""),format.raw/*25.14*/("""
             $.ajax("""),format.raw/*26.20*/("""{"""),format.raw/*26.21*/("""
                 url: "/deletePost",
                 data: JSON.stringify(obj),
@@ -73,84 +73,95 @@ Seq[Any](format.raw/*17.103*/("""
                 """),format.raw/*31.17*/("""}"""),format.raw/*31.18*/(""",
                 type: "POST"
             """),format.raw/*33.13*/("""}"""),format.raw/*33.14*/(""").done(function(data) """),format.raw/*33.36*/("""{"""),format.raw/*33.37*/("""
-                console.log(data);
                 var response = data;
-                if("error" in response)"""),format.raw/*36.40*/("""{"""),format.raw/*36.41*/("""
+                if("error" in response)"""),format.raw/*35.40*/("""{"""),format.raw/*35.41*/("""
                     alert("delete error!")
-                """),format.raw/*38.17*/("""}"""),format.raw/*38.18*/("""else"""),format.raw/*38.22*/("""{"""),format.raw/*38.23*/("""
+                """),format.raw/*37.17*/("""}"""),format.raw/*37.18*/("""else"""),format.raw/*37.22*/("""{"""),format.raw/*37.23*/("""
                     window.location.reload();
-                """),format.raw/*40.17*/("""}"""),format.raw/*40.18*/("""
-            """),format.raw/*41.13*/("""}"""),format.raw/*41.14*/(""");
-    """),format.raw/*42.5*/("""}"""),format.raw/*42.6*/("""
+                """),format.raw/*39.17*/("""}"""),format.raw/*39.18*/("""
+            """),format.raw/*40.13*/("""}"""),format.raw/*40.14*/(""");
+    """),format.raw/*41.5*/("""}"""),format.raw/*41.6*/("""
 
-    function likePost(postId)"""),format.raw/*44.30*/("""{"""),format.raw/*44.31*/("""
-
-        var obj = """),format.raw/*46.19*/("""{"""),format.raw/*46.20*/("""
+    function likePost(postId)"""),format.raw/*43.30*/("""{"""),format.raw/*43.31*/("""
+        var obj = """),format.raw/*44.19*/("""{"""),format.raw/*44.20*/("""
             postId : postId
-        """),format.raw/*48.9*/("""}"""),format.raw/*48.10*/("""
-//        var likepost = document.getElementById(postId);
-//        alert(postId);
-        $.ajax("""),format.raw/*51.16*/("""{"""),format.raw/*51.17*/("""
+        """),format.raw/*46.9*/("""}"""),format.raw/*46.10*/("""
+        $.ajax("""),format.raw/*47.16*/("""{"""),format.raw/*47.17*/("""
             url: "/likePost",
             data: JSON.stringify(obj),
-            headers: """),format.raw/*54.22*/("""{"""),format.raw/*54.23*/("""
+            headers: """),format.raw/*50.22*/("""{"""),format.raw/*50.23*/("""
                 'Content-Type': 'application/json'
-            """),format.raw/*56.13*/("""}"""),format.raw/*56.14*/(""",
+            """),format.raw/*52.13*/("""}"""),format.raw/*52.14*/(""",
             type: "POST"
-        """),format.raw/*58.9*/("""}"""),format.raw/*58.10*/(""").done(function(data) """),format.raw/*58.32*/("""{"""),format.raw/*58.33*/("""
-            console.log(data);
+        """),format.raw/*54.9*/("""}"""),format.raw/*54.10*/(""").done(function(data) """),format.raw/*54.32*/("""{"""),format.raw/*54.33*/("""
             var response = data;
-            if("error" in response)"""),format.raw/*61.36*/("""{"""),format.raw/*61.37*/("""
+            if("error" in response)"""),format.raw/*56.36*/("""{"""),format.raw/*56.37*/("""
                 alert("like error!")
-            """),format.raw/*63.13*/("""}"""),format.raw/*63.14*/("""else"""),format.raw/*63.18*/("""{"""),format.raw/*63.19*/("""
+            """),format.raw/*58.13*/("""}"""),format.raw/*58.14*/("""else"""),format.raw/*58.18*/("""{"""),format.raw/*58.19*/("""
                 window.location.reload();
-            """),format.raw/*65.13*/("""}"""),format.raw/*65.14*/("""
-        """),format.raw/*66.9*/("""}"""),format.raw/*66.10*/(""");
-    """),format.raw/*67.5*/("""}"""),format.raw/*67.6*/("""
+            """),format.raw/*60.13*/("""}"""),format.raw/*60.14*/("""
+        """),format.raw/*61.9*/("""}"""),format.raw/*61.10*/(""");
+    """),format.raw/*62.5*/("""}"""),format.raw/*62.6*/("""
 
-    function commentPost(postId)"""),format.raw/*69.33*/("""{"""),format.raw/*69.34*/("""
-        $.get("/allComment/"+postId, function(data)"""),format.raw/*70.52*/("""{"""),format.raw/*70.53*/("""
-            var commentServices = data;
-            for (cid in commentServices) """),format.raw/*72.42*/("""{"""),format.raw/*72.43*/("""
-                var json = commentServices[cid];
-                var html = "<li><h6>"+json["time"]+"</h6>" +
-                        json["commentUserId"] +"</a>&nbsp;replied:&nbsp;"+json["text"]+"</li>";
-                //用下面的替换上面的html
-//                var html = "<li><h6>"+json["time"]+"</h6>&nbsp;&nbsp;" +
-//                        json["commentUserFirstName"] + "&nbsp;"+ json["commentUserLastName"] +"</a>&nbsp;replied:&nbsp;"+json["text"]+"</li>";
-                $("#comment"+postId).append(html);
-            """),format.raw/*80.13*/("""}"""),format.raw/*80.14*/("""
-        """),format.raw/*81.9*/("""}"""),format.raw/*81.10*/(""");
-        var commentBox = $('#commentBox'+postId);
-        if (commentBox.css("display") == "none") """),format.raw/*83.50*/("""{"""),format.raw/*83.51*/("""
-            commentBox.show();
-        """),format.raw/*85.9*/("""}"""),format.raw/*85.10*/(""" else """),format.raw/*85.16*/("""{"""),format.raw/*85.17*/("""
-            commentBox.hide();
-        """),format.raw/*87.9*/("""}"""),format.raw/*87.10*/("""
-    """),format.raw/*88.5*/("""}"""),format.raw/*88.6*/("""
+    function sharePost(postId)"""),format.raw/*64.31*/("""{"""),format.raw/*64.32*/("""
+           var obj = """),format.raw/*65.22*/("""{"""),format.raw/*65.23*/("""
+               postId : postId,
+               postUserId : document.getElementById("inputUserId").value,
+               postUserFirstName : document.getElementById("inputUserFirstName").value,
+               postUserLastName : document.getElementById("inputUserLastName").value,
+           """),format.raw/*70.12*/("""}"""),format.raw/*70.13*/("""
+           $.ajax("""),format.raw/*71.19*/("""{"""),format.raw/*71.20*/("""
+               url: "/sharePost",
+               data: JSON.stringify(obj),
+               headers: """),format.raw/*74.25*/("""{"""),format.raw/*74.26*/("""
+                   'Content-Type': 'application/json'
+               """),format.raw/*76.16*/("""}"""),format.raw/*76.17*/(""",
+               type: "POST"
+           """),format.raw/*78.12*/("""}"""),format.raw/*78.13*/(""").done(function(data) """),format.raw/*78.35*/("""{"""),format.raw/*78.36*/("""
+              window.location.reload();
+           """),format.raw/*80.12*/("""}"""),format.raw/*80.13*/(""");
+       """),format.raw/*81.8*/("""}"""),format.raw/*81.9*/("""
 
+       function editPost(postId, text)"""),format.raw/*83.39*/("""{"""),format.raw/*83.40*/("""
+              var ntext = prompt("Edit here:",text);
+              var obj = """),format.raw/*85.25*/("""{"""),format.raw/*85.26*/("""
+                  postId : postId,
+                  text : ntext,
+              """),format.raw/*88.15*/("""}"""),format.raw/*88.16*/("""
+              $.ajax("""),format.raw/*89.22*/("""{"""),format.raw/*89.23*/("""
+                  url: "/editPost",
+                  data: JSON.stringify(obj),
+                  headers: """),format.raw/*92.28*/("""{"""),format.raw/*92.29*/("""
+                      'Content-Type': 'application/json'
+                  """),format.raw/*94.19*/("""}"""),format.raw/*94.20*/(""",
+                  type: "POST"
+              """),format.raw/*96.15*/("""}"""),format.raw/*96.16*/(""").done(function(data) """),format.raw/*96.38*/("""{"""),format.raw/*96.39*/("""
+                  window.location.reload();
+              """),format.raw/*98.15*/("""}"""),format.raw/*98.16*/(""");
+          """),format.raw/*99.11*/("""}"""),format.raw/*99.12*/("""
 
-    function submitComment(postId)"""),format.raw/*91.35*/("""{"""),format.raw/*91.36*/("""
-        var obj = """),format.raw/*92.19*/("""{"""),format.raw/*92.20*/("""
-            postId : postId,
-            commentUserId : document.getElementById("commentUserId").value,
-            //取消注释
-//            commentUserFirstName : document.getElementById("commentUserFirstName").value,
-//            commentUserLastName : document.getElementById("commentUserLastName").value,
-        """),format.raw/*98.9*/("""}"""),format.raw/*98.10*/("""
-        $.ajax("""),format.raw/*99.16*/("""{"""),format.raw/*99.17*/("""
-            url: "/addComment",
-            data: JSON.stringify(obj),
-            headers: """),format.raw/*102.22*/("""{"""),format.raw/*102.23*/("""
-                'Content-Type': 'application/json'
-            """),format.raw/*104.13*/("""}"""),format.raw/*104.14*/(""",
-            type: "POST"
-        """),format.raw/*106.9*/("""}"""),format.raw/*106.10*/(""").done(function(data) """),format.raw/*106.32*/("""{"""),format.raw/*106.33*/("""
-            window.location.reload();
-        """),format.raw/*108.9*/("""}"""),format.raw/*108.10*/(""");
-    """),format.raw/*109.5*/("""}"""),format.raw/*109.6*/("""
+    function commentPost(postId)"""),format.raw/*101.33*/("""{"""),format.raw/*101.34*/("""
+          var commentBox = $('#commentBox'+postId);
+          if (commentBox.css("display") == "none") """),format.raw/*103.52*/("""{"""),format.raw/*103.53*/("""
+              commentBox.show();
+              $.get("/allComment/"+postId, function(data)"""),format.raw/*105.58*/("""{"""),format.raw/*105.59*/("""
+                  $("#comment"+postId).empty();
+                  var commentServices = data;
+                  if("error" in commentServices) return;
+                  for (cid in commentServices) """),format.raw/*109.48*/("""{"""),format.raw/*109.49*/("""
+                      var json = commentServices[cid];
+                      var html = "<li><h6>"+json["time"]+"</h6>&nbsp;&nbsp;" +
+                       json["commentUserFirstName"] + "&nbsp;"+ json["commentUserLastName"]
+                       +"</a>&nbsp;replied:&nbsp;"+json["text"]+"</li>";
+                       $("#comment"+postId).append(html);
+                     """),format.raw/*115.22*/("""}"""),format.raw/*115.23*/("""
+              """),format.raw/*116.15*/("""}"""),format.raw/*116.16*/(""");
+            """),format.raw/*117.13*/("""}"""),format.raw/*117.14*/(""" else """),format.raw/*117.20*/("""{"""),format.raw/*117.21*/("""
+              commentBox.hide();
+            """),format.raw/*119.13*/("""}"""),format.raw/*119.14*/("""
+    """),format.raw/*120.5*/("""}"""),format.raw/*120.6*/("""
 </script>
-"""),_display_(Seq[Any](/*111.2*/self("Home Page")/*111.19*/ {_display_(Seq[Any](format.raw/*111.21*/("""
+"""),_display_(Seq[Any](/*122.2*/self("Home Page")/*122.19*/ {_display_(Seq[Any](format.raw/*122.21*/("""
 
 <!--Navigation bar (Cite Bootstrap template)-->
 <nav id="bar" class="navbar navbar-default navbar-fixed-top">
@@ -169,20 +180,19 @@ Seq[Any](format.raw/*17.103*/("""
         <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav nav-pills navbar-right">
                 <li  class="nav-btn"><a href="mainpage"><span class="glyphicon glyphicon-home"></span> Home</a></li>
-                """),_display_(Seq[Any](/*130.18*/if(!session.get("email"))/*130.43*/ {_display_(Seq[Any](format.raw/*130.45*/("""
-                <form class="navbar-form navbar-right" action=""""),_display_(Seq[Any](/*131.65*/routes/*131.71*/.Application.login())),format.raw/*131.91*/("""">
+                """),_display_(Seq[Any](/*141.18*/if(!session.get("email"))/*141.43*/ {_display_(Seq[Any](format.raw/*141.45*/("""
+                <form class="navbar-form navbar-right" action=""""),_display_(Seq[Any](/*142.65*/routes/*142.71*/.Application.login())),format.raw/*142.91*/("""">
                     <button type="submit" class="btn btn-success">Log in</button>
                 </form>
-                """)))}/*134.19*/else/*134.24*/{_display_(Seq[Any](format.raw/*134.25*/("""
+                """)))}/*145.19*/else/*145.24*/{_display_(Seq[Any](format.raw/*145.25*/("""
                 <li id="drop" class="dropdown nav-btn"><a href="#" class="dropdown-toggle" data-toggle="dropdown">
                     <span class="glyphicon glyphicon-user"></span> My Account<span class="caret"></span></a>
                     <ul class="dropdown-menu">
-                        <li><a href=""""),_display_(Seq[Any](/*138.39*/routes/*138.45*/.UserController.homepage())),format.raw/*138.71*/("""">View Profile</a></li>
-                        <li><a href=""""),_display_(Seq[Any](/*139.39*/routes/*139.45*/.UserController.editProfile())),format.raw/*139.74*/("""">Edit Profile</a></li>
-                        <li><a href=""""),_display_(Seq[Any](/*140.39*/routes/*140.45*/.Application.logout())),format.raw/*140.66*/("""">Log out</a></li>
+                        <li><a href=""""),_display_(Seq[Any](/*149.39*/routes/*149.45*/.UserController.editProfile())),format.raw/*149.74*/("""">Edit Profile</a></li>
+                        <li><a href=""""),_display_(Seq[Any](/*150.39*/routes/*150.45*/.Application.logout())),format.raw/*150.66*/("""">Log out</a></li>
                     </ul>
                 </li>
-                """)))})),format.raw/*143.18*/("""
+                """)))})),format.raw/*153.18*/("""
             </ul>
         </div><!--/navbar-collapse-->
     </div><!--/container-fluid-->
@@ -192,16 +202,23 @@ Seq[Any](format.raw/*17.103*/("""
     <div id="wrapper1" class="col-md-10 col-md-offset-1">
         <div id="profile1">
             <img id="photo" src="/assets/image/default.jpg" class="img-circle center-block" alt="photo">
-            <p class="text-center"><strong><a href="homepage">"""),_display_(Seq[Any](/*153.64*/session/*153.71*/.get("email"))),format.raw/*153.84*/("""</a></strong></p>
-            <p class="text-center">"""),_display_(Seq[Any](/*154.37*/session/*154.44*/.get("firstName"))),format.raw/*154.61*/(""" """),_display_(Seq[Any](/*154.63*/session/*154.70*/.get("lastName"))),format.raw/*154.86*/("""</p>
-            <div style="margin-left:46%; margin-top:-8px;">
-                <button type="button" class="btn btn-success btn-xs" name="follow" id="follow">
-                    <a href="#"><span style="color:white;">Follow</span></a>
-                </button>
-                <button type="button" class="btn btn-warning btn-xs" name="unblock" id="unblock">
-                    <a href="#"><span style="color:white;">Block</span></a>
-                </button>
+            <p class="text-center"><strong>"""),_display_(Seq[Any](/*163.45*/editUser/*163.53*/.getEmail())),format.raw/*163.64*/("""</strong></p>
+            <p class="text-center">"""),_display_(Seq[Any](/*164.37*/editUser/*164.45*/.getFirstName())),format.raw/*164.60*/(""" """),_display_(Seq[Any](/*164.62*/editUser/*164.70*/.getLastName())),format.raw/*164.84*/("""</p>
+
+            <div style="margin-left:48%; margin-top:-8px;">
+
+                  <form id="Follow" action = "/follow" method="POST">
+                      <button type="submit" class="btn btn-success btn-xs" name="follow"><span style="color:white;">Follow</span></button>
+                  </form>
             </div>
+            <div style="margin-left:47.5%; margin-top:-8px;">
+                  <form id="unFollow" action = "/unFollow" method="POST">
+                      <button type="submit" class="btn btn-warning btn-xs" name="unFollow"><span style="color:white;">Unfollow</span></button>
+                  </form>
+            </div>
+            <input id="inputUserId" type="hidden" value=""""),_display_(Seq[Any](/*177.59*/session/*177.66*/.get("userId"))),format.raw/*177.80*/(""""></input>
+            <input id="inputUserFirstName" type="hidden" value=""""),_display_(Seq[Any](/*178.66*/session/*178.73*/.get("firstName"))),format.raw/*178.90*/(""""></input>
+            <input id="inputUserLastName" type="hidden" value=""""),_display_(Seq[Any](/*179.65*/session/*179.72*/.get("lastName"))),format.raw/*179.88*/(""""></input>
         </div>
     </div>
 </div>
@@ -215,101 +232,93 @@ Seq[Any](format.raw/*17.103*/("""
                  <caption class="text-center"><strong>Personal Information</strong></caption>
                  <tr>
                      <td><span class="glyphicon glyphicon-th-large"><small> Name</small></span></td>
-                     <td><small><strong>"""),_display_(Seq[Any](/*176.42*/session/*176.49*/.get("firstName"))),format.raw/*176.66*/(""" """),_display_(Seq[Any](/*176.68*/session/*176.75*/.get("lastName"))),format.raw/*176.91*/("""</strong></small></td>
+                     <td><small><strong>"""),_display_(Seq[Any](/*193.42*/editUser/*193.50*/.getFirstName())),format.raw/*193.65*/(""" """),_display_(Seq[Any](/*193.67*/editUser/*193.75*/.getLastName())),format.raw/*193.89*/("""</strong></small></td>
                  </tr>
                  <tr>
                      <td><span class="glyphicon glyphicon-heart"><small> Research</small></span></td>
-                     <td><small><strong>"""),_display_(Seq[Any](/*180.42*/editUser/*180.50*/.getResearchFields())),format.raw/*180.70*/("""</strong></small></td>
+                     <td><small><strong>"""),_display_(Seq[Any](/*197.42*/editUser/*197.50*/.getResearchFields())),format.raw/*197.70*/("""</strong></small></td>
                  </tr>
                  <tr>
                      <td><span class="glyphicon glyphicon-education"><small> Highest Degree</small></span></td>
-                     <td><small><strong>"""),_display_(Seq[Any](/*184.42*/editUser/*184.50*/.getHighestDegree())),format.raw/*184.69*/("""</strong></small></td>
+                     <td><small><strong>"""),_display_(Seq[Any](/*201.42*/editUser/*201.50*/.getHighestDegree())),format.raw/*201.69*/("""</strong></small></td>
                  </tr>
                  <tr>
                      <td><span class="glyphicon glyphicon-phone-alt"><small> Phone</small></span></td>
-                     <td><small><strong>"""),_display_(Seq[Any](/*188.42*/editUser/*188.50*/.getPhoneNumber())),format.raw/*188.67*/("""</strong></small></td>
+                     <td><small><strong>"""),_display_(Seq[Any](/*205.42*/editUser/*205.50*/.getPhoneNumber())),format.raw/*205.67*/("""</strong></small></td>
                  </tr>
                  <tr>
                      <td><span class="glyphicon glyphicon-search"><small> Affiliation</small></span></td>
-                     <td><small><strong>"""),_display_(Seq[Any](/*192.42*/editUser/*192.50*/.getAffiliation())),format.raw/*192.67*/("""</strong></small></td>
+                     <td><small><strong>"""),_display_(Seq[Any](/*209.42*/editUser/*209.50*/.getAffiliation())),format.raw/*209.67*/("""</strong></small></td>
                  </tr>
              </table>
          </div>
-         <!--<div class="line1"></div>-->
-         <!--<div id="photo-list1">-->
-             <!--<table id="photo-table1">-->
-                 <!--<caption class="text-center"><strong> Gallery </strong></caption>-->
-                 <!--<tr>-->
-                     <!--<td><img src="/assets/image/img-default.jpg" alt="photos" class="img-thumbnail picture-lib1"></td>-->
-                     <!--<td><img src="/assets/image/img-default.jpg" alt="photos" class="img-thumbnail picture-lib1"></td>-->
-                 <!--</tr>-->
-                 <!--<tr>-->
-                     <!--<td><img src="/assets/image/img-default.jpg" alt="photos" class="img-thumbnail picture-lib1"></td>-->
-                     <!--<td><img src="/assets/image/img-default.jpg" alt="photos" class="img-thumbnail picture-lib1"></td>-->
-                 <!--</tr>-->
-             <!--</table>-->
-          <!--<br/>-->
-         <!--</div>-->
-         <!--<div class="line1" style="margin-top:20px;"></div><br/>-->
+
        </div>
+       <form action = "/getMoreSelfPost" method="POST">
+           <button type="submit" class="btn btn-success">Click Here To Show More Posts!</button>
+       </form>
+
+       <form action = "/getLessSelfPost" method="POST">
+           <button type="submit" class="btn btn-success">Click Here To Show Less Posts!</button>
+       </form>
     </div>
+
+
+
  <div id="rightcontent1" class="col-md-7">
      <div id="stream-list1">
-         """),_display_(Seq[Any](/*216.11*/for(postService <- postServices) yield /*216.43*/{_display_(Seq[Any](format.raw/*216.44*/("""
+         """),_display_(Seq[Any](/*228.11*/for(postService <- postServices) yield /*228.43*/{_display_(Seq[Any](format.raw/*228.44*/("""
          <div class="soc-box1">
              <div class="soc">
                  <img src="/assets/image/default.jpg" class="img-circle user-picture" alt="photo">
-                 <a href="homepage">"""),_display_(Seq[Any](/*220.38*/postService/*220.49*/.getPostUserFirstName())),format.raw/*220.72*/(""" """),_display_(Seq[Any](/*220.74*/postService/*220.85*/.getPostUserLastName())),format.raw/*220.107*/("""</a>
+                 <a href="homepage">"""),_display_(Seq[Any](/*232.38*/postService/*232.49*/.getPostUserFirstName())),format.raw/*232.72*/(""" """),_display_(Seq[Any](/*232.74*/postService/*232.85*/.getPostUserLastName())),format.raw/*232.107*/("""</a>
              </div>
              <div class="post-time text-right">
-                 <h6><span class="glyphicon glyphicon-time"></span> """),_display_(Seq[Any](/*223.70*/postService/*223.81*/.getTime())),format.raw/*223.91*/("""</h6>
+                 <h6><span class="glyphicon glyphicon-time"></span> """),_display_(Seq[Any](/*235.70*/postService/*235.81*/.getTime())),format.raw/*235.91*/("""</h6>
+                 <h6><span class="glyphicon"></span>"""),_display_(Seq[Any](/*236.54*/postService/*236.65*/.getLocation())),format.raw/*236.79*/("""</h6>
              </div>
-             <p class="post-text">"""),_display_(Seq[Any](/*225.36*/postService/*225.47*/.getText())),format.raw/*225.57*/("""</p>
+             <p class="post-text">"""),_display_(Seq[Any](/*238.36*/postService/*238.47*/.getText())),format.raw/*238.57*/("""</p>
              <div class="btn-group btn-group-justified" role="group" aria-label="...">
+               <div class="btn-group" role="group">
+                   <button type="button" onclick="sharePost("""),_display_(Seq[Any](/*241.62*/postService/*241.73*/.getId())),format.raw/*241.81*/(""")" class="btn btn-default"><small><span class="glyphicon glyphicon-list-alt"></span> Share </small></button>
+               </div>
                  <div class="btn-group" role="group">
-                     <button type="button" class="btn btn-default"><small><span class="glyphicon glyphicon-list-alt"></span> Share</small></button>
+                     <button type="button" type="button" onclick="commentPost("""),_display_(Seq[Any](/*244.80*/postService/*244.91*/.getId())),format.raw/*244.99*/(""")" class="btn btn-default"><span class="glyphicon glyphicon-list-alt"></span><small> Reply </small></button>
                  </div>
                  <div class="btn-group" role="group">
-                     <button type="button" type="button" onclick="commentPost("""),_display_(Seq[Any](/*231.80*/postService/*231.91*/.getId())),format.raw/*231.99*/(""")" class="btn btn-default"><span class="glyphicon glyphicon-list-alt"></span><small> Reply </small></button>
+                     <button type="button" onclick="likePost("""),_display_(Seq[Any](/*247.63*/postService/*247.74*/.getId())),format.raw/*247.82*/(""","""),_display_(Seq[Any](/*247.84*/postService/*247.95*/.getLikes())),format.raw/*247.106*/(""")" class="btn btn-default"><span class="glyphicon glyphicon-heart"></span><small> Like : <span id=""""),_display_(Seq[Any](/*247.206*/postService/*247.217*/.getId())),format.raw/*247.225*/("""">"""),_display_(Seq[Any](/*247.228*/postService/*247.239*/.getLikes())),format.raw/*247.250*/("""</span></small></button>
                  </div>
                  <div class="btn-group" role="group">
-                     <button type="button" onclick="likePost("""),_display_(Seq[Any](/*234.63*/postService/*234.74*/.getId())),format.raw/*234.82*/(""","""),_display_(Seq[Any](/*234.84*/postService/*234.95*/.getLikes())),format.raw/*234.106*/(""")" class="btn btn-default"><span class="glyphicon glyphicon-heart"></span><small> Like : <span id=""""),_display_(Seq[Any](/*234.206*/postService/*234.217*/.getId())),format.raw/*234.225*/("""">"""),_display_(Seq[Any](/*234.228*/postService/*234.239*/.getLikes())),format.raw/*234.250*/("""</span></small></button>
+                     <button type="button" onclick="editPost('"""),_display_(Seq[Any](/*250.64*/postService/*250.75*/.getId())),format.raw/*250.83*/("""','"""),_display_(Seq[Any](/*250.87*/postService/*250.98*/.getText())),format.raw/*250.108*/("""')" class="btn btn-default"><small><span class="glyphicon glyphicon-list-alt"></span> EditHere! </small></button>
                  </div>
                  <div class="btn-group" role="group">
-                     <button type="button"  data=""""),_display_(Seq[Any](/*237.52*/postService/*237.63*/.getId())),format.raw/*237.71*/("""" onclick="editPostById()" class="btn btn-default"><span class="glyphicon glyphicon-pencil"></span><small> Edit</small></button>
-                 </div>
-                 <div class="btn-group" role="group">
-                     <button type="button" onclick="deletePostById("""),_display_(Seq[Any](/*240.69*/postService/*240.80*/.getId())),format.raw/*240.88*/(""")" class="btn btn-default"><span class="glyphicon glyphicon-trash"></span><small> Delete</small></button>
+                     <button type="button" onclick="deletePostById("""),_display_(Seq[Any](/*253.69*/postService/*253.80*/.getId())),format.raw/*253.88*/(""")" class="btn btn-default"><span class="glyphicon glyphicon-trash"></span><small> Delete</small></button>
                  </div>
              </div>
 
-             <div class="comment-box" style="display:none;" id="commentBox"""),_display_(Seq[Any](/*244.76*/postService/*244.87*/.getId())),format.raw/*244.95*/("""">
+             <div class="comment-box" style="display:none;" id="commentBox"""),_display_(Seq[Any](/*257.76*/postService/*257.87*/.getId())),format.raw/*257.95*/("""">
                  <div class="comment">
-                     <ol class="list-unstyled" id="comment"""),_display_(Seq[Any](/*246.60*/postService/*246.71*/.getId())),format.raw/*246.79*/("""">
+                     <ol class="list-unstyled" id="comment"""),_display_(Seq[Any](/*259.60*/postService/*259.71*/.getId())),format.raw/*259.79*/("""">
                      </ol>
                  </div>
 
-                 """),_display_(Seq[Any](/*250.19*/helper/*250.25*/.form(action = routes.UserController.addComment)/*250.73*/ {_display_(Seq[Any](format.raw/*250.75*/("""
-                 <form id="form"""),_display_(Seq[Any](/*251.33*/postService/*251.44*/.getId())),format.raw/*251.52*/("""" method="post">
-                     <input type="hidden" name="postId" id="postId" value=""""),_display_(Seq[Any](/*252.77*/postService/*252.88*/.getId())),format.raw/*252.96*/("""">
-                     <input class="form-control" type="hidden" name="commentUserId" id="commentUserId" value=""""),_display_(Seq[Any](/*253.112*/session/*253.119*/.get("userId"))),format.raw/*253.133*/("""">
-                     <!--取消注释-->
-                     <!--<input class="form-control" type="hidden" name="commentUserFirstName" id="commentUserFirstName" value=""""),_display_(Seq[Any](/*255.130*/session/*255.137*/.get("firstName"))),format.raw/*255.154*/("""">-->
-                     <!--<input class="form-control" type="hidden" name="commentUserLastName" id="commentUserLastName" value=""""),_display_(Seq[Any](/*256.128*/session/*256.135*/.get("lastName"))),format.raw/*256.151*/("""">-->
-                     <input type="text" class="form-control" placeholder="Type Your comment" name="text">
-                     <button type="submit" class="btn btn-info pull-right submitBtn btn-xs" onclick="submitComment("""),_display_(Seq[Any](/*258.117*/postService/*258.128*/.getId())),format.raw/*258.136*/(""")">Submit</button>
-                 </form>
-                 """)))})),format.raw/*260.19*/("""
+                 """),_display_(Seq[Any](/*263.19*/helper/*263.25*/.form(action = routes.UserController.addComment)/*263.73*/ {_display_(Seq[Any](format.raw/*263.75*/("""
+                     <form id="form"""),_display_(Seq[Any](/*264.37*/postService/*264.48*/.getId())),format.raw/*264.56*/("""" method="post">
+                         <input type="hidden" name="postId" id="postId" value=""""),_display_(Seq[Any](/*265.81*/postService/*265.92*/.getId())),format.raw/*265.100*/("""">
+                         <input type="hidden" name="homepageflag" id="homepageflag" value="homepageflag">
+                         <input class="form-control" type="hidden" name="commentUserId" id="commentUserId" value=""""),_display_(Seq[Any](/*267.116*/session/*267.123*/.get("userId"))),format.raw/*267.137*/("""">
+                         <input type="text" class="form-control" placeholder="Type Your comment" name="text">
+                         <button type="submit" class="btn btn-info pull-right submitBtn btn-xs">Submit</button>
+                     </form>
+                 """)))})),format.raw/*271.19*/("""
              </div>
          </div><br>
-         """)))})),format.raw/*263.11*/("""
-
+         """)))})),format.raw/*274.11*/("""
         </div>
-
     </div>
-
 </div>
-""")))})))}
+""")))})),format.raw/*278.2*/("""
+"""))}
     }
     
     def render(postServices:List[models.Post],commentForm:play.data.Form[models.Comment],editUser:models.User): play.api.templates.HtmlFormat.Appendable = apply(postServices,commentForm,editUser)
@@ -321,11 +330,11 @@ Seq[Any](format.raw/*17.103*/("""
 }
                 /*
                     -- GENERATED --
-                    DATE: Thu Dec 03 12:01:08 EST 2015
-                    SOURCE: /Users/apple/test/SOC-Fall-2015-Team4-Lead-Shuting-Xi/ApacheCMDA-Frontend/app/views/climate/homepage.scala.html
-                    HASH: d7935064833b71c2e29f999e52744144878d56bf
-                    MATRIX: 3204->1188|3417->1289|3445->1307|3540->1374|3569->1375|3621->1399|3650->1400|3723->1445|3752->1446|3829->1495|3858->1496|3991->1601|4020->1602|4120->1674|4149->1675|4220->1718|4249->1719|4299->1741|4328->1742|4468->1854|4497->1855|4585->1915|4614->1916|4646->1920|4675->1921|4766->1984|4795->1985|4836->1998|4865->1999|4899->2006|4927->2007|4986->2038|5015->2039|5063->2059|5092->2060|5156->2097|5185->2098|5312->2197|5341->2198|5460->2289|5489->2290|5581->2354|5610->2355|5672->2390|5701->2391|5751->2413|5780->2414|5908->2514|5937->2515|6015->2565|6044->2566|6076->2570|6105->2571|6188->2626|6217->2627|6253->2636|6282->2637|6316->2644|6344->2645|6406->2679|6435->2680|6515->2732|6544->2733|6654->2815|6683->2816|7233->3338|7262->3339|7298->3348|7327->3349|7457->3451|7486->3452|7553->3492|7582->3493|7616->3499|7645->3500|7712->3540|7741->3541|7773->3546|7801->3547|7866->3584|7895->3585|7942->3604|7971->3605|8313->3920|8342->3921|8386->3937|8415->3938|8537->4031|8567->4032|8660->4096|8690->4097|8753->4132|8783->4133|8834->4155|8864->4156|8939->4203|8969->4204|9004->4211|9033->4212|9081->4224|9108->4241|9149->4243|10235->5292|10270->5317|10311->5319|10413->5384|10429->5390|10472->5410|10618->5537|10632->5542|10672->5543|11019->5853|11035->5859|11084->5885|11183->5947|11199->5953|11251->5982|11350->6044|11366->6050|11410->6071|11527->6155|11935->6526|11952->6533|11988->6546|12079->6600|12096->6607|12136->6624|12175->6626|12192->6633|12231->6649|13261->7642|13278->7649|13318->7666|13357->7668|13374->7675|13413->7691|13661->7902|13679->7910|13722->7930|13980->8151|13998->8159|14040->8178|14289->8390|14307->8398|14347->8415|14599->8630|14617->8638|14657->8655|15875->9836|15924->9868|15964->9869|16201->10069|16222->10080|16268->10103|16307->10105|16328->10116|16374->10138|16553->10280|16574->10291|16607->10301|16705->10362|16726->10373|16759->10383|17247->10834|17268->10845|17299->10853|17585->11102|17606->11113|17637->11121|17676->11123|17697->11134|17732->11145|17870->11245|17892->11256|17924->11264|17965->11267|17987->11278|18022->11289|18213->11443|18234->11454|18265->11462|18577->11737|18598->11748|18629->11756|18892->11982|18913->11993|18944->12001|19082->12102|19103->12113|19134->12121|19244->12194|19260->12200|19318->12248|19359->12250|19429->12283|19450->12294|19481->12302|19611->12395|19632->12406|19663->12414|19815->12528|19833->12535|19871->12549|20074->12714|20092->12721|20133->12738|20304->12871|20322->12878|20362->12894|20628->13122|20650->13133|20682->13141|20777->13203|20861->13254
-                    LINES: 56->17|60->17|61->19|62->20|62->20|64->22|64->22|66->24|66->24|68->26|68->26|71->29|71->29|73->31|73->31|75->33|75->33|75->33|75->33|78->36|78->36|80->38|80->38|80->38|80->38|82->40|82->40|83->41|83->41|84->42|84->42|86->44|86->44|88->46|88->46|90->48|90->48|93->51|93->51|96->54|96->54|98->56|98->56|100->58|100->58|100->58|100->58|103->61|103->61|105->63|105->63|105->63|105->63|107->65|107->65|108->66|108->66|109->67|109->67|111->69|111->69|112->70|112->70|114->72|114->72|122->80|122->80|123->81|123->81|125->83|125->83|127->85|127->85|127->85|127->85|129->87|129->87|130->88|130->88|133->91|133->91|134->92|134->92|140->98|140->98|141->99|141->99|144->102|144->102|146->104|146->104|148->106|148->106|148->106|148->106|150->108|150->108|151->109|151->109|153->111|153->111|153->111|172->130|172->130|172->130|173->131|173->131|173->131|176->134|176->134|176->134|180->138|180->138|180->138|181->139|181->139|181->139|182->140|182->140|182->140|185->143|195->153|195->153|195->153|196->154|196->154|196->154|196->154|196->154|196->154|218->176|218->176|218->176|218->176|218->176|218->176|222->180|222->180|222->180|226->184|226->184|226->184|230->188|230->188|230->188|234->192|234->192|234->192|258->216|258->216|258->216|262->220|262->220|262->220|262->220|262->220|262->220|265->223|265->223|265->223|267->225|267->225|267->225|273->231|273->231|273->231|276->234|276->234|276->234|276->234|276->234|276->234|276->234|276->234|276->234|276->234|276->234|276->234|279->237|279->237|279->237|282->240|282->240|282->240|286->244|286->244|286->244|288->246|288->246|288->246|292->250|292->250|292->250|292->250|293->251|293->251|293->251|294->252|294->252|294->252|295->253|295->253|295->253|297->255|297->255|297->255|298->256|298->256|298->256|300->258|300->258|300->258|302->260|305->263
+                    DATE: Fri Dec 11 00:10:23 EST 2015
+                    SOURCE: /Users/X/Desktop/SOC-Fall-2015/ApacheCMDA-Frontend/app/views/climate/homepage.scala.html
+                    HASH: eb127aa59c38ad73eef1f6d370fc53a24aef4629
+                    MATRIX: 3204->1188|3418->1291|3446->1309|3541->1376|3570->1377|3621->1400|3650->1401|3723->1446|3752->1447|3800->1467|3829->1468|3962->1573|3991->1574|4091->1646|4120->1647|4191->1690|4220->1691|4270->1713|4299->1714|4404->1791|4433->1792|4521->1852|4550->1853|4582->1857|4611->1858|4702->1921|4731->1922|4772->1935|4801->1936|4835->1943|4863->1944|4922->1975|4951->1976|4998->1995|5027->1996|5091->2033|5120->2034|5164->2050|5193->2051|5312->2142|5341->2143|5433->2207|5462->2208|5524->2243|5553->2244|5603->2266|5632->2267|5729->2336|5758->2337|5836->2387|5865->2388|5897->2392|5926->2393|6009->2448|6038->2449|6074->2458|6103->2459|6137->2466|6165->2467|6225->2499|6254->2500|6304->2522|6333->2523|6653->2815|6682->2816|6729->2835|6758->2836|6887->2937|6916->2938|7014->3008|7043->3009|7112->3050|7141->3051|7191->3073|7220->3074|7300->3126|7329->3127|7366->3137|7394->3138|7462->3178|7491->3179|7597->3257|7626->3258|7736->3340|7765->3341|7815->3363|7844->3364|7981->3473|8010->3474|8114->3550|8143->3551|8218->3598|8247->3599|8297->3621|8326->3622|8413->3681|8442->3682|8483->3695|8512->3696|8575->3730|8605->3731|8738->3835|8768->3836|8888->3927|8918->3928|9146->4127|9176->4128|9584->4507|9614->4508|9658->4523|9688->4524|9732->4539|9762->4540|9797->4546|9827->4547|9902->4593|9932->4594|9965->4599|9994->4600|10042->4612|10069->4629|10110->4631|11196->5680|11231->5705|11272->5707|11374->5772|11390->5778|11433->5798|11579->5925|11593->5930|11633->5931|11980->6241|11996->6247|12048->6276|12147->6338|12163->6344|12207->6365|12324->6449|12713->6801|12731->6809|12765->6820|12852->6870|12870->6878|12908->6893|12947->6895|12965->6903|13002->6917|13742->7620|13759->7627|13796->7641|13909->7717|13926->7724|13966->7741|14078->7816|14095->7823|14134->7839|14692->8360|14710->8368|14748->8383|14787->8385|14805->8393|14842->8407|15090->8618|15108->8626|15151->8646|15409->8867|15427->8875|15469->8894|15718->9106|15736->9114|15776->9131|16028->9346|16046->9354|16086->9371|16655->9903|16704->9935|16744->9936|16981->10136|17002->10147|17048->10170|17087->10172|17108->10183|17154->10205|17333->10347|17354->10358|17387->10368|17483->10427|17504->10438|17541->10452|17639->10513|17660->10524|17693->10534|17935->10739|17956->10750|17987->10758|18288->11022|18309->11033|18340->11041|18626->11290|18647->11301|18678->11309|18717->11311|18738->11322|18773->11333|18911->11433|18933->11444|18965->11452|19006->11455|19028->11466|19063->11477|19266->11643|19287->11654|19318->11662|19359->11666|19380->11677|19414->11687|19711->11947|19732->11958|19763->11966|20026->12192|20047->12203|20078->12211|20216->12312|20237->12323|20268->12331|20378->12404|20394->12410|20452->12458|20493->12460|20567->12497|20588->12508|20619->12516|20753->12613|20774->12624|20806->12632|21068->12856|21086->12863|21124->12877|21429->13149|21513->13200|21580->13235
+                    LINES: 56->17|62->19|63->21|64->22|64->22|65->23|65->23|67->25|67->25|68->26|68->26|71->29|71->29|73->31|73->31|75->33|75->33|75->33|75->33|77->35|77->35|79->37|79->37|79->37|79->37|81->39|81->39|82->40|82->40|83->41|83->41|85->43|85->43|86->44|86->44|88->46|88->46|89->47|89->47|92->50|92->50|94->52|94->52|96->54|96->54|96->54|96->54|98->56|98->56|100->58|100->58|100->58|100->58|102->60|102->60|103->61|103->61|104->62|104->62|106->64|106->64|107->65|107->65|112->70|112->70|113->71|113->71|116->74|116->74|118->76|118->76|120->78|120->78|120->78|120->78|122->80|122->80|123->81|123->81|125->83|125->83|127->85|127->85|130->88|130->88|131->89|131->89|134->92|134->92|136->94|136->94|138->96|138->96|138->96|138->96|140->98|140->98|141->99|141->99|143->101|143->101|145->103|145->103|147->105|147->105|151->109|151->109|157->115|157->115|158->116|158->116|159->117|159->117|159->117|159->117|161->119|161->119|162->120|162->120|164->122|164->122|164->122|183->141|183->141|183->141|184->142|184->142|184->142|187->145|187->145|187->145|191->149|191->149|191->149|192->150|192->150|192->150|195->153|205->163|205->163|205->163|206->164|206->164|206->164|206->164|206->164|206->164|219->177|219->177|219->177|220->178|220->178|220->178|221->179|221->179|221->179|235->193|235->193|235->193|235->193|235->193|235->193|239->197|239->197|239->197|243->201|243->201|243->201|247->205|247->205|247->205|251->209|251->209|251->209|270->228|270->228|270->228|274->232|274->232|274->232|274->232|274->232|274->232|277->235|277->235|277->235|278->236|278->236|278->236|280->238|280->238|280->238|283->241|283->241|283->241|286->244|286->244|286->244|289->247|289->247|289->247|289->247|289->247|289->247|289->247|289->247|289->247|289->247|289->247|289->247|292->250|292->250|292->250|292->250|292->250|292->250|295->253|295->253|295->253|299->257|299->257|299->257|301->259|301->259|301->259|305->263|305->263|305->263|305->263|306->264|306->264|306->264|307->265|307->265|307->265|309->267|309->267|309->267|313->271|316->274|320->278
                     -- GENERATED --
                 */
             

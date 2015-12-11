@@ -31,8 +31,8 @@ public class PostController extends Controller {
 	private final UserRepository userRepository;
 
 	@Inject
-	public PostController(final PostRepository postRepository, 
-			final FollowerRepository followerRepository, 
+	public PostController(final PostRepository postRepository,
+			final FollowerRepository followerRepository,
 			final UserRepository userRepository) {
 		this.postRepository = postRepository;
 		this.followerRepository = followerRepository;
@@ -40,8 +40,6 @@ public class PostController extends Controller {
 	}
 
 	public Result addPost() {
-		System.out.println("-------------------Add Backend Called--------------------------" + "\n");
-		
 		JsonNode json = request().body().asJson();
 		if (json == null) {
 			System.out.println("Post not created, expecting Json data");
@@ -61,43 +59,30 @@ public class PostController extends Controller {
 		String time = df.format(new Date());
 
 		try {
-			Post post = new Post(visibility, text, Integer.valueOf(likes),
+					Post post = new Post(visibility, text, Integer.valueOf(likes),
 					location, Long.valueOf(postUserId), share, time,
 					postUserFirstName, postUserLastName);
-			System.out.println("id: " + post.getId());
-			System.out.println("visibility: " + post.getVisibility());
-			System.out.println("text: " + post.getText());
-			System.out.println("likes: " + post.getLikes());
-			System.out.println("location: " + post.getLocation());
-			System.out.println("postUserId: " + post.getPostUserId());
-			System.out.println("share: " + post.getShare());
-			System.out.println("time: " + post.getTime());
-
-			postRepository.save(post);
-			System.out.println("Post saved: " + post.getId());
-			return created(new Gson().toJson(post.getId()));
+					postRepository.save(post);
+					return created(new Gson().toJson(post.getId()));
 		} catch (PersistenceException pe) {
 			pe.printStackTrace();
 			System.out.println("Post not saved: " + postUserId + ": " + text);
 			return badRequest("Post not saved: " + postUserId + ": " + text);
 		}
 	}
-	
+
 	public Result sharePost() {
-		System.out.println("-------------------Backend Called--------------------------" + "\n");
 		JsonNode json = request().body().asJson();
 		if (json == null) {
 			System.out.println("Post not created, expecting Json data");
 			return badRequest("Post not created, expecting Json data");
 		}
-		
+
 		Long origPostId = Long.parseLong(json.path("origPostId").asText());
-		
 		Post origPost = postRepository.findOne(origPostId);
 		String origName = origPost.getPostUserFirstName() + " " + origPost.getPostUserLastName();
 		String origText = origPost.getText();
 		String text = "Share from " + origName + ": " + origText;
-		
 		// Parse JSON file
 		String visibility = json.path("visibility").asText();
 		String likes = json.path("likes").asText();
@@ -113,25 +98,16 @@ public class PostController extends Controller {
 			Post post = new Post(visibility, text, Integer.valueOf(likes),
 					location, Long.valueOf(postUserId), share, time,
 					postUserFirstName, postUserLastName);
-			System.out.println("id: " + post.getId());
-			System.out.println("visibility: " + post.getVisibility());
-			System.out.println("text: " + post.getText());
-			System.out.println("likes: " + post.getLikes());
-			System.out.println("location: " + post.getLocation());
-			System.out.println("postUserId: " + post.getPostUserId());
-			System.out.println("share: " + post.getShare());
-			System.out.println("time: " + post.getTime());
 
-			postRepository.save(post);
-			System.out.println("Post saved: " + post.getId());
-			return created(new Gson().toJson(post.getId()));
+					postRepository.save(post);
+
+					return created(new Gson().toJson(post.getId()));
 		} catch (PersistenceException pe) {
 			pe.printStackTrace();
 			System.out.println("Post not saved: " + postUserId + ": " + text);
 			return badRequest("Post not saved: " + postUserId + ": " + text);
 		}
 	}
-
 
 	public Result deletePost(Long id) {
 		Post deletePost = postRepository.findOne(id);
@@ -152,7 +128,7 @@ public class PostController extends Controller {
 		}
 
 		List<Post> allPosts = postRepository.findByPostUserId(postUserId);
-		
+
 		try {
 			allPosts = sortByTime(allPosts);
 		} catch (ParseException e) {
@@ -170,19 +146,19 @@ public class PostController extends Controller {
 
 		return ok(result);
 	}
-	
+
 	public Result getAllPostsByUserId(Long userId, String format) {
 		if (userId == null) {
 			System.out.println("User id is null or empty!");
 			return badRequest("User id is null or empty!");
 		}
-		
+
 		FollowerController followerController = new FollowerController(followerRepository, userRepository);
 		List<Follower> allFollowees = followerController.getAllFolloweesByFollowerId(userId);
-		
+
 		// Find all posts of the user
 		List<Post> allPosts = postRepository.findByPostUserId(userId);
-		
+
 		if (allFollowees != null) {
 			// Find all posts of the user's followees
 			for (int i = 0; i < allFollowees.size(); i++) {
@@ -191,7 +167,7 @@ public class PostController extends Controller {
 				allPosts.addAll(posts);
 			}
 		}
-		
+
 		if (allPosts != null) {
 			// Filter out private posts
 			for (int i = 0; i < allPosts.size(); i++) {
@@ -199,20 +175,20 @@ public class PostController extends Controller {
 					allPosts.remove(i);
 				}
 			}
-			
+
 			// Sort all posts
 			try {
 				allPosts = sortByTime(allPosts);
 			} catch (ParseException e) {
 				e.printStackTrace();
 			}
-			
+
 			if (allPosts.size() == 0) {
 				System.out.println("Post not found with id: " + userId);
 				return notFound("Post not found with id: " + userId);
 			}
-		}	
-	
+		}
+
 		String result = new String();
 		if (format.equals("json")) {
 			result = new Gson().toJson(allPosts);
@@ -266,7 +242,7 @@ public class PostController extends Controller {
 			return badRequest("Post not saved: " + id);
 		}
 	}
-	
+
 	private List<Post> sortByTime(List<Post> allPosts) throws ParseException {
 		System.setProperty("java.util.Arrays.useLegacyMergeSort", "true");
 		SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");

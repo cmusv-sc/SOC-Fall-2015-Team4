@@ -34,15 +34,15 @@ import util.APICall.ResponseType;
 import views.html.climate.*;
 
 public class Application extends Controller {
-	
+
 	final static Form<User> userForm = Form
 			.form(User.class);
-	
+
 	public static class Login {
 
 	    public String email;
 	    public String password;
-	    
+
 	}
 
 	public static Result home() {
@@ -52,7 +52,7 @@ public class Application extends Controller {
 	public static Result login() {
 	    return ok(login.render(Form.form(Login.class)));
 	}
-	
+
 	public static Result logout() {
         session().clear();
         flash("success", "You've been logged out");
@@ -79,7 +79,7 @@ public class Application extends Controller {
 	public static Result createSuccess(){
 		return ok(createSuccess.render());
 	}
-	
+
 	public static Result authenticate() {
 		Form<Login> loginForm = Form.form(Login.class).bindFromRequest();
 		String email = loginForm.field("email").value();
@@ -100,32 +100,35 @@ public class Application extends Controller {
 			session("highestDegree",validation.path("highestDegree").asText());
 			session("phoneNumber",validation.path("phoneNumber").asText());
 			session("affiliation",validation.path("affiliation").asText());
+
+			System.out.println();
+
 			return redirect(routes.UserController.mainpage());
 	    }
 	}
-    
+
     public static void flashMsg(JsonNode jsonNode){
 		Iterator<Entry<String, JsonNode>> it = jsonNode.fields();
 		while (it.hasNext()) {
 			Entry<String, JsonNode> field = it.next();
-			flash(field.getKey(),field.getValue().asText());	
+			flash(field.getKey(),field.getValue().asText());
 		}
     }
-    
+
     public static Result signup() {
-    	
+
 		return ok(signup.render(userForm));
 	}
-  
-    
+
+
     public static Result createNewUser(){
     	Form<User> nu = userForm.bindFromRequest();
-    	
-    	
-    	
+
+
+
     	ObjectNode jsonData = Json.newObject();
     	String userName = null;
-    	
+
     	try{
     		userName = nu.field("firstName").value()+" "+(nu.field("middleInitial")).value()
     				+" "+(nu.field("lastName")).value();
@@ -142,14 +145,14 @@ public class Application extends Controller {
 			jsonData.put("faxNumber", nu.get().getFaxNumber());
 			jsonData.put("researchFields", nu.get().getResearchFields());
 			jsonData.put("highestDegree", nu.get().getHighestDegree());
-			
-			JsonNode response = APICall.postAPI(Constants.URL_HOST + Constants.CMU_BACKEND_PORT 
+
+			JsonNode response = APICall.postAPI(Constants.URL_HOST + Constants.CMU_BACKEND_PORT
 					+ Constants.ADD_USER, jsonData);
 
 			// flash the response message
 			Application.flashMsg(response);
 			return redirect(routes.Application.createSuccess());
-    		
+
     	}catch (IllegalStateException e) {
 			e.printStackTrace();
 			Application.flashMsg(APICall
@@ -159,18 +162,18 @@ public class Application extends Controller {
 			Application.flashMsg(APICall
 					.createResponse(ResponseType.UNKNOWN));
 		}
-		return ok(signup.render(nu));  
+		return ok(signup.render(nu));
     }
-    
+
     public static Result isEmailExisted() {
     	JsonNode json = request().body().asJson();
     	String email = json.path("email").asText();
-    	
+
 		ObjectNode jsonData = Json.newObject();
 		JsonNode response = null;
 		try {
 			jsonData.put("email", email);
-			response = APICall.postAPI(Constants.URL_HOST + Constants.CMU_BACKEND_PORT 
+			response = APICall.postAPI(Constants.URL_HOST + Constants.CMU_BACKEND_PORT
 					+ Constants.IS_EMAIL_EXISTED, jsonData);
 			Application.flashMsg(response);
 		}catch (IllegalStateException e) {

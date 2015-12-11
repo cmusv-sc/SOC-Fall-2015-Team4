@@ -1,6 +1,6 @@
-// @SOURCE:/Users/apple/test/SOC-Fall-2015-Team4-Lead-Shuting-Xi/ApacheCMDA-Frontend/conf/routes
-// @HASH:7f169241709bf2a264afba2b2d9fd791bde7f783
-// @DATE:Thu Dec 03 12:00:37 EST 2015
+// @SOURCE:/Users/X/Desktop/SOC-Fall-2015/ApacheCMDA-Frontend/conf/routes
+// @HASH:e94e43092e8dd1316efa239b317b6fa3a0dd46ca
+// @DATE:Thu Dec 10 23:06:00 EST 2015
 
 
 import play.core._
@@ -199,7 +199,55 @@ private[this] lazy val controllers_UserController_editProfile41 = Route("GET", P
 // @LINE:60
 private[this] lazy val controllers_UserController_editUser42 = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("editUser"))))
         
-def documentation = List(("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """home""","""controllers.ClimateServiceController.home(email:String ?= null, vfile:String ?= null, dataset:String ?= null)"""),("""GET""", prefix,"""controllers.ClimateServiceController.home(email:String ?= null, vfile:String ?= null, dataset:String ?= null)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """login""","""controllers.Application.login()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """logout""","""controllers.Application.logout()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """authenticate""","""controllers.Application.authenticate()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """signup""","""controllers.Application.signup()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """createNewUser""","""controllers.Application.createNewUser()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """createSuccess""","""controllers.Application.createSuccess()"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """isEmailExisted""","""controllers.Application.isEmailExisted()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """bugs""","""controllers.BugReportController.reports()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """newReport""","""controllers.BugReportController.newReport()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """bug/list""","""controllers.BugReportController.list()"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """delete/report""","""controllers.BugReportController.deleteReport()"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """solve/report""","""controllers.BugReportController.solveReport()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """aboutus""","""controllers.AboutusController.aboutUs()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """aboutProject""","""controllers.AboutusController.aboutProject()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """climate""","""controllers.ClimateServiceController.home(email:String ?= null, vfile:String ?= null, dataset:String ?= null)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """climate/tutorial""","""controllers.ClimateServiceController.tutorial()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """climate/climateServices""","""controllers.ClimateServiceController.climateServices()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """climate/mostRecentlyAddedClimateServices""","""controllers.ClimateServiceController.mostRecentlyAddedClimateServices()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """climate/mostRecentlyUsedClimateServices""","""controllers.ClimateServiceController.mostRecentlyUsedClimateServices()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """climate/mostPopularClimateServices""","""controllers.ClimateServiceController.mostPopularClimateServices()"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """climate/new/climateServices""","""controllers.ClimateServiceController.newClimateService()"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """climate/delete/climateServices""","""controllers.ClimateServiceController.deleteClimateService()"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """climate/download/climateServices""","""controllers.ClimateServiceController.downloadClimateService()"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """climate/edit/climateServices""","""controllers.ClimateServiceController.editClimateService()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """climate/new/climateServices""","""controllers.ClimateServiceController.addClimateServices()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """climate/oneService""","""controllers.ClimateServiceController.oneService(url:String ?= null)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """climate/datasets""","""controllers.DatasetController.datasetList()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """climate/searchDataSet""","""controllers.DatasetController.searchDataset()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """climate/getSearchResult""","""controllers.DatasetController.getSearchResult()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """assets/$file<.+>""","""controllers.Assets.at(path:String = "/public", file:String)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """mainpage""","""controllers.UserController.mainpage()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """homepage""","""controllers.UserController.homepage()"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """addPost""","""controllers.UserController.addPost()"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """deletePost""","""controllers.UserController.deletePost()"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """sharePost""","""controllers.UserController.sharePost()"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """likePost""","""controllers.UserController.likePost()"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """searchUser""","""controllers.UserController.searchUser()"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """addComment""","""controllers.UserController.addComment()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """allComment/$id<[^/]+>""","""controllers.UserController.allComment(id:Long)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """editProfile""","""controllers.UserController.editProfile()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """editUser""","""controllers.UserController.editUser()""")).foldLeft(List.empty[(String,String,String)]) { (s,e) => e.asInstanceOf[Any] match {
+
+// @LINE:61
+private[this] lazy val controllers_UserController_editPost43 = Route("POST", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("editPost"))))
+        
+
+// @LINE:62
+private[this] lazy val controllers_UserController_searchUser44 = Route("POST", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("searchUser"))))
+        
+
+// @LINE:63
+private[this] lazy val controllers_UserController_searchPost45 = Route("POST", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("searchPost"))))
+        
+
+// @LINE:64
+private[this] lazy val controllers_UserController_goBack46 = Route("POST", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("goBack"))))
+        
+
+// @LINE:65
+private[this] lazy val controllers_UserController_visitFollowee47 = Route("POST", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("visitFollowee"))))
+        
+
+// @LINE:66
+private[this] lazy val controllers_UserController_follow48 = Route("POST", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("follow"))))
+        
+
+// @LINE:67
+private[this] lazy val controllers_UserController_unFollow49 = Route("POST", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("unFollow"))))
+        
+
+// @LINE:68
+private[this] lazy val controllers_UserController_sendLocation50 = Route("POST", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("sendLocation"))))
+        
+
+// @LINE:69
+private[this] lazy val controllers_UserController_getMoreAllPost51 = Route("POST", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("getMoreAllPost"))))
+        
+
+// @LINE:70
+private[this] lazy val controllers_UserController_getLessAllPost52 = Route("POST", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("getLessAllPost"))))
+        
+
+// @LINE:71
+private[this] lazy val controllers_UserController_getMoreSelfPost53 = Route("POST", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("getMoreSelfPost"))))
+        
+
+// @LINE:72
+private[this] lazy val controllers_UserController_getLessSelfPost54 = Route("POST", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("getLessSelfPost"))))
+        
+def documentation = List(("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """home""","""controllers.ClimateServiceController.home(email:String ?= null, vfile:String ?= null, dataset:String ?= null)"""),("""GET""", prefix,"""controllers.ClimateServiceController.home(email:String ?= null, vfile:String ?= null, dataset:String ?= null)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """login""","""controllers.Application.login()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """logout""","""controllers.Application.logout()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """authenticate""","""controllers.Application.authenticate()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """signup""","""controllers.Application.signup()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """createNewUser""","""controllers.Application.createNewUser()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """createSuccess""","""controllers.Application.createSuccess()"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """isEmailExisted""","""controllers.Application.isEmailExisted()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """bugs""","""controllers.BugReportController.reports()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """newReport""","""controllers.BugReportController.newReport()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """bug/list""","""controllers.BugReportController.list()"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """delete/report""","""controllers.BugReportController.deleteReport()"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """solve/report""","""controllers.BugReportController.solveReport()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """aboutus""","""controllers.AboutusController.aboutUs()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """aboutProject""","""controllers.AboutusController.aboutProject()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """climate""","""controllers.ClimateServiceController.home(email:String ?= null, vfile:String ?= null, dataset:String ?= null)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """climate/tutorial""","""controllers.ClimateServiceController.tutorial()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """climate/climateServices""","""controllers.ClimateServiceController.climateServices()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """climate/mostRecentlyAddedClimateServices""","""controllers.ClimateServiceController.mostRecentlyAddedClimateServices()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """climate/mostRecentlyUsedClimateServices""","""controllers.ClimateServiceController.mostRecentlyUsedClimateServices()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """climate/mostPopularClimateServices""","""controllers.ClimateServiceController.mostPopularClimateServices()"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """climate/new/climateServices""","""controllers.ClimateServiceController.newClimateService()"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """climate/delete/climateServices""","""controllers.ClimateServiceController.deleteClimateService()"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """climate/download/climateServices""","""controllers.ClimateServiceController.downloadClimateService()"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """climate/edit/climateServices""","""controllers.ClimateServiceController.editClimateService()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """climate/new/climateServices""","""controllers.ClimateServiceController.addClimateServices()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """climate/oneService""","""controllers.ClimateServiceController.oneService(url:String ?= null)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """climate/datasets""","""controllers.DatasetController.datasetList()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """climate/searchDataSet""","""controllers.DatasetController.searchDataset()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """climate/getSearchResult""","""controllers.DatasetController.getSearchResult()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """assets/$file<.+>""","""controllers.Assets.at(path:String = "/public", file:String)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """mainpage""","""controllers.UserController.mainpage()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """homepage""","""controllers.UserController.homepage()"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """addPost""","""controllers.UserController.addPost()"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """deletePost""","""controllers.UserController.deletePost()"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """sharePost""","""controllers.UserController.sharePost()"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """likePost""","""controllers.UserController.likePost()"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """searchUser""","""controllers.UserController.searchUser()"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """addComment""","""controllers.UserController.addComment()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """allComment/$id<[^/]+>""","""controllers.UserController.allComment(id:Long)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """editProfile""","""controllers.UserController.editProfile()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """editUser""","""controllers.UserController.editUser()"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """editPost""","""controllers.UserController.editPost()"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """searchUser""","""controllers.UserController.searchUser()"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """searchPost""","""controllers.UserController.searchPost()"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """goBack""","""controllers.UserController.goBack()"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """visitFollowee""","""controllers.UserController.visitFollowee()"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """follow""","""controllers.UserController.follow()"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """unFollow""","""controllers.UserController.unFollow()"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """sendLocation""","""controllers.UserController.sendLocation()"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """getMoreAllPost""","""controllers.UserController.getMoreAllPost()"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """getLessAllPost""","""controllers.UserController.getLessAllPost()"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """getMoreSelfPost""","""controllers.UserController.getMoreSelfPost()"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """getLessSelfPost""","""controllers.UserController.getLessSelfPost()""")).foldLeft(List.empty[(String,String,String)]) { (s,e) => e.asInstanceOf[Any] match {
   case r @ (_,_,_) => s :+ r.asInstanceOf[(String,String,String)]
   case l => s ++ l.asInstanceOf[List[(String,String,String)]] 
 }}
@@ -547,6 +595,102 @@ case controllers_UserController_editProfile41(params) => {
 case controllers_UserController_editUser42(params) => {
    call { 
         invokeHandler(controllers.UserController.editUser(), HandlerDef(this, "controllers.UserController", "editUser", Nil,"GET", """""", Routes.prefix + """editUser"""))
+   }
+}
+        
+
+// @LINE:61
+case controllers_UserController_editPost43(params) => {
+   call { 
+        invokeHandler(controllers.UserController.editPost(), HandlerDef(this, "controllers.UserController", "editPost", Nil,"POST", """""", Routes.prefix + """editPost"""))
+   }
+}
+        
+
+// @LINE:62
+case controllers_UserController_searchUser44(params) => {
+   call { 
+        invokeHandler(controllers.UserController.searchUser(), HandlerDef(this, "controllers.UserController", "searchUser", Nil,"POST", """""", Routes.prefix + """searchUser"""))
+   }
+}
+        
+
+// @LINE:63
+case controllers_UserController_searchPost45(params) => {
+   call { 
+        invokeHandler(controllers.UserController.searchPost(), HandlerDef(this, "controllers.UserController", "searchPost", Nil,"POST", """""", Routes.prefix + """searchPost"""))
+   }
+}
+        
+
+// @LINE:64
+case controllers_UserController_goBack46(params) => {
+   call { 
+        invokeHandler(controllers.UserController.goBack(), HandlerDef(this, "controllers.UserController", "goBack", Nil,"POST", """""", Routes.prefix + """goBack"""))
+   }
+}
+        
+
+// @LINE:65
+case controllers_UserController_visitFollowee47(params) => {
+   call { 
+        invokeHandler(controllers.UserController.visitFollowee(), HandlerDef(this, "controllers.UserController", "visitFollowee", Nil,"POST", """""", Routes.prefix + """visitFollowee"""))
+   }
+}
+        
+
+// @LINE:66
+case controllers_UserController_follow48(params) => {
+   call { 
+        invokeHandler(controllers.UserController.follow(), HandlerDef(this, "controllers.UserController", "follow", Nil,"POST", """""", Routes.prefix + """follow"""))
+   }
+}
+        
+
+// @LINE:67
+case controllers_UserController_unFollow49(params) => {
+   call { 
+        invokeHandler(controllers.UserController.unFollow(), HandlerDef(this, "controllers.UserController", "unFollow", Nil,"POST", """""", Routes.prefix + """unFollow"""))
+   }
+}
+        
+
+// @LINE:68
+case controllers_UserController_sendLocation50(params) => {
+   call { 
+        invokeHandler(controllers.UserController.sendLocation(), HandlerDef(this, "controllers.UserController", "sendLocation", Nil,"POST", """""", Routes.prefix + """sendLocation"""))
+   }
+}
+        
+
+// @LINE:69
+case controllers_UserController_getMoreAllPost51(params) => {
+   call { 
+        invokeHandler(controllers.UserController.getMoreAllPost(), HandlerDef(this, "controllers.UserController", "getMoreAllPost", Nil,"POST", """""", Routes.prefix + """getMoreAllPost"""))
+   }
+}
+        
+
+// @LINE:70
+case controllers_UserController_getLessAllPost52(params) => {
+   call { 
+        invokeHandler(controllers.UserController.getLessAllPost(), HandlerDef(this, "controllers.UserController", "getLessAllPost", Nil,"POST", """""", Routes.prefix + """getLessAllPost"""))
+   }
+}
+        
+
+// @LINE:71
+case controllers_UserController_getMoreSelfPost53(params) => {
+   call { 
+        invokeHandler(controllers.UserController.getMoreSelfPost(), HandlerDef(this, "controllers.UserController", "getMoreSelfPost", Nil,"POST", """""", Routes.prefix + """getMoreSelfPost"""))
+   }
+}
+        
+
+// @LINE:72
+case controllers_UserController_getLessSelfPost54(params) => {
+   call { 
+        invokeHandler(controllers.UserController.getLessSelfPost(), HandlerDef(this, "controllers.UserController", "getLessSelfPost", Nil,"POST", """""", Routes.prefix + """getLessSelfPost"""))
    }
 }
         

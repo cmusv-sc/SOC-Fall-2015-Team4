@@ -24,13 +24,13 @@ public class Constants {
 
 	// API Call format
 	public static final String FORMAT = "json";
-	
+
 	// climate service
 	public static final String NEW_GET_CLIMATE_SERVICE = "getAllClimateServices/";
 	public static final String NEW_ADD_CLIMATE_SERVICE = "addClimateService";
 	public static final String NEW_DELETE_CLIMATE_SERVICE = "climateService/deleteClimateService/id/";
 	public static final String NEW_EDIT_CLIMATE_SERVICE = "updateClimateService";
-	
+
 	//service log
 	public static final String NEW_GET_A_SERVICE_LOG = "getServiceExecutionLogs/";
 
@@ -70,4 +70,8 @@ public class Constants {
 
 	public static final String Edit_USER = "/users/update/";
 	public static final String GET_USER_INFO = Constants.NEW_BACKEND+"users/";
+
+
+	public static final String GET_ALL_FOLLOWER_CALL = Constants.NEW_BACKEND+"followers/getAllFollowersByUserId/user/";
+	public static final String GET_ALL_FOLLOWEE_CALL = Constants.NEW_BACKEND+"followers/getAllFolloweesByFollowerId/user/";
 }

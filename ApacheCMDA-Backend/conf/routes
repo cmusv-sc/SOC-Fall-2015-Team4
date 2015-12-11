@@ -54,9 +54,7 @@ GET			  /users/getAllUsers/json																	@controllers.UserController.getA
 POST		  /users/isUserValid																		@controllers.UserController.isUserValid
 POST		  /users/isEmailExisted																		@controllers.UserController.isEmailExisted
 DELETE		  /users/delete/userName/:userName/password/:password										@controllers.UserController.deleteUserByUserNameandPassword(userName: String, password: String)
-POST		  /users/search																	            @controllers.UserController.search     
-
-
+POST		  /users/search																	            @controllers.UserController.search
 
 # Map static resources from the /public folder to the /assets URL path
 GET           /assets/*file                                                                             controllers.Assets.at(path="/public", file)
@@ -78,3 +76,5 @@ PUT           /posts/updatePostLikesById/id/:id                                 
 # Follower
 POST          /followers/add                                                                            @controllers.FollowerController.addFollower
 GET			  /followers/getAllFollowersByUserId/user/:id/json											@controllers.FollowerController.getAllFollowersByUserId(id: Long, format: String="json")
+GET			  /followers/getAllFolloweesByFollowerId/user/:id/json											@controllers.FollowerController.getAllFolloweesByFollowerId(id: Long, format: String="json")
+POST         /followers/delete                                                      @controllers.FollowerController.deleteFollowee

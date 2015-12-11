@@ -13,18 +13,25 @@ public class Comment {
 	private String text;
 	private long postId;
 	private long commentUserId;
+	private String commentUserFirstName;
+	private String commentUserLastName;
 	private String time;
 	
 	public Comment() {
 	}
 
-	public Comment(String text, long postId, long commentUserId, String time) {
+	public Comment(String text, long postId, long commentUserId,
+			String commentUserFirstName, String commentUserLastName, String time) {
 		super();
 		this.text = text;
 		this.postId = postId;
 		this.commentUserId = commentUserId;
+		this.commentUserFirstName = commentUserFirstName;
+		this.commentUserLastName = commentUserLastName;
 		this.time = time;
 	}
+
+
 
 	public String getTime() {
 		return time;
@@ -66,9 +73,28 @@ public class Comment {
 		this.commentUserId = commentUserId;
 	}
 
+	public String getCommentUserFirstName() {
+		return commentUserFirstName;
+	}
+
+	public void setCommentUserFirstName(String commentUserFirstName) {
+		this.commentUserFirstName = commentUserFirstName;
+	}
+
+	public String getCommentUserLastName() {
+		return commentUserLastName;
+	}
+
+	public void setCommentUserLastName(String commentUserLastName) {
+		this.commentUserLastName = commentUserLastName;
+	}
+
 	@Override
 	public String toString() {
 		return "Comment [id=" + id + ", text=" + text + ", postId=" + postId
-				+ ", commentUserId=" + commentUserId + ", time=" + time + "]";
+				+ ", commentUserId=" + commentUserId
+				+ ", commentUserFirstName=" + commentUserFirstName
+				+ ", commentUserLastName=" + commentUserLastName + ", time="
+				+ time + "]";
 	}
 }

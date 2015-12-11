@@ -14,11 +14,17 @@
 * See the License for the specific language governing permissions and         *
 * limitations under the License.											   *
 *******************************************************************************@
-@(postServices: List[models.Post],postForm: play.data.Form[models.Post],commentForm: play.data.Form[models.Comment])
+@(postServices: List[models.Post],
+  postForm: play.data.Form[models.Post],
+  commentForm: play.data.Form[models.Comment],
+  user:models.User,
+  searchUserResult: List[models.User],
+  followees: List[models.User],
+  followers: List[models.User]
+  )
 <script type="text/javascript">
 
     function likePost(postId){
-
         var obj = {
             postId : postId
         }
@@ -30,7 +36,6 @@
             },
             type: "POST"
         }).done(function(data) {
-            console.log(data);
             var response = data;
             if("error" in response){
                 alert("like error!")
@@ -39,8 +44,8 @@
             }
         });
     }
-    
-function searchUser(){
+
+    function searchUser(){
         var obj = {
             userKeyword : document.getElementById("userKeyword").value
         }
@@ -52,7 +57,6 @@ function searchUser(){
             },
             type: "POST"
         }).done(function(data) {
-            console.log(data);
             var response = data;
             if("error" in response){
                 alert("like error!")
@@ -61,8 +65,8 @@ function searchUser(){
             }
         });
     }
-    
- function sharePost(postId){
+
+    function sharePost(postId){
         var obj = {
             postId : postId,
             postUserId : document.getElementById("inputUserId").value,
@@ -77,50 +81,120 @@ function searchUser(){
             },
             type: "POST"
         }).done(function(data) {
-			window.location.reload();
+			       window.location.reload();
         });
     }
 
-    function commentPost(postId){
-        $.get("/allComment/"+postId, function(data){
-            var commentServices = data;
-            for (cid in commentServices) {
-                var json = commentServices[cid];
-                var html = "<li><h6>"+json["time"]+"</h6>" +
-                            json["commentUserId"] +"</a>&nbsp;replied:&nbsp;"+json["text"]+"</li>";
-                //用下面的替换上面的html
-//                var html = "<li><h6>"+json["time"]+"</h6>&nbsp;&nbsp;" +
-//                        json["commentUserFirstName"] + "&nbsp;"+ json["commentUserLastName"] +"</a>&nbsp;replied:&nbsp;"+json["text"]+"</li>";
-                $("#comment"+postId).append(html);
-            }
-        });
-        var commentBox = $('#commentBox'+postId);
-        if (commentBox.css("display") == "none") {
-            commentBox.show();
-        } else {
-            commentBox.hide();
-        }
-    }
-
-
-    function submitComment(postId){
+    function visitFollowee(followeeId){
+       alert(followeeId);
         var obj = {
-            postId : postId,
-            commentUserId : document.getElementById("commentUserId").value,
-            //取消注释
-//            commentUserFirstName : document.getElementById("commentUserFirstName").value,
-//            commentUserLastName : document.getElementById("commentUserLastName").value,
+            followeeId : followeeId,
         }
         $.ajax({
-            url: "/addComment",
+            url: "/visitFollowee",
             data: JSON.stringify(obj),
             headers: {
                 'Content-Type': 'application/json'
             },
             type: "POST"
         }).done(function(data) {
-            window.location.reload();
+             //window.location.reload();
         });
+        //window.location.reload();
+    }
+
+    function searchUser(){
+            var obj = {
+                userKeyword : document.getElementById("userKeyword").value
+            }
+            $.ajax({
+                url: "/searchUser",
+                data: JSON.stringify(obj),
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                type: "POST"
+            }).done(function(data) {
+                    window.location.reload();
+            });
+        }
+
+    function searchPost(){
+            var obj = {
+                postKeyword : document.getElementById("postKeyword").value
+            }
+            $.ajax({
+                url: "/searchPost",
+                data: JSON.stringify(obj),
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                type: "POST"
+             }).done(function(data) {
+                    window.location.reload();
+             });
+    }
+
+    function goBack() {
+            $.ajax({
+              url: "/goBack",
+              type: "POST"
+            }).done(function(data) {
+              window.location.reload();
+            });
+          }
+
+    function commentPost(postId){
+        var commentBox = $('#commentBox'+postId);
+        if (commentBox.css("display") == "none") {
+            commentBox.show();
+            $.get("/allComment/"+postId, function(data){
+                $("#comment"+postId).empty();
+
+                var commentServices = data;
+                if("error" in commentServices) return;
+                for (cid in commentServices) {
+                var json = commentServices[cid];
+                var html = "<li><h6>"+json["time"]+"</h6>&nbsp;&nbsp;" +
+                       json["commentUserFirstName"] + "&nbsp;"+ json["commentUserLastName"]
+                       +"</a>&nbsp;replied:&nbsp;"+json["text"]+"</li>";
+                $("#comment"+postId).append(html);
+                }
+              });
+          } else {
+          commentBox.hide();
+      }
+    }
+
+
+    var la = NULL;
+    var lt = NULL;
+
+    function refreshLocation() {
+      if (navigator.geolocation) {
+          navigator.geolocation.getCurrentPosition(showPosition);
+        }
+      }
+
+    function showPosition(position) {
+      la = position.coords.latitude;
+      lt = position.coords.longitude;
+      alert("Location Refreshed!");
+      var obj = {
+          latitude : la,
+          longtitude : lt,
+      }
+      $.ajax({
+          url: "/sendLocation",
+          data: JSON.stringify(obj),
+          headers: {
+              'Content-Type': 'application/json'
+          },
+          type: "POST"
+       }).done(function(data) {
+              window.location.reload();
+       });
+
     }
 
 
@@ -153,20 +227,34 @@ function searchUser(){
             <li id="drop" class="dropdown nav-btn"><a href="#" class="dropdown-toggle" data-toggle="dropdown">
                 <span class="glyphicon glyphicon-user"></span> My Account<span class="caret"></span></a>
                 <ul class="dropdown-menu">
-                    <li><a href="@routes.UserController.homepage()">View Profile</a></li>
                     <li><a href="@routes.Application.logout()">Log out</a></li>
                 </ul>
             </li>
             }
         </ul>
- 
-            <div class="navbar-form navbar-right">
-                <input type="text" id="userKeyword" class="form-control" placeholder="Search user">
-                <button type="button" onclick="searchUser()" class="btn btn-default">Search</button>
-            </div>
-            
- 
-        
+
+        <div class="navbar-form navbar-right">
+            <input type="text" id="userKeyword" class="form-control" placeholder="Search user">
+            <button type="button" onclick="searchUser()" class="btn btn-default">Search User!</button>
+            <button type="button" onclick="goBack()" class="btn btn-default">Go Back!</button>
+        </div>
+
+        <div class="navbar-form navbar-right">
+            <input type="text" id="postKeyword" class="form-control" placeholder="Search Post!">
+            <button type="button" onclick="searchPost()" class="btn btn-default">Search Post!</button>
+        </div>
+
+        <div class="navbar-form navbar-left">
+        <form id="getFolloweeform" action = "/visitFollowee" method="POST">
+            <button type="submit" class="btn btn-success">My Profile</button>
+            <input id="followeeId" name="followeeId" type="hidden" value="@session.get("userId")"></input>
+        </form>
+        </div>
+
+        <div class="navbar-form navbar-left">
+            <button type="submit" class="btn btn-success" onclick="refreshLocation()">Refresh Location</button>
+        </div>
+
         </div><!--/navbar-collapse-->
     </div><!--/container-fluid-->
 </nav>
@@ -176,8 +264,9 @@ function searchUser(){
     <div id="right" class="col-md-3 col-md-offset-1">
         <div id="profile">
         <img id="photo" src="/assets/image/default.jpg" class="img-circle center-block" alt="photo">
-        <p class="text-center"><strong><a href="homepage">@session.get("email")</a></strong></p>
-        <p class="text-center">@session.get("firstName") @session.get("lastName")</p>
+
+        <p class="text-center" ><strong><font color="black">@session.get("firstName") @session.get("lastName")</font></strong></p>
+          <p class="text-center" ><strong><font color="black">@session.get("email")</font></strong></p>
         </div>
     </div>
     <div id="left" class="col-md-7">
@@ -197,6 +286,11 @@ function searchUser(){
                     <input type="radio" name="visibility" value="private"> Private
                     <p class="error" style="color: red;"></p>
                 </li>
+                <li role="presentation">
+                    <input type="radio" name="shareLocation" value="share" checked> Share Location
+                    <input type="radio" name="shareLocation" value="hide"> Do Not Share Location
+                    <p class="error" style="color: red;"></p>
+                </li>
                 </ul>
                 <button id="post-btn" type="submit" class="btn btn-danger pull-right">Post</button>
             </form>
@@ -204,81 +298,55 @@ function searchUser(){
     </div>
 </div><!--/medium-->
 }
-<!--Main Content-->
 
 <div id="content" class="row">
 <!--Right-->
     <div id="rightcontent" class="col-md-3  col-md-offset-1">
     <div id="sidebar"><br/>
     <!-- Hot Topic -->
-    <div id="friends" class="friends-list">
+
+    <div id="followeeList" class="friends-list">
         <table class="table table-hover text-center">
-            <caption class="text-center"><strong>Friends List</strong></caption>
-            <tr>
-                <td><a href="homepage"><img src="/assets/image/1.jpg" alt="friends-list" class="img-circle friends-photo"></a></td>
-                <td><a href="homepage">Shuting Xi</a></td>
-                <td><button type="button" class="btn btn-sm btn-warning"><small>&minus; Unfollow</small></button></td>
-            </tr>
-            <tr>
-                <td><a href="homepage"><img src="/assets/image/2.jpg" alt="friends-list" class="img-circle friends-photo"></a></td>
-                <td><a href="homepage">Pan Li</a></td>
-                <td><button type="button" class="btn btn-sm btn-warning"><small>&minus; Unfollow</small></button></td>
-            </tr>
-            <tr>
-                <td><a href="homepage"><img src="/assets/image/4.jpg" alt="friends-list" class="img-circle friends-photo"></a></td>
-                <td><a href="homepage">Nianzu Tang</a></td>
-                <td><button type="button" class="btn btn-sm btn-warning"><small>&minus; Unfollow</small></button></td>
-            </tr>
-            <tr>
-                <td><a href="homepage"><img src="/assets/image/6.jpg" alt="friends-list" class="img-circle friends-photo"></a></td>
-                <td><a href="homepage">Shuoyao Ma</a></td>
-                <td><button type="button" class="btn btn-sm btn-warning"><small>&minus; Unfollow</small></button></td>
-            </tr>
+            <caption class="text-center"><strong>Followees</strong></caption>
+            @for(followee <- followees){
+                  <tr>
+                    <form id="getFolloweeform@followee.getId()" action = "/visitFollowee" method="POST">
+                        <td><img src="/assets/image/2.jpg" alt="friends-list" class="img-circle friends-photo"></td>
+                        <td><a href="#" onclick="document.getElementById('getFolloweeform@followee.getId()').submit();">@followee.getFirstName @followee.getLastName</a></td>
+                        <td><input id="followeeId" name="followeeId" type="hidden" value="@followee.getId"></input></td>
+                    </form>
+                  </tr>
+              }
+
         </table>
     </div><!--/friend-list-->
+
     <div class="line"></div><br/>
-    <div id="new-friends" class="friends-list">
+
+    <div id="followerList" class="friends-list">
         <table class="table table-hover text-center">
-            <caption class="text-center"><strong>New Friends</strong></caption>
-            <tr>
-                <td><a href="homepage"><img src="/assets/image/default.jpg" alt="friends-list" class="img-circle friends-photo"></a></td>
-                <td><a href="homepage">Tina</a></td>
-                <td><button type="button" class="btn btn-sm btn-info"><small>&plus; Follow</small></button></td>
-            </tr>
-            <tr>
-                <td><a href="homepage"><img src="/assets/image/default.jpg" alt="friends-list" class="img-circle friends-photo"></a></td>
-                <td><a href="homepage">cpp</a></td>
-                <td><button type="button" class="btn btn-sm btn-info"><small>&plus; Follow</small></button></td>
-            </tr>
-            <tr>
-                <td><a href="homepage"><img src="/assets/image/default.jpg" alt="friends-list" class="img-circle friends-photo"></a></td>
-                <td><a href="homepage">Ge</a></td>
-                <td><button type="button" class="btn btn-sm btn-info"><small>&plus; Follow</small></button></td>
-            </tr>
-            <tr>
-                <td><a href="homepage"><img src="/assets/image/default.jpg" alt="friends-list" class="img-circle friends-photo"></a></td>
-                <td><a href="homepage">Sherry</a></td>
-                <td><button type="button" class="btn btn-sm btn-info"><small>&plus; Follow</small></button></td>
-            </tr>
+            <caption class="text-center"><strong>Followers</strong></caption>
+            @for(follower <- followers){
+                  <tr>
+                    <form id="getFollowerform@follower.getId()" action = "/visitFollowee" method="POST">
+                        <td><img src="/assets/image/2.jpg" alt="friends-list" class="img-circle friends-photo"></td>
+                        <td><a href="#" onclick="document.getElementById('getFollowerform@follower.getId()').submit();">@follower.getFirstName @follower.getLastName</a></td>
+                        <td><input id="followeeId" name="followeeId" type="hidden" value="@follower.getId()"></input></td>
+                    </form>
+                  </tr>
+              }
+
         </table>
     </div><!--/friend-list-->
-        <div id="hot-picture">
-            <table id="picture-table">
-                <caption class="text-center"><strong>Photos and videos</strong></caption>
-                <tr>
-                    <td><img src="/assets/image/post1.png" alt="photos" class="img-thumbnail picture-lib"></td>
-                    <td><img src="/assets/image/post3.jpg" alt="photos" class="img-thumbnail picture-lib"></td>
-                </tr>
-                <tr>
-                    <td><img src="/assets/image/post2.jpg" alt="photos" class="img-thumbnail picture-lib"></td>
-                    <td><img src="/assets/image/img3.jpg" alt="photos" class="img-thumbnail picture-lib"></td>
-                </tr>
-                <tr>
-                    <td><img src="/assets/image/flower2.jpg" alt="photos" class="img-thumbnail picture-lib"></td>
-                    <td><img src="/assets/image/img2.jpg" alt="photos" class="img-thumbnail picture-lib"></td>
-                </tr>
-            </table>
-        </div><!--/Hot picture -->
+
+    <form action = "/getMoreAllPost" method="POST">
+        <button type="submit" class="btn btn-success">Click Here To Show More Posts!</button>
+    </form>
+
+    <form action = "/getLessAllPost" method="POST">
+        <button type="submit" class="btn btn-success">Click Here To Show Less Posts!</button>
+    </form>
+
     </div><!--/sidebar-->
     </div><!--/rightcontent-->
 
@@ -288,12 +356,19 @@ function searchUser(){
         @for(postService <- postServices){
         <div class="soc-box">
             <div class="soc">
+
+              <form id="getPostUser@postService.getId()" action = "/visitFollowee" method="POST">
                 <img src="/assets/image/default.jpg" class="img-circle user-picture" alt="photo">
-                <a href="homepage">@postService.getPostUserFirstName() @postService.getPostUserLastName()</a>
+                <a href="#" onclick="document.getElementById('getPostUser@postService.getId()').submit();">@postService.getPostUserFirstName() @postService.getPostUserLastName()</a>
+                <input id="followeeId" name="followeeId" type="hidden" value="@postService.getPostUserId()"></input>
+              </form>
+
             </div>
             <div class="post-time text-right">
                 <h6><span class="glyphicon glyphicon-time"></span> @postService.getTime()</h6>
+                <h6><span class="glyphicon"></span>@postService.getLocation()</h6>
             </div>
+
             <p class="post-text">@postService.getText()</p>
             <div class="btn-group btn-group-justified" role="group" aria-label="...">
                 <div class="btn-group" role="group">
@@ -317,11 +392,8 @@ function searchUser(){
                     <form id="form@postService.getId()" method="post">
                         <input type="hidden" name="postId" id="postId" value="@postService.getId()">
                         <input class="form-control" type="hidden" name="commentUserId" id="commentUserId" value="@session.get("userId")">
-                        <!--取消注释-->
-                        <!--<input class="form-control" type="hidden" name="commentUserFirstName" id="commentUserFirstName" value="@session.get("firstName")">-->
-                        <!--<input class="form-control" type="hidden" name="commentUserLastName" id="commentUserLastName" value="@session.get("lastName")">-->
                         <input type="text" class="form-control" placeholder="Type Your comment" name="text">
-                        <button type="submit" class="btn btn-info pull-right submitBtn btn-xs" onclick="submitComment(@postService.getId())">Submit</button>
+                        <button type="submit" class="btn btn-info pull-right submitBtn btn-xs">Submit</button>
                     </form>
                 }
             </div>
@@ -329,8 +401,21 @@ function searchUser(){
         <br>
         }
 
+        @for(sUser <- searchUserResult){
+            <div class="soc-box">
+              <div class="soc">
 
-    </div>
+                <form id="getSearched@sUser.getId()" action = "/visitFollowee" method="POST">
+                  <img src="/assets/image/default.jpg" class="img-circle user-picture" alt="photo">
+                  <a href="#" onclick="document.getElementById('getSearched@sUser.getId()').submit();">@sUser.getUserName</a>
+                  <input id="followeeId" name="followeeId" type="hidden" value="@sUser.getId()"></input>
+                </form>
+
+              </div>
+            </div>
+
+
+          }
     </div><!--leftcontent-->
 </div><!--Content-->
 }

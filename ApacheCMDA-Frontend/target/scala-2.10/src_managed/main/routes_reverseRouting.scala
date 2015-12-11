@@ -1,6 +1,6 @@
-// @SOURCE:/Users/apple/test/SOC-Fall-2015-Team4-Lead-Shuting-Xi/ApacheCMDA-Frontend/conf/routes
-// @HASH:7f169241709bf2a264afba2b2d9fd791bde7f783
-// @DATE:Thu Dec 03 12:00:37 EST 2015
+// @SOURCE:/Users/X/Desktop/SOC-Fall-2015/ApacheCMDA-Frontend/conf/routes
+// @HASH:e94e43092e8dd1316efa239b317b6fa3a0dd46ca
+// @DATE:Thu Dec 10 23:06:00 EST 2015
 
 import Routes.{prefix => _prefix, defaultPrefix => _defaultPrefix}
 import play.core._
@@ -13,6 +13,18 @@ import play.libs.F
 import Router.queryString
 
 
+// @LINE:72
+// @LINE:71
+// @LINE:70
+// @LINE:69
+// @LINE:68
+// @LINE:67
+// @LINE:66
+// @LINE:65
+// @LINE:64
+// @LINE:63
+// @LINE:62
+// @LINE:61
 // @LINE:60
 // @LINE:59
 // @LINE:58
@@ -132,6 +144,18 @@ def newReport(): Call = {
 }
                           
 
+// @LINE:72
+// @LINE:71
+// @LINE:70
+// @LINE:69
+// @LINE:68
+// @LINE:67
+// @LINE:66
+// @LINE:65
+// @LINE:64
+// @LINE:63
+// @LINE:62
+// @LINE:61
 // @LINE:60
 // @LINE:59
 // @LINE:58
@@ -146,15 +170,41 @@ def newReport(): Call = {
 class ReverseUserController {
     
 
+// @LINE:64
+def goBack(): Call = {
+   Call("POST", _prefix + { _defaultPrefix } + "goBack")
+}
+                                                
+
+// @LINE:71
+def getMoreSelfPost(): Call = {
+   Call("POST", _prefix + { _defaultPrefix } + "getMoreSelfPost")
+}
+                                                
+
 // @LINE:52
 def addPost(): Call = {
    Call("POST", _prefix + { _defaultPrefix } + "addPost")
 }
                                                 
 
+// @LINE:72
+def getLessSelfPost(): Call = {
+   Call("POST", _prefix + { _defaultPrefix } + "getLessSelfPost")
+}
+                                                
+
+// @LINE:62
 // @LINE:56
 def searchUser(): Call = {
-   Call("POST", _prefix + { _defaultPrefix } + "searchUser")
+   () match {
+// @LINE:56
+case () if true => Call("POST", _prefix + { _defaultPrefix } + "searchUser")
+                                                        
+// @LINE:62
+case () if true => Call("POST", _prefix + { _defaultPrefix } + "searchUser")
+                                                        
+   }
 }
                                                 
 
@@ -164,15 +214,45 @@ def homepage(): Call = {
 }
                                                 
 
+// @LINE:63
+def searchPost(): Call = {
+   Call("POST", _prefix + { _defaultPrefix } + "searchPost")
+}
+                                                
+
+// @LINE:66
+def follow(): Call = {
+   Call("POST", _prefix + { _defaultPrefix } + "follow")
+}
+                                                
+
+// @LINE:61
+def editPost(): Call = {
+   Call("POST", _prefix + { _defaultPrefix } + "editPost")
+}
+                                                
+
 // @LINE:57
 def addComment(): Call = {
    Call("POST", _prefix + { _defaultPrefix } + "addComment")
 }
                                                 
 
+// @LINE:69
+def getMoreAllPost(): Call = {
+   Call("POST", _prefix + { _defaultPrefix } + "getMoreAllPost")
+}
+                                                
+
 // @LINE:54
 def sharePost(): Call = {
    Call("POST", _prefix + { _defaultPrefix } + "sharePost")
+}
+                                                
+
+// @LINE:67
+def unFollow(): Call = {
+   Call("POST", _prefix + { _defaultPrefix } + "unFollow")
 }
                                                 
 
@@ -209,6 +289,24 @@ def likePost(): Call = {
 // @LINE:53
 def deletePost(): Call = {
    Call("POST", _prefix + { _defaultPrefix } + "deletePost")
+}
+                                                
+
+// @LINE:70
+def getLessAllPost(): Call = {
+   Call("POST", _prefix + { _defaultPrefix } + "getLessAllPost")
+}
+                                                
+
+// @LINE:65
+def visitFollowee(): Call = {
+   Call("POST", _prefix + { _defaultPrefix } + "visitFollowee")
+}
+                                                
+
+// @LINE:68
+def sendLocation(): Call = {
+   Call("POST", _prefix + { _defaultPrefix } + "sendLocation")
 }
                                                 
     
@@ -404,6 +502,18 @@ def deleteClimateService(): Call = {
                   
 
 
+// @LINE:72
+// @LINE:71
+// @LINE:70
+// @LINE:69
+// @LINE:68
+// @LINE:67
+// @LINE:66
+// @LINE:65
+// @LINE:64
+// @LINE:63
+// @LINE:62
+// @LINE:61
 // @LINE:60
 // @LINE:59
 // @LINE:58
@@ -563,6 +673,18 @@ def newReport : JavascriptReverseRoute = JavascriptReverseRoute(
 }
               
 
+// @LINE:72
+// @LINE:71
+// @LINE:70
+// @LINE:69
+// @LINE:68
+// @LINE:67
+// @LINE:66
+// @LINE:65
+// @LINE:64
+// @LINE:63
+// @LINE:62
+// @LINE:61
 // @LINE:60
 // @LINE:59
 // @LINE:58
@@ -577,6 +699,28 @@ def newReport : JavascriptReverseRoute = JavascriptReverseRoute(
 class ReverseUserController {
     
 
+// @LINE:64
+def goBack : JavascriptReverseRoute = JavascriptReverseRoute(
+   "controllers.UserController.goBack",
+   """
+      function() {
+      return _wA({method:"POST", url:"""" + _prefix + { _defaultPrefix } + """" + "goBack"})
+      }
+   """
+)
+                        
+
+// @LINE:71
+def getMoreSelfPost : JavascriptReverseRoute = JavascriptReverseRoute(
+   "controllers.UserController.getMoreSelfPost",
+   """
+      function() {
+      return _wA({method:"POST", url:"""" + _prefix + { _defaultPrefix } + """" + "getMoreSelfPost"})
+      }
+   """
+)
+                        
+
 // @LINE:52
 def addPost : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.UserController.addPost",
@@ -588,12 +732,29 @@ def addPost : JavascriptReverseRoute = JavascriptReverseRoute(
 )
                         
 
+// @LINE:72
+def getLessSelfPost : JavascriptReverseRoute = JavascriptReverseRoute(
+   "controllers.UserController.getLessSelfPost",
+   """
+      function() {
+      return _wA({method:"POST", url:"""" + _prefix + { _defaultPrefix } + """" + "getLessSelfPost"})
+      }
+   """
+)
+                        
+
+// @LINE:62
 // @LINE:56
 def searchUser : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.UserController.searchUser",
    """
       function() {
+      if (true) {
       return _wA({method:"POST", url:"""" + _prefix + { _defaultPrefix } + """" + "searchUser"})
+      }
+      if (true) {
+      return _wA({method:"POST", url:"""" + _prefix + { _defaultPrefix } + """" + "searchUser"})
+      }
       }
    """
 )
@@ -610,6 +771,39 @@ def homepage : JavascriptReverseRoute = JavascriptReverseRoute(
 )
                         
 
+// @LINE:63
+def searchPost : JavascriptReverseRoute = JavascriptReverseRoute(
+   "controllers.UserController.searchPost",
+   """
+      function() {
+      return _wA({method:"POST", url:"""" + _prefix + { _defaultPrefix } + """" + "searchPost"})
+      }
+   """
+)
+                        
+
+// @LINE:66
+def follow : JavascriptReverseRoute = JavascriptReverseRoute(
+   "controllers.UserController.follow",
+   """
+      function() {
+      return _wA({method:"POST", url:"""" + _prefix + { _defaultPrefix } + """" + "follow"})
+      }
+   """
+)
+                        
+
+// @LINE:61
+def editPost : JavascriptReverseRoute = JavascriptReverseRoute(
+   "controllers.UserController.editPost",
+   """
+      function() {
+      return _wA({method:"POST", url:"""" + _prefix + { _defaultPrefix } + """" + "editPost"})
+      }
+   """
+)
+                        
+
 // @LINE:57
 def addComment : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.UserController.addComment",
@@ -621,12 +815,34 @@ def addComment : JavascriptReverseRoute = JavascriptReverseRoute(
 )
                         
 
+// @LINE:69
+def getMoreAllPost : JavascriptReverseRoute = JavascriptReverseRoute(
+   "controllers.UserController.getMoreAllPost",
+   """
+      function() {
+      return _wA({method:"POST", url:"""" + _prefix + { _defaultPrefix } + """" + "getMoreAllPost"})
+      }
+   """
+)
+                        
+
 // @LINE:54
 def sharePost : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.UserController.sharePost",
    """
       function() {
       return _wA({method:"POST", url:"""" + _prefix + { _defaultPrefix } + """" + "sharePost"})
+      }
+   """
+)
+                        
+
+// @LINE:67
+def unFollow : JavascriptReverseRoute = JavascriptReverseRoute(
+   "controllers.UserController.unFollow",
+   """
+      function() {
+      return _wA({method:"POST", url:"""" + _prefix + { _defaultPrefix } + """" + "unFollow"})
       }
    """
 )
@@ -693,6 +909,39 @@ def deletePost : JavascriptReverseRoute = JavascriptReverseRoute(
    """
       function() {
       return _wA({method:"POST", url:"""" + _prefix + { _defaultPrefix } + """" + "deletePost"})
+      }
+   """
+)
+                        
+
+// @LINE:70
+def getLessAllPost : JavascriptReverseRoute = JavascriptReverseRoute(
+   "controllers.UserController.getLessAllPost",
+   """
+      function() {
+      return _wA({method:"POST", url:"""" + _prefix + { _defaultPrefix } + """" + "getLessAllPost"})
+      }
+   """
+)
+                        
+
+// @LINE:65
+def visitFollowee : JavascriptReverseRoute = JavascriptReverseRoute(
+   "controllers.UserController.visitFollowee",
+   """
+      function() {
+      return _wA({method:"POST", url:"""" + _prefix + { _defaultPrefix } + """" + "visitFollowee"})
+      }
+   """
+)
+                        
+
+// @LINE:68
+def sendLocation : JavascriptReverseRoute = JavascriptReverseRoute(
+   "controllers.UserController.sendLocation",
+   """
+      function() {
+      return _wA({method:"POST", url:"""" + _prefix + { _defaultPrefix } + """" + "sendLocation"})
       }
    """
 )
@@ -998,6 +1247,18 @@ def deleteClimateService : JavascriptReverseRoute = JavascriptReverseRoute(
         
 
 
+// @LINE:72
+// @LINE:71
+// @LINE:70
+// @LINE:69
+// @LINE:68
+// @LINE:67
+// @LINE:66
+// @LINE:65
+// @LINE:64
+// @LINE:63
+// @LINE:62
+// @LINE:61
 // @LINE:60
 // @LINE:59
 // @LINE:58
@@ -1118,6 +1379,18 @@ def newReport(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
 }
                           
 
+// @LINE:72
+// @LINE:71
+// @LINE:70
+// @LINE:69
+// @LINE:68
+// @LINE:67
+// @LINE:66
+// @LINE:65
+// @LINE:64
+// @LINE:63
+// @LINE:62
+// @LINE:61
 // @LINE:60
 // @LINE:59
 // @LINE:58
@@ -1132,9 +1405,27 @@ def newReport(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
 class ReverseUserController {
     
 
+// @LINE:64
+def goBack(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
+   controllers.UserController.goBack(), HandlerDef(this, "controllers.UserController", "goBack", Seq(), "POST", """""", _prefix + """goBack""")
+)
+                      
+
+// @LINE:71
+def getMoreSelfPost(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
+   controllers.UserController.getMoreSelfPost(), HandlerDef(this, "controllers.UserController", "getMoreSelfPost", Seq(), "POST", """""", _prefix + """getMoreSelfPost""")
+)
+                      
+
 // @LINE:52
 def addPost(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    controllers.UserController.addPost(), HandlerDef(this, "controllers.UserController", "addPost", Seq(), "POST", """""", _prefix + """addPost""")
+)
+                      
+
+// @LINE:72
+def getLessSelfPost(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
+   controllers.UserController.getLessSelfPost(), HandlerDef(this, "controllers.UserController", "getLessSelfPost", Seq(), "POST", """""", _prefix + """getLessSelfPost""")
 )
                       
 
@@ -1150,15 +1441,45 @@ def homepage(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
 )
                       
 
+// @LINE:63
+def searchPost(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
+   controllers.UserController.searchPost(), HandlerDef(this, "controllers.UserController", "searchPost", Seq(), "POST", """""", _prefix + """searchPost""")
+)
+                      
+
+// @LINE:66
+def follow(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
+   controllers.UserController.follow(), HandlerDef(this, "controllers.UserController", "follow", Seq(), "POST", """""", _prefix + """follow""")
+)
+                      
+
+// @LINE:61
+def editPost(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
+   controllers.UserController.editPost(), HandlerDef(this, "controllers.UserController", "editPost", Seq(), "POST", """""", _prefix + """editPost""")
+)
+                      
+
 // @LINE:57
 def addComment(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    controllers.UserController.addComment(), HandlerDef(this, "controllers.UserController", "addComment", Seq(), "POST", """""", _prefix + """addComment""")
 )
                       
 
+// @LINE:69
+def getMoreAllPost(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
+   controllers.UserController.getMoreAllPost(), HandlerDef(this, "controllers.UserController", "getMoreAllPost", Seq(), "POST", """""", _prefix + """getMoreAllPost""")
+)
+                      
+
 // @LINE:54
 def sharePost(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    controllers.UserController.sharePost(), HandlerDef(this, "controllers.UserController", "sharePost", Seq(), "POST", """""", _prefix + """sharePost""")
+)
+                      
+
+// @LINE:67
+def unFollow(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
+   controllers.UserController.unFollow(), HandlerDef(this, "controllers.UserController", "unFollow", Seq(), "POST", """""", _prefix + """unFollow""")
 )
                       
 
@@ -1195,6 +1516,24 @@ def likePost(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
 // @LINE:53
 def deletePost(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    controllers.UserController.deletePost(), HandlerDef(this, "controllers.UserController", "deletePost", Seq(), "POST", """""", _prefix + """deletePost""")
+)
+                      
+
+// @LINE:70
+def getLessAllPost(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
+   controllers.UserController.getLessAllPost(), HandlerDef(this, "controllers.UserController", "getLessAllPost", Seq(), "POST", """""", _prefix + """getLessAllPost""")
+)
+                      
+
+// @LINE:65
+def visitFollowee(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
+   controllers.UserController.visitFollowee(), HandlerDef(this, "controllers.UserController", "visitFollowee", Seq(), "POST", """""", _prefix + """visitFollowee""")
+)
+                      
+
+// @LINE:68
+def sendLocation(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
+   controllers.UserController.sendLocation(), HandlerDef(this, "controllers.UserController", "sendLocation", Seq(), "POST", """""", _prefix + """sendLocation""")
 )
                       
     
