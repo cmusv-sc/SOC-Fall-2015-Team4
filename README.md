@@ -4,6 +4,9 @@
 
 In this project, we have been introduced to a fully functional and interesting social network project. We have put in our own design in this project and achieved extra features for the web site to perfectify the user experience of our product.
 
+In our technical report we are going to give you detailed introduction about our project. After that, we are going to tell you the motivation behind our project. Then we are going to talk about the related work we have received to develop our project. After that, we will show you the system design of our project, including front end and back end. Follow that, the detailed system implementation will be listed. Then we are going to show you the experiments we have done for our project, which also comes the analysis for them. Then, the conclusion will be drawn for our project and future work that could be done will be discussed. Last but not the lease, a detailed tutorial will be given to walk you through our project.
+
+
 -- Download and Instrallation Instruction
 
 1. Download the project from github or other code repository where the code project is. 
